@@ -1,3 +1,6 @@
+# Stable Release Repository
+For source, use the following location: [tarkystuffs](https://github.com/jbs4bmx/tarkyStuffs)
+
 # AssAssIn's Olympus Mod
 >Re-worked version of AssAssIn's Olympus mod for SPT 3.0.0.
 
