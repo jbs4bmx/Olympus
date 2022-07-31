@@ -1,0 +1,18 @@
+{
+    "Resize": true,
+    "Sicc": {
+        "defaultEFTSize": "5x5 - Don't change this value. It's just here for informational purposes.",
+        "newHSize":10,
+        "newVSize":16
+    },
+    "KeyTool": {
+        "defaultEFTSize": "4x4 - Don't change this value. It's just here for informational purposes.",
+        "newHSize":12,
+        "newVSize":12
+    },
+    "MoneyCase": {
+        "defaultEFTSize": "7x7 - Don't change this value. It's just here for informational purposes.",
+        "newHSize":10,
+        "newVSize":10
+    }
+}

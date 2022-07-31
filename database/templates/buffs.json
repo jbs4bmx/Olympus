@@ -1,0 +1,51 @@
+{
+    "BuffsApollo": [
+        {
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 3000,
+            "Value": 100,
+            "AbsoluteValue": true,
+            "SkillName": "Endurance"
+        },
+        {
+            "BuffType": "SkillRate",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 3000,
+            "Value": 100,
+            "AbsoluteValue": true,
+            "SkillName": "Strength"
+        },
+        {
+            "BuffType": "MaxStamina",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 3000,
+            "Value": 50,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        },
+        {
+            "BuffType": "StaminaRate",
+            "Chance": 1,
+            "Delay": 0,
+            "Duration": 3000,
+            "Value": 3,
+            "AbsoluteValue": true,
+            "SkillName": ""
+        }
+    ],
+    "BuffsApolloPain": [
+        {
+            "BuffType": "Pain",
+            "Chance": 1,
+            "Delay": 1,
+            "Duration": 300,
+            "Value": 0,
+            "AbsoluteValue": false,
+            "SkillName": ""
+        }
+    ]
+}

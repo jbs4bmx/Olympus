@@ -1,0 +1,244 @@
+{
+	"templates": {
+		"apollosStim": {
+			"Name": "Apollo's Stim",
+			"ShortName": "ApoStim",
+			"Description": "TAKE ALL THE STIMS!"
+		},
+		"apollosPropital": {
+			"Name": "Apollo's Propital",
+			"ShortName": "ApoProp",
+			"Description": "With Apollo's Propital coursing through your veins, there's no ailment you can't cure."
+		},
+		"apollosPain": {
+			"Name": "Apollo's PAIN",
+			"ShortName": "ApoPAIN",
+			"Description": "PAIN, but is it really?!"
+		},
+		"apollosCMS": {
+			"Name": "Apollo's CMS",
+			"ShortName": "ApoCMS",
+			"Description": "Not even 100 Blackened limbs can stop the god of war."
+		},
+		"armorOfAthena": {
+			"Name": "Armor Of Athena",
+			"ShortName": "Athena",
+			"Description": "The Armor Of Athena provides the highest level of protection for all your common body parts. A bit restrictive in movement, you might want to couple it with the Helmet of Hermes."
+		},
+		"atlasSatchel": {
+			"Name": "Atlas' Satchel",
+			"ShortName": "Atlas",
+			"Description": "With Atlas' Satchel, you feel like you could carry the world on your back."
+		},
+		"hercRig": {
+			"Name": "Hercules' Rig",
+			"ShortName": "Hercules",
+			"Description": "If heroic labors didn't stop him, what makes you think a little weight matters?"
+		},
+		"helmetOfHermes": {
+			"Name": "Helmet of Hermes",
+			"ShortName": "Hermes",
+			"Description": "The Helmet of Hermes protects your entire head while also making you feel light on your feet."
+		},
+		"ares_12ga_250": {
+			"Name": "250rd Mag for 12g Shotguns",
+			"ShortName": "a25012ga",
+			"Description": "Ares 12ga magazine for MP-133/MP-153."
+		},
+		"ares_12gaSaiga_250": {
+			"Name": "250rd Mag for Saiga Shotguns",
+			"ShortName": "a250saiga",
+			"Description": "Ares 12ga Magazine for Saiga Semi-Automatic Shotguns."
+		},
+		"ares_Gratch_250": {
+			"Name": "250rd Mag for MP-443 Gratch",
+			"ShortName": "a250grat",
+			"Description": "Ares 9x19 Magazine for MP-443 (Gratch) pistol."
+		},
+		"ares_kedr_250": {
+			"Name": "250rd Mag for Kedr",
+			"ShortName": "a250kedr",
+			"Description": "Ares 9x18 Magazine for Kedr automatic firearm."
+		},
+		"ares_20ga_250": {
+			"Name": "250rd Mag for 20g Shotguns",
+			"ShortName": "a25020ga",
+			"Description": "Ares 20ga (20x70) Magazine for Toz shotgun."
+		},
+		"ares_DVL_250": {
+			"Name": "250rd Mag for DVL",
+			"ShortName": "a250dvl",
+			"Description": "Ares .308 Magazine for DVL rifle."
+		},
+		"ares_ak762_250": {
+			"Name": "250rd Mag for 7.62AK",
+			"ShortName": "a250762",
+			"Description": "Ares 7.62x39 Magazine for AKM rifles."
+		},
+		"ares_ak545_250": {
+			"Name": "250rd Mag for 5.45AK",
+			"ShortName": "a250545",
+			"Description": "Ares 5.45x39 Magazine for AK/AKS rifles."
+		},
+		"ares_Glock_250": {
+			"Name": "250rd Mag for Glock",
+			"ShortName": "a250glo",
+			"Description": "Ares 9x19 Magazine for Glock pistols."
+		},
+		"ares_Ash12_250": {
+			"Name": "250rd Mag for Ash12",
+			"ShortName": "a250ash",
+			"Description": "Ares 12.7x55 Magazine for Ash12 rifle."
+		},
+		"ares_57_250": {
+			"Name": "250rd Mag for 5-7",
+			"ShortName": "a25057",
+			"Description": "Ares 5.7x28 Magazine for FN-57 pistol."
+		},
+		"ares_mp7a_250": {
+			"Name": "250rd Mag for mp7",
+			"ShortName": "a250mp7",
+			"Description": "Ares 4.6x30 Magazine for MP7 submachine gun."
+		},
+		"ares_M1A_250": {
+			"Name": "250rd Mag for M1A",
+			"ShortName": "a250m1a",
+			"Description": "Ares 7.62x51 Magazine for M1A/M14 rifle."
+		},
+		"ares_M700_250": {
+			"Name": "250rd Mag for M700",
+			"ShortName": "a250m700",
+			"Description": "Ares 7.62x54 Magpul Magazine for M700 rifle."
+		},
+		"ares_MosinAngel_250": {
+			"Name": "250rd Mag for Mosin",
+			"ShortName": "a250angel",
+			"Description": "Ares 7.62x54 Angel Magazine for Mosin rifle."
+		},
+		"ares_MosinInt_250": {
+			"Name": "250rd Mag for Mosin",
+			"ShortName": "a250mosin",
+			"Description": "Ares 7.62x54 Magazine for Mosin rifle."
+		},
+		"ares_mk18_250": {
+			"Name": "250rd Mag for MK18",
+			"ShortName": "a250mk18",
+			"Description": "Ares Magazine for MK18 rifle."
+		},
+		"ares_M9A3_250": {
+			"Name": "250rd Mag for M9A3",
+			"ShortName": "a250m9a3",
+			"Description": "Ares 9x19 Magazine for M9A3 Beretta."
+		},
+		"ares_MP5_250": {
+			"Name": "250rd Mag for MP5",
+			"ShortName": "a250mp5",
+			"Description": "Ares 9x19 Magazine for MP5 submachine gun."
+		},
+		"ares_MPX_250": {
+			"Name": "250rd Mag for MPX",
+			"ShortName": "a250mpx",
+			"Description": "Ares 9x19 Magazine for MPX submachine gun."
+		},
+		"ares_MP9_250": {
+			"Name": "250rd Mag for MP9",
+			"ShortName": "a250mp9",
+			"Description": "Ares 9x19 Magazine for MP9 submachine gun."
+		},
+		"ares_nato556_250": {
+			"Name": "250rd Mag for M4",
+			"ShortName": "a250556",
+			"Description": "Ares 5.56x45 Magazine for AR15 type freedom dispensers."
+		},
+		"ares_P90_250": {
+			"Name": "250rd Mag for P90",
+			"ShortName": "a250p90",
+			"Description": "Ares 5.7x28 Magazine for P90 CQC rifle."
+		},
+		"ares_pl15_250": {
+			"Name": "250rd Mag for PL15",
+			"ShortName": "a250pl15",
+			"Description": "Ares 9x19 Magazine for PL15 pistol."
+		},
+		"ares_P226r_250": {
+			"Name": "250rd Mag for P226",
+			"ShortName": "a250p226",
+			"Description": "Ares 9x19 Magazine for Sig Sauer P226 pistol."
+		},
+		"ares_PP19_250": {
+			"Name": "250rd Mag for PP-19",
+			"ShortName": "a250pp19",
+			"Description": "Ares 9x19 Magazine for PP-19-01 submachine gun."
+		},
+		"ares_PM_250": {
+			"Name": "250rd Mag for PM",
+			"ShortName": "a250pm",
+			"Description": "Ares 9x18 Magazine for PM pistol."
+		},
+		"ares_PPsH_250": {
+			"Name": "250rd Mag for PPsH",
+			"ShortName": "a250ppsh",
+			"Description": "Ares 7.62x25 Magazine for PPsH submachine gun."
+		},
+		"ares_SA58_250": {
+			"Name": "250rd Mag for SA-58",
+			"ShortName": "a250sa58",
+			"Description": "Ares 7.62x51 Magazine for SA-58 rifle."
+		},
+		"ares_Shrimp_250": {
+			"Name": "250rd Mag for Sr1mp",
+			"ShortName": "a250srimp",
+			"Description": "Ares 9x21 Magazine for Sr1mp (Shrimp) pistol."
+		},
+		"ares_SR25_250": {
+			"Name": "250rd Mag for SR-25",
+			"ShortName": "a250sr25",
+			"Description": "Ares 7.62x51 Magazine for SR-25/AR10 rifles."
+		},
+		"ares_vector45_250": {
+			"Name": "250rd Mag for .45 Vector",
+			"ShortName": "a250v45",
+			"Description": "Ares .45 Magazine for Kriss Vector CQC firearm."
+		},
+		"ares_SVDS_250": {
+			"Name": "250rd Mag for SVD",
+			"ShortName": "a250svds",
+			"Description": "Ares 7.62x54 Magazine for SVD/SV98 rifles."
+		},
+		"ares_TT_250": {
+			"Name": "250rd Mag for TT",
+			"ShortName": "a250tt",
+			"Description": "Ares 7.62x25 Magazine for TT pistol."
+		},
+		"ares_T5000_250": {
+			"Name": "250rd Mag for T5000",
+			"ShortName": "a250t5000",
+			"Description": "Ares 7.62x51 Magazine for Orsis T-5000 rifle."
+		},
+		"ares_ump_250": {
+			"Name": "250rd Mag for UMP",
+			"ShortName": "a250ump",
+			"Description": "Ares .45 Magazine for UMP submachine gun."
+		},
+		"ares_VSS_250": {
+			"Name": "250rd Mag for VSS",
+			"ShortName": "a250vss",
+			"Description": "Ares 9x39 Magazine for VSS/AS-Val rifles."
+		},
+		"ares_VepHunt_250": {
+			"Name": "250rd Mag for Vepr",
+			"ShortName": "a250vepr",
+			"Description": "Ares 7.62x51 Magazine for Vepr Hunter rifle."
+		},
+		"ares_VPO_250e": {
+			"Name": "250rd Mag for VPO",
+			"ShortName": "a250vpo",
+			"Description": "Ares 7.62x39 Magazine for VPO/366TKM rifle."
+		},
+		"ares_M1911_250": {
+			"Name": "250rd Mag for M1911",
+			"ShortName": "a2501911",
+			"Description": "Ares .45 Magazine for M1911 sidearm freedom dispenser."
+		}
+	}
+}
