@@ -1,6 +1,6 @@
 {
 	"name": "Olympus",
-	"version": "311.0.0",
+	"version": "311.0.1",
 	"main": "src/Olympus.js",
 	"license": "NCSA",
 	"author": "AssAssIn",
@@ -23,6 +23,6 @@
         "bestzip": "2.2.1"
     },
 	"updateBy": "jbs4bmx",
-	"changeDate": "27 Jul 2022",
+	"changeDate": "06 Aug 2022",
     "releaseDate": "31 Jul 2022"
 }

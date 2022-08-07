@@ -7,7 +7,7 @@ If at any time, AssAssIn comes back to the scene and wants take over his mod aga
 # Information
 >Author  : AssAssIn & jbs4bmx
 
->Version : 311.0.0 (Supports SPT-AKI 3.1.1 and EFT Version 0.12.12.30.19078)
+>Version : 311.0.1 (Supports SPT-AKI 3.1.1 and EFT Version 0.12.12.30.19078)
 
 
 # The gods favor you soldier.
@@ -41,6 +41,9 @@ Add additional higher capacity mags.
 
 
 # Changelog:
+311.0.1
+   - Update code for dynamic folder name. User can now change the name of the mod's folder to fix mod load order where needed.
+
 311.0.0:
    - Release Date: 31 July, 2022
    - Refactor Code to work with SPT 3.1.1
