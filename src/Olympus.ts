@@ -1,8 +1,8 @@
 /*
  *      Name: Olympus
- *   Version: 311.0.0
+ *   Version: 311.0.1
  * Copyright: AssAssIn
- *    Update: 31.07.2022
+ *    Update: 06.08.2022
 */
 
 import { DependencyContainer } from "tsyringe";
@@ -19,7 +19,8 @@ let zeusdb;
 class Olympus implements IMod
 {
     private pkg;
-    private modName = "AssAssIn-Olympus";
+    private path = require('path');
+    private modName = this.path.basename(this.path.dirname(__dirname.split('/').pop()));
 
     public preAkiLoad(container: DependencyContainer)
     {
