@@ -1,10 +1,10 @@
 {
 	"name": "Olympus",
-	"version": "311.0.1",
+	"version": "320.0.1",
 	"main": "src/Olympus.js",
 	"license": "NCSA",
 	"author": "AssAssIn",
-	"akiVersion": ">=3.1.1",
+	"akiVersion": ">=3.2.0",
 	"scripts": {
         "setup:environment": "npm i",
         "build:unzipped": "copyfiles -e \"./node_modules/**/*.*\" -e \"./dist/**/*.*\" -e \"./package-lock.json\" -e \"./tsconfig.json\" -e \"./README.txt\" -e \"./mod.code-workspace\" \"./**/*.*\" ./dist",
@@ -23,6 +23,6 @@
         "bestzip": "2.2.1"
     },
 	"updateBy": "jbs4bmx",
-	"changeDate": "06 Aug 2022",
+	"changeDate": "08 Aug 2022",
     "releaseDate": "31 Jul 2022"
 }
