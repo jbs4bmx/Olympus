@@ -32,213 +32,843 @@
 		},
 		"hercRig": {
 			"Name": "Hercules' Rig",
-			"ShortName": "Hercules",
+			"ShortName": "Hercules1",
 			"Description": "If heroic labors didn't stop him, what makes you think a little weight matters?"
+		},
+		"hercRig2":{
+			"Name": "Hercules' Rig 2",
+			"ShortName": "Hercules2",
+			"Description": "All of his strength, and now all of his protection."
 		},
 		"helmetOfHermes": {
 			"Name": "Helmet of Hermes",
 			"ShortName": "Hermes",
 			"Description": "The Helmet of Hermes protects your entire head while also making you feel light on your feet."
 		},
-		"ares_12ga_250": {
-			"Name": "250rd Mag for 12g Shotguns",
-			"ShortName": "a25012ga",
-			"Description": "Ares 12ga magazine for MP-133/MP-153."
-		},
-		"ares_12gaSaiga_250": {
-			"Name": "250rd Mag for Saiga Shotguns",
-			"ShortName": "a250saiga",
-			"Description": "Ares 12ga Magazine for Saiga Semi-Automatic Shotguns."
-		},
-		"ares_Gratch_250": {
-			"Name": "250rd Mag for MP-443 Gratch",
-			"ShortName": "a250grat",
-			"Description": "Ares 9x19 Magazine for MP-443 (Gratch) pistol."
-		},
-		"ares_kedr_250": {
-			"Name": "250rd Mag for Kedr",
-			"ShortName": "a250kedr",
-			"Description": "Ares 9x18 Magazine for Kedr automatic firearm."
-		},
-		"ares_20ga_250": {
-			"Name": "250rd Mag for 20g Shotguns",
-			"ShortName": "a25020ga",
-			"Description": "Ares 20ga (20x70) Magazine for Toz shotgun."
-		},
-		"ares_DVL_250": {
-			"Name": "250rd Mag for DVL",
-			"ShortName": "a250dvl",
-			"Description": "Ares .308 Magazine for DVL rifle."
-		},
-		"ares_ak762_250": {
-			"Name": "250rd Mag for 7.62AK",
-			"ShortName": "a250762",
-			"Description": "Ares 7.62x39 Magazine for AKM rifles."
-		},
-		"ares_ak545_250": {
-			"Name": "250rd Mag for 5.45AK",
-			"ShortName": "a250545",
-			"Description": "Ares 5.45x39 Magazine for AK/AKS rifles."
-		},
-		"ares_Glock_250": {
-			"Name": "250rd Mag for Glock",
-			"ShortName": "a250glo",
-			"Description": "Ares 9x19 Magazine for Glock pistols."
-		},
-		"ares_Ash12_250": {
-			"Name": "250rd Mag for Ash12",
-			"ShortName": "a250ash",
-			"Description": "Ares 12.7x55 Magazine for Ash12 rifle."
-		},
-		"ares_57_250": {
-			"Name": "250rd Mag for 5-7",
-			"ShortName": "a25057",
-			"Description": "Ares 5.7x28 Magazine for FN-57 pistol."
-		},
-		"ares_mp7a_250": {
-			"Name": "250rd Mag for mp7",
-			"ShortName": "a250mp7",
-			"Description": "Ares 4.6x30 Magazine for MP7 submachine gun."
-		},
-		"ares_M1A_250": {
-			"Name": "250rd Mag for M1A",
-			"ShortName": "a250m1a",
-			"Description": "Ares 7.62x51 Magazine for M1A/M14 rifle."
-		},
-		"ares_M700_250": {
-			"Name": "250rd Mag for M700",
-			"ShortName": "a250m700",
-			"Description": "Ares 7.62x54 Magpul Magazine for M700 rifle."
-		},
-		"ares_MosinAngel_250": {
-			"Name": "250rd Mag for Mosin",
-			"ShortName": "a250angel",
-			"Description": "Ares 7.62x54 Angel Magazine for Mosin rifle."
-		},
-		"ares_MosinInt_250": {
-			"Name": "250rd Mag for Mosin",
-			"ShortName": "a250mosin",
-			"Description": "Ares 7.62x54 Magazine for Mosin rifle."
-		},
-		"ares_mk18_250": {
-			"Name": "250rd Mag for MK18",
-			"ShortName": "a250mk18",
-			"Description": "Ares Magazine for MK18 rifle."
-		},
-		"ares_M9A3_250": {
-			"Name": "250rd Mag for M9A3",
-			"ShortName": "a250m9a3",
-			"Description": "Ares 9x19 Magazine for M9A3 Beretta."
-		},
-		"ares_MP5_250": {
-			"Name": "250rd Mag for MP5",
-			"ShortName": "a250mp5",
-			"Description": "Ares 9x19 Magazine for MP5 submachine gun."
-		},
-		"ares_MPX_250": {
-			"Name": "250rd Mag for MPX",
-			"ShortName": "a250mpx",
-			"Description": "Ares 9x19 Magazine for MPX submachine gun."
-		},
-		"ares_MP9_250": {
-			"Name": "250rd Mag for MP9",
-			"ShortName": "a250mp9",
-			"Description": "Ares 9x19 Magazine for MP9 submachine gun."
-		},
-		"ares_nato556_250": {
-			"Name": "250rd Mag for M4",
-			"ShortName": "a250556",
-			"Description": "Ares 5.56x45 Magazine for AR15 type freedom dispensers."
-		},
-		"ares_P90_250": {
-			"Name": "250rd Mag for P90",
-			"ShortName": "a250p90",
-			"Description": "Ares 5.7x28 Magazine for P90 CQC rifle."
-		},
-		"ares_pl15_250": {
-			"Name": "250rd Mag for PL15",
-			"ShortName": "a250pl15",
-			"Description": "Ares 9x19 Magazine for PL15 pistol."
-		},
-		"ares_P226r_250": {
-			"Name": "250rd Mag for P226",
-			"ShortName": "a250p226",
-			"Description": "Ares 9x19 Magazine for Sig Sauer P226 pistol."
-		},
-		"ares_PP19_250": {
-			"Name": "250rd Mag for PP-19",
-			"ShortName": "a250pp19",
-			"Description": "Ares 9x19 Magazine for PP-19-01 submachine gun."
-		},
-		"ares_PM_250": {
-			"Name": "250rd Mag for PM",
-			"ShortName": "a250pm",
-			"Description": "Ares 9x18 Magazine for PM pistol."
-		},
-		"ares_PPsH_250": {
-			"Name": "250rd Mag for PPsH",
-			"ShortName": "a250ppsh",
-			"Description": "Ares 7.62x25 Magazine for PPsH submachine gun."
-		},
-		"ares_SA58_250": {
-			"Name": "250rd Mag for SA-58",
-			"ShortName": "a250sa58",
-			"Description": "Ares 7.62x51 Magazine for SA-58 rifle."
-		},
-		"ares_Shrimp_250": {
-			"Name": "250rd Mag for Sr1mp",
-			"ShortName": "a250srimp",
-			"Description": "Ares 9x21 Magazine for Sr1mp (Shrimp) pistol."
-		},
-		"ares_SR25_250": {
-			"Name": "250rd Mag for SR-25",
-			"ShortName": "a250sr25",
-			"Description": "Ares 7.62x51 Magazine for SR-25/AR10 rifles."
-		},
-		"ares_vector45_250": {
-			"Name": "250rd Mag for .45 Vector",
-			"ShortName": "a250v45",
-			"Description": "Ares .45 Magazine for Kriss Vector CQC firearm."
-		},
-		"ares_SVDS_250": {
-			"Name": "250rd Mag for SVD",
-			"ShortName": "a250svds",
-			"Description": "Ares 7.62x54 Magazine for SVD/SV98 rifles."
-		},
-		"ares_TT_250": {
-			"Name": "250rd Mag for TT",
-			"ShortName": "a250tt",
-			"Description": "Ares 7.62x25 Magazine for TT pistol."
-		},
-		"ares_T5000_250": {
-			"Name": "250rd Mag for T5000",
-			"ShortName": "a250t5000",
-			"Description": "Ares 7.62x51 Magazine for Orsis T-5000 rifle."
-		},
-		"ares_ump_250": {
-			"Name": "250rd Mag for UMP",
-			"ShortName": "a250ump",
-			"Description": "Ares .45 Magazine for UMP submachine gun."
-		},
-		"ares_VSS_250": {
-			"Name": "250rd Mag for VSS",
-			"ShortName": "a250vss",
-			"Description": "Ares 9x39 Magazine for VSS/AS-Val rifles."
-		},
-		"ares_VepHunt_250": {
-			"Name": "250rd Mag for Vepr",
-			"ShortName": "a250vepr",
-			"Description": "Ares 7.62x51 Magazine for Vepr Hunter rifle."
-		},
-		"ares_VPO_250e": {
-			"Name": "250rd Mag for VPO",
-			"ShortName": "a250vpo",
-			"Description": "Ares 7.62x39 Magazine for VPO/366TKM rifle."
-		},
-		"ares_M1911_250": {
-			"Name": "250rd Mag for M1911",
-			"ShortName": "a2501911",
-			"Description": "Ares .45 Magazine for M1911 sidearm freedom dispenser."
-		}
+        "a250_pm_84": {
+            "Name": "a250_pm_84",
+            "ShortName": "a250_pm_84",
+            "Description": "PM 9x18PM 250-round makeshift drum magazine"
+        },
+        "a250_g28_20": {
+            "Name": "a250_g28_20",
+            "ShortName": "a250_g28_20",
+            "Description": "HK417/G28 7.62x51 250-round magazine"
+        },
+        "a250_mp133_6": {
+            "Name": "a250_mp133_6",
+            "ShortName": "a250_mp133_6",
+            "Description": "MP-133 12ga 250-shell magazine"
+        },
+        "a250_ak74l26_45": {
+            "Name": "a250_ak74l26_45",
+            "ShortName": "a250_ak74l26_45",
+            "Description": "AK-74 5.45x39 6L26 250-round magazine"
+        },
+        "a250_ak74l18_45": {
+            "Name": "a250_ak74l18_45",
+            "ShortName": "a250_ak74l18_45",
+            "Description": "AK-74 5.45x39 6L18 250-round magazine"
+        },
+        "a250_m700aics_12": {
+            "Name": "a250_m700aics_12",
+            "ShortName": "a250_m700aics_12",
+            "Description": "M700 7.62x51 MDT AICS 250-round magazine"
+        },
+        "a250_mp5_20": {
+            "Name": "a250_mp5_20",
+            "ShortName": "a250_mp5_20",
+            "Description": "HK MP5 9x19 250-round magazine"
+        },
+        "a250_m3sup90_7": {
+            "Name": "a250_m3sup90_7",
+            "ShortName": "a250_m3sup90_7",
+            "Description": "Benelli M3 Super 90 12ga 250-shell magazine"
+        },
+        "a250_ar10_10": {
+            "Name": "a250_ar10_10",
+            "ShortName": "a250_ar10_10",
+            "Description": "AR-10 7.62x51 KAC 250-round steel magazine"
+        },
+        "a250_m700aics_10": {
+            "Name": "a250_m700aics_10",
+            "ShortName": "a250_m700aics_10",
+            "Description": "M700 7.62x51 AICS 250-round magazine"
+        },
+        "a250_dvl10_10": {
+            "Name": "a250_dvl10_10",
+            "ShortName": "a250_dvl10_10",
+            "Description": "DVL-10 7.62x51 250-round magazine"
+        },
+        "a250_glock919_17": {
+            "Name": "a250_glock919_17",
+            "ShortName": "a250_glock919_17",
+            "Description": "Glock 9x19 250-round magazine"
+        },
+        "a250_m700_10": {
+            "Name": "a250_m700_10",
+            "ShortName": "a250_m700_10",
+            "Description": "M700 7.62x51 Wyatt's Outdoor 250-round magazine"
+        },
+        "a250_ak74l23_30": {
+            "Name": "a250_ak74l23_30",
+            "ShortName": "a250_ak74l23_30",
+            "Description": "AK-74 5.45x39 6L23 250-round magazine"
+        },
+        "a250_mk17scarh_20": {
+            "Name": "a250_mk17scarh_20",
+            "ShortName": "a250_mk17scarh_20",
+            "Description": "FN SCAR-H 7.62x51 250-round magazine"
+        },
+        "a250_ak762_75": {
+            "Name": "a250_ak762_75",
+            "ShortName": "a250_ak762_75",
+            "Description": "AK 7.62x39 Molot 250-round drum magazine"
+        },
+        "a250_ar15g36_30": {
+            "Name": "a250_ar15g36_30",
+            "ShortName": "a250_ar15g36_30",
+            "Description": "HK G36 5.56x45 250-round magazine"
+        },
+        "a250_ak101l29_30": {
+            "Name": "a250_ak101l29_30",
+            "ShortName": "a250_ak101l29_30",
+            "Description": "AK-101 5.56x45 6L29 250-round magazine"
+        },
+        "a250_m700_5": {
+            "Name": "a250_m700_5",
+            "ShortName": "a250_m700_5",
+            "Description": "M700 7.62x51 Wyatt's Outdoor 250-round magazine"
+        },
+        "a250_mp443_18": {
+            "Name": "a250_mp443_18",
+            "ShortName": "a250_mp443_18",
+            "Description": "MP-443 Grach 9x19 250-round magazine"
+        },
+        "a250_ak30blk_30": {
+            "Name": "a250_ak30blk_30",
+            "ShortName": "a250_ak30blk_30",
+            "Description": "AK 7.62x39 US Palm AK30 250-round magazine (Black)"
+        },
+        "a250_sa58falpoly_20": {
+            "Name": "a250_sa58falpoly_20",
+            "ShortName": "a250_sa58falpoly_20",
+            "Description": "SA-58/FAL 7.62x51 MMW polymer 250-round magazine"
+        },
+        "a250_ks23_3": {
+            "Name": "a250_ks23_3",
+            "ShortName": "a250_ks23_3",
+            "Description": "KS-23M 23x75 250-shell magazine cap"
+        },
+        "a250_m700pmag_20": {
+            "Name": "a250_m700pmag_20",
+            "ShortName": "a250_m700pmag_20",
+            "Description": "M700 7.62x51 ProMag AA-70 250-round magazine"
+        },
+        "a250_m9a3_17": {
+            "Name": "a250_m9a3_17",
+            "ShortName": "a250_m9a3_17",
+            "Description": "M9A3 9x19 250-round magazine"
+        },
+        "a250_mp9_30": {
+            "Name": "a250_mp9_30",
+            "ShortName": "a250_mp9_30",
+            "Description": "MP9 9x19 250-round magazine"
+        },
+        "a250_ak74l31_60": {
+            "Name": "a250_ak74l31_60",
+            "ShortName": "a250_ak74l31_60",
+            "Description": "AK-74 5.45x39 6L31 250-round magazine"
+        },
+        "a250_ak30fde_30": {
+            "Name": "a250_ak30fde_30",
+            "ShortName": "a250_ak30fde_30",
+            "Description": "AK 7.62x39 US Palm AK30 250-round magazine (FDE)"
+        },
+        "a250_ak74l20_30": {
+            "Name": "a250_ak74l20_30",
+            "ShortName": "a250_ak74l20_30",
+            "Description": "AK-74 5.45x39 6L20 250-round magazine"
+        },
+        "a250_ar10kac_20": {
+            "Name": "a250_ar10kac_20",
+            "ShortName": "a250_ar10kac_20",
+            "Description": "AR-10 7.62x51 KAC 250-round steel magazine"
+        },
+        "a250_mp7_20": {
+            "Name": "a250_mp7_20",
+            "ShortName": "a250_mp7_20",
+            "Description": "HK MP7 4.6x30 250-round magazine"
+        },
+        "a250_mp153_5": {
+            "Name": "a250_mp153_5",
+            "ShortName": "a250_mp153_5",
+            "Description": "MP-153 12ga 250-shell magazine"
+        },
+        "a250_m700aics_5": {
+            "Name": "a250_m700aics_5",
+            "ShortName": "a250_m700aics_5",
+            "Description": "M700 7.62x51 AICS 250-round magazine"
+        },
+        "a250_g28_10": {
+            "Name": "a250_g28_10",
+            "ShortName": "a250_g28_10",
+            "Description": "HK417/G28 7.62x51 250-round magazine"
+        },
+        "a250_akl10_30": {
+            "Name": "a250_akl10_30",
+            "ShortName": "a250_akl10_30",
+            "Description": "AK 7.62x39 6L10 250-round magazine"
+        },
+        "a250_m700aa70_10": {
+            "Name": "a250_m700aa70_10",
+            "ShortName": "a250_m700aa70_10",
+            "Description": "M700 7.62x51 ProMag AA-70 250-round magazine"
+        },
+        "a250_mp153_8": {
+            "Name": "a250_mp153_8",
+            "ShortName": "a250_mp153_8",
+            "Description": "MP-153 12ga 250-shell magazine"
+        },
+        "a250_pm_8": {
+            "Name": "a250_pm_8",
+            "ShortName": "a250_pm_8",
+            "Description": "PM 9x18PM 90-93 250-round magazine"
+        },
+        "a250_vssl25_20": {
+            "Name": "a250_vssl25_20",
+            "ShortName": "a250_vssl25_20",
+            "Description": "VSS 9x39 6L25 250-round magazine"
+        },
+        "a250_mp5_50": {
+            "Name": "a250_mp5_50",
+            "ShortName": "a250_mp5_50",
+            "Description": "HK MP5 9x19 X Products X-5 250-round drum magazine"
+        },
+        "a250_mp5_30": {
+            "Name": "a250_mp5_30",
+            "ShortName": "a250_mp5_30",
+            "Description": "HK MP5 9x19 250-round magazine"
+        },
+        "a250_mpx_50": {
+            "Name": "a250_mpx_50",
+            "ShortName": "a250_mpx_50",
+            "Description": "MPX 9x19 F5 MFG 250-round drum magazine"
+        },
+        "a250_skspmag_20": {
+            "Name": "a250_skspmag_20",
+            "ShortName": "a250_skspmag_20",
+            "Description": "SKS 7.62x39 ProMag SKS-A5 250-round magazine"
+        },
+        "a250_mp9_15": {
+            "Name": "a250_mp9_15",
+            "ShortName": "a250_mp9_15",
+            "Description": "MP9 9x19 250-round magazine"
+        },
+        "a250_p226_15": {
+            "Name": "a250_p226_15",
+            "ShortName": "a250_p226_15",
+            "Description": "P226 9x19 250-round magazine"
+        },
+        "a250_ump45_25": {
+            "Name": "a250_ump45_25",
+            "ShortName": "a250_ump45_25",
+            "Description": "HK UMP .45 ACP 250-round magazine"
+        },
+        "a250_usp45_12": {
+            "Name": "a250_usp45_12",
+            "ShortName": "a250_usp45_12",
+            "Description": "HK USP .45 ACP 250-round magazine"
+        },
+        "a250_p90_50": {
+            "Name": "a250_p90_50",
+            "ShortName": "a250_p90_50",
+            "Description": "FN P90 5.7x28 250-round magazine"
+        },
+        "a250_mpx_20": {
+            "Name": "a250_mpx_20",
+            "ShortName": "a250_mpx_20",
+            "Description": "MPX 9x19 250-round magazine"
+        },
+        "a250_ppsh_71": {
+            "Name": "a250_ppsh_71",
+            "ShortName": "a250_ppsh_71",
+            "Description": "PPSh-41 7.62x25 250-round drum magazine"
+        },
+        "a250_sr1mp_18": {
+            "Name": "a250_sr1mp_18",
+            "ShortName": "a250_sr1mp_18",
+            "Description": "SR-1MP 9x21 250-round magazine"
+        },
+        "a250_mp153_4": {
+            "Name": "a250_mp153_4",
+            "ShortName": "a250_mp153_4",
+            "Description": "MP-153 12ga 250-shell magazine cap"
+        },
+        "a250_mp7_30": {
+            "Name": "a250_mp7_30",
+            "ShortName": "a250_mp7_30",
+            "Description": "HK MP7 4.6x30 250-round magazine"
+        },
+        "a250_akx47_50": {
+            "Name": "a250_akx47_50",
+            "ShortName": "a250_akx47_50",
+            "Description": "AK 7.62x39 X Products X-47 250-round drum magazine"
+        },
+        "a250_ppsh_35": {
+            "Name": "a250_ppsh_35",
+            "ShortName": "a250_ppsh_35",
+            "Description": "PPSh-41 7.62x25 250-round magazine"
+        },
+        "a250_saiga12_5": {
+            "Name": "a250_saiga12_5",
+            "ShortName": "a250_saiga12_5",
+            "Description": "SOK-12 12/76 sb.5 250-round magazine"
+        },
+        "a250_mp9_25": {
+            "Name": "a250_mp9_25",
+            "ShortName": "a250_mp9_25",
+            "Description": "MP9 9x19 250-round magazine"
+        },
+        "a250_sks_75": {
+            "Name": "a250_sks_75",
+            "ShortName": "a250_sks_75",
+            "Description": "SKS 7.62x39 KCI 250-round drum magazine"
+        },
+        "a250_mp153_6": {
+            "Name": "a250_mp153_6",
+            "ShortName": "a250_mp153_6",
+            "Description": "MP-153 12ga 250-shell magazine"
+        },
+        "a250_aps_20": {
+            "Name": "a250_aps_20",
+            "ShortName": "a250_aps_20",
+            "Description": "APS 9x18PM 250-round magazine"
+        },
+        "a250_mp155_6": {
+            "Name": "a250_mp155_6",
+            "ShortName": "a250_mp155_6",
+            "Description": "MP-155 12ga 250-shell magazine"
+        },
+        "a250_ak74l23plum_30": {
+            "Name": "a250_ak74l23plum_30",
+            "ShortName": "a250_ak74l23plum_30",
+            "Description": "AK-74 5.45x39 6L23 Plum 250-round magazine"
+        },
+        "a250_mp9_20": {
+            "Name": "a250_mp9_20",
+            "ShortName": "a250_mp9_20",
+            "Description": "MP9 9x19 250-round magazine"
+        },
+        "a250_mp7_40": {
+            "Name": "a250_mp7_40",
+            "ShortName": "a250_mp7_40",
+            "Description": "HK MP7 4.6x30 250-round magazine"
+        },
+        "a250_vssl24_10": {
+            "Name": "a250_vssl24_10",
+            "ShortName": "a250_vssl24_10",
+            "Description": "VSS 9x39 6L24 250-round magazine"
+        },
+        "a250_ar10pmag_20": {
+            "Name": "a250_ar10pmag_20",
+            "ShortName": "a250_ar10pmag_20",
+            "Description": "AR-10 7.62x51 Magpul PMAG 20 SR-LR GEN M3 250-round magazine"
+        },
+        "a250_tt105_8": {
+            "Name": "a250_tt105_8",
+            "ShortName": "a250_tt105_8",
+            "Description": "TT 7.62x25 tt-105 250-round magazine"
+        },
+        "a250_mp133_8": {
+            "Name": "a250_mp133_8",
+            "ShortName": "a250_mp133_8",
+            "Description": "MP-133 12ga 250-shell magazine"
+        },
+        "a250_ak762met_10": {
+            "Name": "a250_ak762met_10",
+            "ShortName": "a250_ak762met_10",
+            "Description": "AK 7.62x39 ribbed metal 250-round magazine"
+        },
+        "a250_mpx_30": {
+            "Name": "a250_mpx_30",
+            "ShortName": "a250_mpx_30",
+            "Description": "MPX 9x19 250-round magazine"
+        },
+        "a250_mp153_7": {
+            "Name": "a250_mp153_7",
+            "ShortName": "a250_mp153_7",
+            "Description": "MP-153 12ga 250-shell magazine"
+        },
+        "a250_ak762met_30": {
+            "Name": "a250_ak762met_30",
+            "ShortName": "a250_ak762met_30",
+            "Description": "AK 7.62x39 250-round magazine (issued '55 or later)"
+        },
+        "a250_ak12_30": {
+            "Name": "a250_ak12_30",
+            "ShortName": "a250_ak12_30",
+            "Description": "AK-12 5.45x39 250-round magazine"
+        },
+        "a250_sa58fal_50": {
+            "Name": "a250_sa58fal_50",
+            "ShortName": "a250_sa58fal_50",
+            "Description": "SA-58/FAL 7.62x51 X Products X-FAL 250-round drum magazine"
+        },
+        "a250_rpk_95": {
+            "Name": "a250_rpk_95",
+            "ShortName": "a250_rpk_95",
+            "Description": "RPK-16 5.45x39 250-round drum magazine"
+        },
+        "a250_ak762alu_10": {
+            "Name": "a250_ak762alu_10",
+            "ShortName": "a250_ak762alu_10",
+            "Description": "AK 7.62x39 aluminium 250-round magazine"
+        },
+        "a250_glock45_30": {
+            "Name": "a250_glock45_30",
+            "ShortName": "a250_glock45_30",
+            "Description": "Glock .45 ACP KRISS G30 MagEx 250-round magazine"
+        },
+        "a250_ags30box_30": {
+            "Name": "a250_ags30box_30",
+            "ShortName": "a250_ags30box_30",
+            "Description": "AGS-30 30x29 250-round box"
+        },
+        "a250_590a1_8": {
+            "Name": "a250_590a1_8",
+            "ShortName": "a250_590a1_8",
+            "Description": "Mossberg 590A1 12ga 250-shell magazine cap"
+        },
+        "a250_ash12_20": {
+            "Name": "a250_ash12_20",
+            "ShortName": "a250_ash12_20",
+            "Description": "ASh-12 12.7x55 250-round magazine"
+        },
+        "a250_m870_4": {
+            "Name": "a250_m870_4",
+            "ShortName": "a250_m870_4",
+            "Description": "M870 12ga 250-shell magazine cap"
+        },
+        "a250_ash12_10": {
+            "Name": "a250_ash12_10",
+            "ShortName": "a250_ash12_10",
+            "Description": "ASh-12 12.7x55 250-round magazine"
+        },
+        "a250_sa58fal_10": {
+            "Name": "a250_sa58fal_10",
+            "ShortName": "a250_sa58fal_10",
+            "Description": "SA-58/FAL 7.62x51 250-round magazine"
+        },
+        "a250_glock45_13": {
+            "Name": "a250_glock45_13",
+            "ShortName": "a250_glock45_13",
+            "Description": "Glock .45 ACP 250-round magazine"
+        },
+        "a250_ak556circ_30": {
+            "Name": "a250_ak556circ_30",
+            "ShortName": "a250_ak556circ_30",
+            "Description": "SLR-106/AK 5.56x45 Circle 10 250-round magazine"
+        },
+        "a250_m3sup90_5": {
+            "Name": "a250_m3sup90_5",
+            "ShortName": "a250_m3sup90_5",
+            "Description": "Benelli M3 Super 90 12ga 250-shell magazine cap"
+        },
+        "a250_skspmag_35": {
+            "Name": "a250_skspmag_35",
+            "ShortName": "a250_skspmag_35",
+            "Description": "SKS 7.62x39 ProMag AALVX 250-round magazine"
+        },
+        "a250_1911_11": {
+            "Name": "a250_1911_11",
+            "ShortName": "a250_1911_11",
+            "Description": "M1911A1 .45 ACP Mec-Gar 250-round magazine"
+        },
+        "a250_MK18_10": {
+            "Name": "a250_MK18_10",
+            "ShortName": "a250_MK18_10",
+            "Description": "Mk-18 .338 LM 250-round magazine"
+        },
+        "a250_sa58slr_30": {
+            "Name": "a250_sa58slr_30",
+            "ShortName": "a250_sa58slr_30",
+            "Description": "SA-58/FAL 7.62x51 SLR 250-round magazine"
+        },
+        "a250_m700pmag_5": {
+            "Name": "a250_m700pmag_5",
+            "ShortName": "a250_m700pmag_5",
+            "Description": "M700 7.62x51 Magpul PMAG AC 250-round magazine"
+        },
+        "a250_sa58fal_30": {
+            "Name": "a250_sa58fal_30",
+            "ShortName": "a250_sa58fal_30",
+            "Description": "SA-58/FAL 7.62x51 250-round magazine"
+        },
+        "a250_sksbox_10": {
+            "Name": "a250_sksbox_10",
+            "ShortName": "a250_sksbox_10",
+            "Description": "SKS 7.62x39 250-round internal box magazine"
+        },
+        "a250_ar15_30": {
+            "Name": "a250_ar15_30",
+            "ShortName": "a250_ar15_30",
+            "Description": "5.56x45 Colt AR-15 STANAG 250-round magazine"
+        },
+        "a250_glock919_33": {
+            "Name": "a250_glock919_33",
+            "ShortName": "a250_glock919_33",
+            "Description": "Glock 9x19 Big Stick 250-round magazine"
+        },
+        "a250_mpx_41": {
+            "Name": "a250_mpx_41",
+            "ShortName": "a250_mpx_41",
+            "Description": "MPX 9x19 TTI Base Pad +11 250-round magazine"
+        },
+        "a250_1911_7": {
+            "Name": "a250_1911_7",
+            "ShortName": "a250_1911_7",
+            "Description": "M1911A1 .45 ACP 250-round magazine"
+        },
+        "a250_pp1901_30": {
+            "Name": "a250_pp1901_30",
+            "ShortName": "a250_pp1901_30",
+            "Description": "PP-19-01 Vityaz 9x19 250-round magazine"
+        },
+        "a250_kedr_30": {
+            "Name": "a250_kedr_30",
+            "ShortName": "a250_kedr_30",
+            "Description": "PP-91 Kedr 9x18PM 250-round magazine"
+        },
+        "a250_ak762alu_30": {
+            "Name": "a250_ak762alu_30",
+            "ShortName": "a250_ak762alu_30",
+            "Description": "AKMS 7.62x39 aluminium 250-round magazine"
+        },
+        "a250_fn57_20": {
+            "Name": "a250_fn57_20",
+            "ShortName": "a250_fn57_20",
+            "Description": "FN Five-seveN 5.7x28 250-round magazine"
+        },
+        "a250_saiga12_10": {
+            "Name": "a250_saiga12_10",
+            "ShortName": "a250_saiga12_10",
+            "Description": "SOK-12 12/76 SAI-02 250-round magazine"
+        },
+        "a250_ak103_30": {
+            "Name": "a250_ak103_30",
+            "ShortName": "a250_ak103_30",
+            "Description": "AK-103 7.62x39 250-round magazine"
+        },
+        "a250_m1a_20": {
+            "Name": "a250_m1a_20",
+            "ShortName": "a250_m1a_20",
+            "Description": "M1A 7.62x51 250-round magazine"
+        },
+        "a250_kedr_20": {
+            "Name": "a250_kedr_20",
+            "ShortName": "a250_kedr_20",
+            "Description": "PP-91 Kedr 9x18PM 250-round magazine"
+        },
+        "a250_sa58fal_20": {
+            "Name": "a250_sa58fal_20",
+            "ShortName": "a250_sa58fal_20",
+            "Description": "SA-58/FAL 7.62x51 250-round magazine"
+        },
+        "a250_pl15_16": {
+            "Name": "a250_pl15_16",
+            "ShortName": "a250_pl15_16",
+            "Description": "PL-15 9x19 250-round magazine"
+        },
+        "a250_m700pmag_10": {
+            "Name": "a250_m700pmag_10",
+            "ShortName": "a250_m700pmag_10",
+            "Description": "M700 7.62x51 Magpul PMAG AC 250-round magazine"
+        },
+        "a250_ak762pmag_73": {
+            "Name": "a250_ak762pmag_73",
+            "ShortName": "a250_ak762pmag_73",
+            "Description": "AK 7.62x39 ProMag AK-A-16 250-round drum magazine"
+        },
+        "a250_glock919_50": {
+            "Name": "a250_glock919_50",
+            "ShortName": "a250_glock919_50",
+            "Description": "Glock 9x19 SGM Tactical 250-round drum magazine"
+        },
+        "a250_m14_30": {
+            "Name": "a250_m14_30",
+            "ShortName": "a250_m14_30",
+            "Description": "M14 7.62x51 250-round magazine"
+        },
+        "a250_p226_20": {
+            "Name": "a250_p226_20",
+            "ShortName": "a250_p226_20",
+            "Description": "P226 9x19 250-round extended magazine"
+        },
+        "a250_m3sup90_9": {
+            "Name": "a250_m3sup_9",
+            "ShortName": "a250_m3sup_9",
+            "Description": "Benelli M3 Super 90 12ga Toni System 250-shell magazine"
+        },
+        "a250_glock919_21": {
+            "Name": "a250_glock919_21",
+            "ShortName": "a250_glock919_21",
+            "Description": "Glock 9x19 Magpul PMAG GL9 250-round magazine"
+        },
+        "a250_vpo101_5": {
+            "Name": "a250_vpo101_5",
+            "ShortName": "a250_vpo101_5",
+            "Description": "VPO-101 Vepr-Hunter 7.62x51 250-round magazine"
+        },
+        "a250_vpo215_4": {
+            "Name": "a250_vpo215_4",
+            "ShortName": "a250_vpo215_4",
+            "Description": "VPO-215 Gornostay .366 TKM 250-round magazine"
+        },
+        "a250_vss_30": {
+            "Name": "a250_vss_30",
+            "ShortName": "a250_vss_30",
+            "Description": "9x39 SR3M.130 250-round magazine"
+        },
+        "a250_1911a1_7": {
+            "Name": "a250_1911a1_7",
+            "ShortName": "a250_1911a1_7",
+            "Description": "M1911A1 .45 ACP Wilson Combat 250-round magazine"
+        },
+        "a250_mosin_5": {
+            "Name": "a250_mosin_5",
+            "ShortName": "a250_mosin_5",
+            "Description": "Mosin Rifle 7.62x54R 250-round magazine"
+        },
+        "a250_scarl_30": {
+            "Name": "a250_scarl_30",
+            "ShortName": "a250_scarl_30",
+            "Description": "FN SCAR-L 5.56x45 250-round magazine"
+        },
+        "a250_scarhfde_20": {
+            "Name": "a250_scarhfde_20",
+            "ShortName": "a250_scarhfde_20",
+            "Description": "FN SCAR-H 7.62x51 250-round magazine (FDE)"
+        },
+        "a250_mosinangel_10": {
+            "Name": "a250_mosinangel_10",
+            "ShortName": "a250_mosinangel_10",
+            "Description": "Mosin Rifle 7.62x54R ProMag Archangel OPFOR 250-round magazine"
+        },
+        "a250_scarlfde_30": {
+            "Name": "a250_scarlfde_30",
+            "ShortName": "a250_scarlfde_30",
+            "Description": "FN SCAR-L 5.56x45 250-round magazine (FDE)"
+        },
+        "a250_556pmg2_30": {
+            "Name": "a250_556pmg2_30",
+            "ShortName": "a250_556pmg2_30",
+            "Description": "5.56x45 HK PM Gen.2 STANAG 250-round magazine"
+        },
+        "a250_556poly_30": {
+            "Name": "a250_556poly_30",
+            "ShortName": "a250_556poly_30",
+            "Description": "5.56x45 HK 30 STANAG polymer 250-round magazine"
+        },
+        "a250_m870_10": {
+            "Name": "a250_m870_10",
+            "ShortName": "a250_m870_10",
+            "Description": "M870 12ga 250-shell magazine"
+        },
+        "a250_556d60_60": {
+            "Name": "a250_556d60_60",
+            "ShortName": "a250_556d60_60",
+            "Description": "5.56x45 Magpul PMAG D-60 STANAG 250-round magazine"
+        },
+        "a250_556pmag_10": {
+            "Name": "a250_556pmag_10",
+            "ShortName": "a250_556pmag_10",
+            "Description": "5.56x45 Magpul PMAG 10 GEN M3 STANAG 250-round magazine"
+        },
+        "a250_556pmag_20": {
+            "Name": "a250_556pmag_20",
+            "ShortName": "a250_556pmag_20",
+            "Description": "5.56x45 Magpul PMAG 20 GEN M3 STANAG 250-round magazine"
+        },
+        "a250_556pmag_30": {
+            "Name": "a250_556pmag_30",
+            "ShortName": "a250_556pmag_30",
+            "Description": "5.56x45 Magpul PMAG 30 GEN M3 STANAG 250-round magazine"
+        },
+        "a250_saiga545_10": {
+            "Name": "a250_saiga545_10",
+            "ShortName": "a250_saiga545_10",
+            "Description": "AK-74 Saiga 545 5.45x39 250-round magazine"
+        },
+        "a250_545pmag_30": {
+            "Name": "a250_545pmag_30",
+            "ShortName": "a250_545pmag_30",
+            "Description": "AK-74 5.45x39 Magpul PMAG 30 GEN M3 250-round magazine"
+        },
+        "a250_m870_7": {
+            "Name": "a250_m870_7",
+            "ShortName": "a250_m870_7",
+            "Description": "M870 12ga 250-shell magazine"
+        },
+        "a250_556pmag_40": {
+            "Name": "a250_556pmag_40",
+            "ShortName": "a250_556pmag_40",
+            "Description": "5.56x45 Magpul PMAG 40 GEN M3 STANAG 250-round magazine"
+        },
+        "a250_airsoft_30": {
+            "Name": "a250_airsoft_30",
+            "ShortName": "a250_airsoft_30",
+            "Description": "5.56x45 Magpul PMAG 30 GEN M3 STANAG 250-round magazine (FDE)"
+        },
+        "a250_556mag5_100": {
+            "Name": "a250_556mag5_100",
+            "ShortName": "a250_556mag5_100",
+            "Description": "5.56x45 SureFire MAG5-100 STANAG 100-round magazine"
+        },
+        "a250_556mag5_60": {
+            "Name": "a250_556mag5_60",
+            "ShortName": "5a250_556mag5_60",
+            "Description": "5.56x45 SureFire MAG5-60 STANAG 250-round magazine"
+        },
+        "a250_762fab_30": {
+            "Name": "a250_762fab_30",
+            "ShortName": "a250_762fab_30",
+            "Description": "AK 7.62x39 FAB Defense Ultimag 30R 250-round magazine"
+        },
+        "a250_762bake_40": {
+            "Name": "a250_762bake_40",
+            "ShortName": "a250_762bake_40",
+            "Description": "AK 7.62x39 bakelite 250-round magazine"
+        },
+        "a250_762pmag_30": {
+            "Name": "a250_762pmag_30",
+            "ShortName": "a250_762pmag_30",
+            "Description": "AK 7.62x39 Magpul PMAG 30 GEN M3 250-round magazine"
+        },
+        "a250_762molot_40": {
+            "Name": "a250_762molot_40",
+            "ShortName": "a250_762molot_40",
+            "Description": "AK 7.62x39 Molot 250-round magazine (6P2.Sb-11)"
+        },
+        "a250_338axmc_10": {
+            "Name": "a250_338axmc_10",
+            "ShortName": "a250_338axmc_10",
+            "Description": "AI AXMC .338 LM 250-round magazine"
+        },
+        "a250_762x14_50": {
+            "Name": "a250_762x14_50",
+            "ShortName": "a250_762x14_50",
+            "Description": "M14 7.62x51 X Products X-14 250-round drum magazine"
+        },
+        "a250_m3sup90_11": {
+            "Name": "a250_m3sup90_11",
+            "ShortName": "a250_m3sup90_11",
+            "Description": "Benelli M3 Super 90 12ga Toni System 250-shell magazine"
+        },
+        "a250_m3sup90_13": {
+            "Name": "a250_m3sup90_13",
+            "ShortName": "a250_m3sup90_13",
+            "Description": "Benelli M3 Super 90 12ga Toni System 250-shell magazine"
+        },
+        "a250_ak762banana_30": {
+            "Name": "a250_ak762banana_30",
+            "ShortName": "a250_ak762banana_30",
+            "Description": "AK 7.62x39 Magpul PMAG 30 GEN M3 250-round magazine (Banana)"
+        },
+        "a250_pp19_10": {
+            "Name": "a250_pp19_10",
+            "ShortName": "a250_pp19_10",
+            "Description": "Saiga-9 9x19 sb.7 250-round magazine"
+        },
+        "a250_pp19_20": {
+            "Name": "a250_pp19_20",
+            "ShortName": "a250_pp19_20",
+            "Description": "PP-19-01 Vityaz 9x19 PUFGUN SG-919 20 250-round magazine"
+        },
+        "a250_pp19_30": {
+            "Name": "a250_pp19_30",
+            "ShortName": "a250_pp19_30",
+            "Description": "PP-19-01 Vityaz 9x19 PUFGUN SG-919 30 250-round magazine"
+        },
+        "a250_saiga12_20": {
+            "Name": "a250_saiga12_20",
+            "ShortName": "a250_saiga12_20",
+            "Description": "SOK-12 12/76 MaxRounds Powermag 250-round magazine"
+        },
+        "a250_556steel_30": {
+            "Name": "a250_556steel_30",
+            "ShortName": "a250_556steel_30",
+            "Description": "5.56x45 HK Steel Maritime STANAG 250-round magazine"
+        },
+        "a250_556pmagfde_30": {
+            "Name": "a250_556pmagfde_30",
+            "ShortName": "a250_556pmagfde_30",
+            "Description": "5.56x45 Magpul PMAG 30 GEN M3 STANAG 250-round magazine (FDE)"
+        },
+        "a250_556pmagfde_40": {
+            "Name": "a250_556pmagfde_40",
+            "ShortName": "a250_556pmagfde_40",
+            "Description": "5.56x45 Magpul PMAG 40 GEN M3 STANAG 250-round magazine (FDE)"
+        },
+        "a250_556pmagwin_30": {
+            "Name": "a250_556pmagwin_30",
+            "ShortName": "a250_556pmagwin_30",
+            "Description": "5.56x45 Magpul PMAG 30 GEN M3 W STANAG 250-round magazine"
+        },
+        "a250_556pmagwinfde_30": {
+            "Name": "a250_556pmagwinfde_30",
+            "ShortName": "a250_556pmagwinfde_30",
+            "Description": "5.56x45 Magpul PMAG 30 GEN M3 W STANAG 250-round magazine (FDE)"
+        },
+        "a250_556troy_30": {
+            "Name": "a250_556troy_30",
+            "ShortName": "a250_556troy_30",
+            "Description": "5.56x45 TROY BattleMag STANAG 250-round magazine"
+        },
+        "a250_sv98_10": {
+            "Name": "a250_sv98_10",
+            "ShortName": "a250_sv98_10",
+            "Description": "SV-98 7.62x54R 250-round magazine"
+        },
+        "a250_svd_10": {
+            "Name": "a250_svd_10",
+            "ShortName": "a250_svd_10",
+            "Description": "SVD 7.62x54R 250-round magazine"
+        },
+        "a250_svd_20": {
+            "Name": "a250_svd_20",
+            "ShortName": "a250_svd_20",
+            "Description": "SVD 7.62x54R 250-round magazine"
+        },
+        "a250_t5000_5": {
+            "Name": "a250_t5000_5",
+            "ShortName": "a250_t5000_5",
+            "Description": "ORSIS T-5000M 7.62x51 250-round magazine"
+        },
+        "a250_toz106_2": {
+            "Name": "a250_toz106_2",
+            "ShortName": "a250_toz106_2",
+            "Description": "TOZ-106 20ga MTs 20-01 Sb.3 250-shot magazine"
+        },
+        "a250_toz106_4": {
+            "Name": "a250_toz106_4",
+            "ShortName": "a250_toz106_4",
+            "Description": "TOZ-106 20ga MTs 20-01 Sb.3 250-shot magazine"
+        },
+        "a250_toz106_5": {
+            "Name": "a250_toz106_5",
+            "ShortName": "a250_toz106_5",
+            "Description": "TOZ-106 20ga MTs 20-01 Sb.3 250-shot magazine"
+        },
+        "a250_usp45tac_12": {
+            "Name": "a250_usp45tac_12",
+            "ShortName": "a250_usp45tac_12",
+            "Description": "HK USP Tactical .45 ACP 250-round magazine"
+        },
+        "a250_vpo101_10": {
+            "Name": "a250_vpo101_10",
+            "ShortName": "a250_vpo101_10",
+            "Description": "VPO-101 Vepr-Hunter 7.62x51 250-round magazine"
+        }
 	}
 }

@@ -31,6 +31,16 @@
             }
         },
         {
+            "_id": "hercRig2",
+            "_tpl": "hercRig2",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
             "_id": "helmetOfHermes",
             "_tpl": "helmetOfHermes",
             "parentId": "hideout",

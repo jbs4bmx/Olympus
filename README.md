@@ -7,10 +7,10 @@ If at any time, AssAssIn comes back to the scene and wants take over his mod aga
 # Information
 >Author  : AssAssIn & jbs4bmx
 
->Version : 320.0.1 (Supports SPT-AKI 3.2.0 and EFT Version 0.12.12.30.19078)
+>Version : 320.0.2 (Supports SPT-AKI 3.2.0 and EFT Version 0.12.12.30.19078)
+#
 
-
-# The gods favor you soldier.
+## The gods favor you soldier.
 >Zeus grants you access to enhanced mags, meds, and gear for your quests.
 
 Hestia's selflessness provides you the courage and power to smite your enemies.
@@ -30,17 +30,24 @@ Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, H
    - Armor of Athena
    - Atlas' Satchel
 
-40 new Magazine options offered by Jaeger
+164 new Magazine options offered by Jaeger
    - 250rd mags for most firearms with OP buffs as well.
+#
 
+### To-Do?:
+~~Add all possible magazine options for all firearms.~~
 
-# To-Do:
-Add additional higher capacity mags.
-   - 500rd  : 500 round mag.
-   - 1000rd : 1000 round mag.
+Fix Stims not applying buffs?
+#
 
+### Changelog:
+320.0.2 (The Options Update)
+   - Increased to 164 magazine options for 104 firearms. (Excludes double-barrel shotgun, 40mm grenade launcher, Utyos HMG, and revolvers.)
+   - Added new item unlocked at Ragman Lvl 2.
+   - Edit/Enhance buff types.
+   - Correct item properties.
+   - Minor balancing of some item stats/buffs. (Don't worry, everything is still OP.)
 
-# Changelog:
 320.0.1
    - Fix God Mode option not setting throughput value correctly.
    - Update to SPT 3.2.0
@@ -89,7 +96,7 @@ Add additional higher capacity mags.
 211.1.0:
    - Last release by AssAssIn.
    - for SPT 2.1.1 and EFT 12.11
+#
 
-
-# End
-:eof
+## End
+#
