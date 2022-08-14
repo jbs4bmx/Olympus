@@ -7,7 +7,7 @@ If at any time, AssAssIn comes back to the scene and wants take over his mod aga
 # Information
 >Author  : AssAssIn & jbs4bmx
 
->Version : 320.0.2 (Supports SPT-AKI 3.2.0 and EFT Version 0.12.12.30.19078)
+>Version : 320.0.3 (Supports SPT-AKI 3.2.0 and EFT Version 0.12.12.30.19078)
 #
 
 ## The gods favor you soldier.
@@ -47,6 +47,7 @@ Fix Stims not applying buffs?
    - Edit/Enhance buff types.
    - Correct item properties.
    - Minor balancing of some item stats/buffs. (Don't worry, everything is still OP.)
+   - Fixed buff stats not applying when using stims.
 
 320.0.1
    - Fix God Mode option not setting throughput value correctly.
