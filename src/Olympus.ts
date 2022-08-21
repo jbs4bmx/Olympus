@@ -27,10 +27,10 @@ class Olympus implements IMod
         const logger = container.resolve<ILogger>("WinstonLogger");
         this.pkg = require("../package.json")
         logger.info(`Loading: ${this.pkg.author}-${this.pkg.name} v${this.pkg.version}`);
-        logger.logWithColor("Zeus grants you access to enhanced mags, meds, and gear for your quests.", LogTextColor.black, LogBackgroundColor.yellow);
-        logger.logWithColor("Hestia's selflessness provides you the courage and power to smite your enemies.", LogTextColor.magenta);
-        logger.logWithColor("Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, ", LogTextColor.cyan);
-        logger.logWithColor("Hermes, and Dionysus rally you on as you storm into battle.", LogTextColor.cyan);
+        logger.log("Zeus grants you access to enhanced mags, meds, and gear for your quests.", "yellow");
+        logger.log("Hestia's selflessness provides you the courage and power to smite your enemies.", "magenta");
+        logger.log("Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, ", "cyan");
+        logger.log("Hermes, and Dionysus rally you on as you storm into battle.", "cyan");
     }
 
     public postDBLoad(container: DependencyContainer)
@@ -65,7 +65,7 @@ class Olympus implements IMod
         for (const tradeName in db.traders) {
             // Ragman
             if ( tradeName === "5ac3b934156ae10c4430e83c" ) {
-                logger.logWithColor("The gods are supplying Ragman with additional gear...",LogTextColor.yellow);
+                logger.log("The gods are supplying Ragman with additional gear...", "yellow");
                 for (const ri_item of zeusdb.traders.Ragman.items.list) {
                     if (!db.traders[tradeName].assort.items.find(i=>i._id == ri_item._id)) {
                         db.traders[tradeName].assort.items.push(ri_item);
@@ -80,7 +80,7 @@ class Olympus implements IMod
             }
             // Jaeger
             if ( tradeName === "5c0647fdd443bc2504c2d371" ) {
-                logger.logWithColor("The gods are supplying Jaeger with o.p. magazines...",LogTextColor.yellow);
+                logger.log("The gods are supplying Jaeger with o.p. magazines...", "yellow");
                 for (const ji_item of zeusdb.traders.Jaeger.items.list) {
                     if (!db.traders[tradeName].assort.items.find(i=>i._id == ji_item._id)) {
                         db.traders[tradeName].assort.items.push(ji_item);
@@ -95,7 +95,7 @@ class Olympus implements IMod
             }
             // Therapist
             if ( tradeName === "54cb57776803fa99248b456e" ) {
-                logger.logWithColor("The gods are supplying Therapist with extra buffed stimulators...",LogTextColor.yellow);
+                logger.log("The gods are supplying Therapist with extra buffed stimulators...", "yellow");
                 for (const ti_item of zeusdb.traders.Therapist.items.list) {
                     if (!db.traders[tradeName].assort.items.find(i=>i._id == ti_item._id)) {
                         db.traders[tradeName].assort.items.push(ti_item);

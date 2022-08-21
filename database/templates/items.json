@@ -153,16 +153,16 @@
                         "duration": 180,
                         "fadeOut": 0,
                         "cost": 0,
-                        "healthPenaltyMin": 0,
-                        "healthPenaltyMax": 0
+                        "healthPenaltyMin": 100,
+                        "healthPenaltyMax": 100
                     },
                     "HeavyBleeding": {
                         "delay": 0,
                         "duration": 180,
                         "fadeOut": 0,
                         "cost": 0,
-                        "healthPenaltyMin": 0,
-                        "healthPenaltyMax": 0
+                        "healthPenaltyMin": 100,
+                        "healthPenaltyMax": 100
                     },
                     "RadExposure": {
                         "delay": 0,
@@ -319,30 +319,30 @@
                         "duration": 180,
                         "fadeOut": 0,
                         "cost": 0,
-                        "healthPenaltyMin": 0,
-                        "healthPenaltyMax": 0
+                        "healthPenaltyMin": 100,
+                        "healthPenaltyMax": 100
                     },
                     "HeavyBleeding": {
                         "delay": 0,
                         "duration": 180,
                         "fadeOut": 0,
                         "cost": 0,
-                        "healthPenaltyMin": 0,
-                        "healthPenaltyMax": 0
+                        "healthPenaltyMin": 100,
+                        "healthPenaltyMax": 100
                     },
                     "DestroyedPart": {
                         "delay": 0,
                         "duration": 0,
                         "fadeOut": 0,
-                        "healthPenaltyMin": 0,
-                        "healthPenaltyMax": 0
+                        "healthPenaltyMin": 100,
+                        "healthPenaltyMax": 100
                     },
                     "Fracture": {
                         "delay": 0,
                         "duration": 0,
                         "fadeOut": 0,
-                        "healthPenaltyMin": 0,
-                        "healthPenaltyMax": 0
+                        "healthPenaltyMin": 100,
+                        "healthPenaltyMax": 100
                     }
                 }
             },
