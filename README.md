@@ -3,14 +3,10 @@
 
 If at any time, AssAssIn comes back to the scene and wants take over his mod again, it will be here waiting. In the meantime, others can enjoy it as it is now.
 
-
-# Information
 >Author  : AssAssIn & jbs4bmx
 
->Version : 320.0.3 (Supports SPT-AKI 3.2.0 and EFT Version 0.12.12.30.19078)
-#
 
-## The gods favor you soldier.
+### The gods favor you soldier.
 >Zeus grants you access to enhanced mags, meds, and gear for your quests.
 
 Hestia's selflessness provides you the courage and power to smite your enemies.
@@ -25,7 +21,8 @@ Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, H
    - Apollo's CMS -- Fixes blackened limbs
 
 4 new Gear items offered by Ragman
-   - Hercules' Rig
+   - Hercules' Rig (Standard Rig)
+   - Hercules' Rig 2 (Armored Rig)
    - Helmet of Hermes
    - Armor of Athena
    - Atlas' Satchel
@@ -35,12 +32,16 @@ Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, H
 #
 
 ### To-Do?:
-~~Add all possible magazine options for all firearms.~~
-
-Fix Stims not applying buffs?
+Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+322.0.1
+   - Version update. No underlying change to code.
+
+321.0.1
+   - Version update. No underlying change to code.
+
 320.0.2 (The Options Update)
    - Increased to 164 magazine options for 104 firearms. (Excludes double-barrel shotgun, 40mm grenade launcher, Utyos HMG, and revolvers.)
    - Added new item unlocked at Ragman Lvl 2.
@@ -99,5 +100,5 @@ Fix Stims not applying buffs?
    - for SPT 2.1.1 and EFT 12.11
 #
 
-## End
+### End
 #

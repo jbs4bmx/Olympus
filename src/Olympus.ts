@@ -1,8 +1,8 @@
 /*
  *      Name: Olympus
- *   Version: 320.0.2
+ *   Version: 322.0.1
  * Copyright: AssAssIn
- *    Update: 11.08.2022
+ *    Update: 30.08.2022
 */
 
 import { DependencyContainer } from "tsyringe";
