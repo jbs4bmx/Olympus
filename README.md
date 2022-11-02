@@ -27,7 +27,7 @@ Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, H
    - Armor of Athena
    - Atlas' Satchel
 
-163 new Magazine options offered by Jaeger
+164 new Magazine options offered by Jaeger
    - 250rd mags for most firearms with OP buffs as well.
 #
 
@@ -36,6 +36,9 @@ Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+325.0.2
+   - Add feature to allow blacklisting of items from bot generation pool.
+
 325.0.1
    - Reduced console spam. (Less junk displayed on screen.)
    - Removed "airsoft" mag. (not used in game.)

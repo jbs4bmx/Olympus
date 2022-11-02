@@ -1,8 +1,8 @@
 /*
  *      Name: Olympus
- *   Version: 322.0.1
+ *   Version: 325.0.2
  * Copyright: AssAssIn
- *    Update: 30.08.2022
+ *    Update: [DMY] 02.11.2022
 */
 
 import { DependencyContainer } from "tsyringe";
@@ -11,6 +11,9 @@ import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
 import { DatabaseImporter } from "@spt-aki/utils/DatabaseImporter";
 import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
+import { ConfigServer } from "@spt-aki/servers/ConfigServer";
+import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
+import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 
 let zeusdb;
 
@@ -155,6 +158,7 @@ class Olympus implements IMod
         this.pushItems(container);
         this.adjustItems(container);
         this.pushBuffs(container);
+        this.checkExclusions(container);
 
         logger.info(`${this.pkg.author}-${this.pkg.name} v${this.pkg.version}: Cached successfully`);
     }
@@ -1149,6 +1153,30 @@ class Olympus implements IMod
         const additions = zeusdb.globals.buffs;
         for (const stimBuff in additions) {
             gameBuffs[stimBuff] = additions[stimBuff];
+        }
+    }
+
+    public checkExclusions(container: DependencyContainer): void {
+        const configServer = container.resolve<ConfigServer>("ConfigServer");
+        const botConfig = configServer.getConfig<IBotConfig>(ConfigTypes.BOT);
+        const { blacklistMeds, blacklistGear, blacklistMags } = require("./config.json");
+
+        if (typeof blacklistMeds === "boolean"){
+            if (blacklistMeds === true) {
+                botConfig.pmc.dynamicLoot.blacklist.push("apollosStim","apollosPropital","apollosPain","apollosCMS");
+            }
+        }
+
+        if (typeof blacklistGear === "boolean"){
+            if (blacklistGear === true) {
+                botConfig.pmc.dynamicLoot.blacklist.push("armorOfAthena","atlasSatchel","hercRig","hercRig2","helmetOfHermes");
+            }
+        }
+
+        if (typeof blacklistMags === "boolean"){
+            if (blacklistMags === true) {
+                botConfig.equipment.pmc.blacklist[0].equipment.mod_magazine.push("a250_pm_84","a250_g28_20","a250_mp133_6","a250_ak74l26_45","a250_ak74l18_45","a250_m700aics_12","a250_mp5_20","a250_m3sup90_7","a250_ar10_10","a250_m700aics_10","a250_dvl10_10","a250_glock919_17","a250_m700_10","a250_ak74l23_30","a250_mk17scarh_20","a250_ak762_75","a250_ar15g36_30","a250_ak101l29_30","a250_m700_5","a250_mp443_18","a250_ak30blk_30","a250_sa58falpoly_20","a250_ks23_3","a250_m700pmag_20","a250_m9a3_17","a250_mp9_30","a250_ak74l31_60","a250_ak30fde_30","a250_ak74l20_30","a250_ar10kac_20","a250_mp7_20","a250_mp153_5","a250_m700aics_5","a250_g28_10","a250_akl10_30","a250_m700aa70_10","a250_mp153_8","a250_pm_8","a250_vssl25_20","a250_mp5_50","a250_mp5_30","a250_mpx_50","a250_skspmag_20","a250_mp9_15","a250_p226_15","a250_ump45_25","a250_usp45_12","a250_p90_50","a250_mpx_20","a250_ppsh_71","a250_sr1mp_18","a250_mp153_4","a250_mp7_30","a250_akx47_50","a250_ppsh_35","a250_saiga12_5","a250_mp9_25","a250_sks_75","a250_mp153_6","a250_aps_20","a250_mp155_6","a250_ak74l23plum_30","a250_mp9_20","a250_mp7_40","a250_vssl24_10","a250_ar10pmag_20","a250_tt105_8","a250_mp133_8","a250_ak762met_10","a250_mpx_30","a250_mp153_7","a250_ak762met_30","a250_ak12_30","a250_sa58fal_50","a250_rpk_95","a250_ak762alu_10","a250_glock45_30","a250_ags30box_30","a250_590a1_8","a250_ash12_20","a250_m870_4","a250_ash12_10","a250_sa58fal_10","a250_glock45_13","a250_ak556circ_30","a250_m3sup90_5","a250_skspmag_35","a250_1911_11","a250_MK18_10","a250_sa58slr_30","a250_m700pmag_5","a250_sa58fal_30","a250_sksbox_10","a250_ar15_30","a250_glock919_33","a250_mpx_41","a250_1911_7","a250_pp1901_30","a250_kedr_30","a250_ak762alu_30","a250_fn57_20","a250_saiga12_10","a250_ak103_30","a250_m1a_20","a250_kedr_20","a250_sa58fal_20","a250_pl15_16","a250_m700pmag_10","a250_ak762pmag_73","a250_glock919_50","a250_m14_30","a250_p226_20","a250_m3sup90_9","a250_glock919_21","a250_vpo101_5","a250_vpo215_4","a250_vss_30","a250_1911a1_7","a250_mosin_5","a250_scarl_30","a250_scarhfde_20","a250_mosinangel_10","a250_scarlfde_30","a250_556pmg2_30","a250_556poly_30","a250_m870_10","a250_556d60_60","a250_556pmag_10","a250_556pmag_20","a250_556pmag_30","a250_saiga545_10","a250_545pmag_30","a250_m870_7","a250_556pmag_40","a250_556mag5_100","a250_556mag5_60","a250_762fab_30","a250_762bake_40","a250_762pmag_30","a250_762molot_40","a250_338axmc_10","a250_762x14_50","a250_m3sup90_11","a250_m3sup90_13","a250_ak762banana_30","a250_pp19_10","a250_pp19_20","a250_pp19_30","a250_saiga12_20","a250_556steel_30","a250_556pmagfde_30","a250_556pmagfde_40","a250_556pmagwin_30","a250_556pmagwinfde_30","a250_556troy_30","a250_sv98_10","a250_svd_10","a250_svd_20","a250_t5000_5","a250_toz106_2","a250_toz106_4","a250_toz106_5","a250_usp45tac_12","a250_vpo101_10");
+            }
         }
     }
 
