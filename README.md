@@ -36,6 +36,14 @@ Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+325.0.3 (The Lua Update)
+   - Changed mod implementation to match current SPT standards.
+   - Fixed a major typo that could throw a bot generation error.
+   - Removed item code that is no longer used.
+   - Optimized a bit of code.
+   - Removed unused entry in database code.
+   - Corrected properties of some items in database.
+
 325.0.2
    - Add feature to allow blacklisting of items from bot generation pool.
 
