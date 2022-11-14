@@ -1,12 +1,11 @@
 /*
  *      Name: Olympus
- *   Version: 325.0.3
+ *   Version: 330.0.1
  * Copyright: AssAssIn
- *    Update: [DMY] 06.11.2022
+ *    Update: [DMY] 14.11.2022
 */
 
 import { DependencyContainer } from "tsyringe";
-import { IMod } from "@spt-aki/models/spt/mod";
 import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { IPostDBLoadMod } from "@spt-aki/models/externals/IPostDBLoadMod";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
@@ -19,7 +18,6 @@ import { IBotConfig } from "@spt-aki/models/spt/config/IBotConfig";
 
 let zeusdb;
 
-//class Olympus implements IMod
 class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
 {
     private pkg;
@@ -58,7 +56,6 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
         }
 
         for (const tradeName in db.traders) {
-            // Ragman
             if ( tradeName === "5ac3b934156ae10c4430e83c" ) {
                 for (const ri_item of zeusdb.traders.Ragman.items.list) {
                     if (!db.traders[tradeName].assort.items.find(i=>i._id == ri_item._id)) {
@@ -72,7 +69,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                     db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyal_level_items[rl_item];
                 }
             }
-            // Jaeger
+
             if ( tradeName === "5c0647fdd443bc2504c2d371" ) {
                 for (const ji_item of zeusdb.traders.Jaeger.items.list) {
                     if (!db.traders[tradeName].assort.items.find(i=>i._id == ji_item._id)) {
@@ -86,7 +83,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                     db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyal_level_items[jl_item];
                 }
             }
-            // Therapist
+
             if ( tradeName === "54cb57776803fa99248b456e" ) {
                 for (const ti_item of zeusdb.traders.Therapist.items.list) {
                     if (!db.traders[tradeName].assort.items.find(i=>i._id == ti_item._id)) {
@@ -100,47 +97,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                     db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyal_level_items[tl_item];
                 }
             }
-            // Ragfair
-            if (tradeName === "ragfair" ) {
-                // Add Ragman Items to Ragfair
-                for (const ri_item of zeusdb.traders.Ragman.items.list) {
-                    if (!db.traders[tradeName].assort.items.find(i=>i._id == ri_item._id)) {
-                        db.traders[tradeName].assort.items.push(ri_item);
-                    }
-                }
-                for (const rb_item in zeusdb.traders.Ragman.barter_scheme) {
-                    db.traders[tradeName].assort.barter_scheme[rb_item] = zeusdb.traders.Ragman.barter_scheme[rb_item];
-                }
-                for (const rl_item in zeusdb.traders.Ragman.loyal_level_items){
-                    db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyal_level_items[rl_item];
-                }
-                // Add Jaeger Items to Ragfair
-                for (const ji_item of zeusdb.traders.Jaeger.items.list) {
-                    if (!db.traders[tradeName].assort.items.find(i=>i._id == ji_item._id)) {
-                        db.traders[tradeName].assort.items.push(ji_item);
-                    }
-                }
-                for (const jb_item in zeusdb.traders.Jaeger.barter_scheme) {
-                    db.traders[tradeName].assort.barter_scheme[jb_item] = zeusdb.traders.Jaeger.barter_scheme[jb_item];
-                }
-                for (const jl_item in zeusdb.traders.Jaeger.loyal_level_items){
-                    db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyal_level_items[jl_item];
-                }
-                // Add Therapist Items to Ragfair
-                for (const ti_item of zeusdb.traders.Therapist.items.list) {
-                    if (!db.traders[tradeName].assort.items.find(i=>i._id == ti_item._id)) {
-                        db.traders[tradeName].assort.items.push(ti_item);
-                    }
-                }
-                for (const tb_item in zeusdb.traders.Therapist.barter_scheme) {
-                    db.traders[tradeName].assort.barter_scheme[tb_item] = zeusdb.traders.Therapist.barter_scheme[tb_item];
-                }
-                for (const tl_item in zeusdb.traders.Therapist.loyal_level_items){
-                    db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyal_level_items[tl_item];
-                }
-            }
         }
-
 
         this.pushItems(container);
         this.adjustItems(container);
@@ -177,11 +134,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
         const db = container.resolve<DatabaseServer>("DatabaseServer").getTables();
         const items = db.templates.items;
 
-        // Add 'Helmet of Hermes' to headwear slot (5) in default inventory.
         items["55d7217a4bdc2d86028b456d"]._props.Slots[5]._props.filters[0].Filter.push("helmetOfHermes");
 
-        // Add new mags to corresponding firearms.
-        // Have to iterate slot numbers since the mag slot is different for each firearm.
         for ( let item in items )
         {
             let data = items[item];
