@@ -36,6 +36,11 @@ Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+330.0.1 (The Slimline Update)
+   - Updated for SPT 3.3.0
+   - Optimized code
+   - Removed ragfair code (not necessary for functionality)
+
 325.0.3 (The Lua Update)
    - Changed mod implementation to match current SPT standards.
    - Fixed a major typo that could throw a bot generation error.
