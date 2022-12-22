@@ -36,6 +36,11 @@ Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+340.0.1 (The 'BSG Fucked It All Up' Update)
+   - Updated for SPT 3.4.0
+   - Restructured locales
+   - Fixed locale code
+
 330.0.1 (The Slimline Update)
    - Updated for SPT 3.3.0
    - Optimized code

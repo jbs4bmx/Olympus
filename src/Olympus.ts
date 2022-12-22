@@ -1,8 +1,8 @@
 /*
  *      Name: Olympus
- *   Version: 330.0.1
+ *   Version: 340.0.1
  * Copyright: AssAssIn
- *    Update: [DMY] 14.11.2022
+ *    Update: [DMY] 22.12.2022
 */
 
 import { DependencyContainer } from "tsyringe";
@@ -47,7 +47,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
 
         for (const localeID in locales) {
             for (const locale in zeusdb.locales.en) {
-                locales[localeID].templates[locale] = zeusdb.locales.en[locale];
+                locales[localeID][locale] = zeusdb.locales.en[locale];
             }
         }
 
