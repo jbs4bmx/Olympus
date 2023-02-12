@@ -1,8 +1,8 @@
-/*
+/**
  *      Name: Olympus
- *   Version: 340.0.1
+ *   Version: 350.0.1
  * Copyright: AssAssIn
- *    Update: [DMY] 22.12.2022
+ *    Update: [DMY] 12.02.2023
 */
 
 import { DependencyContainer } from "tsyringe";
@@ -10,7 +10,7 @@ import { IPreAkiLoadMod } from "@spt-aki/models/external/IPreAkiLoadMod";
 import { IPostDBLoadMod } from "@spt-aki/models/externals/IPostDBLoadMod";
 import { ILogger } from "@spt-aki/models/spt/utils/ILogger";
 import { DatabaseServer } from "@spt-aki/servers/DatabaseServer";
-import { DatabaseImporter } from "@spt-aki/utils/DatabaseImporter";
+import { ImporterUtil } from "@spt-aki/utils/ImporterUtil";
 import { PreAkiModLoader } from "@spt-aki/loaders/PreAkiModLoader";
 import { ConfigServer } from "@spt-aki/servers/ConfigServer";
 import { ConfigTypes } from "@spt-aki/models/enums/ConfigTypes";
@@ -29,7 +29,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
         const logger = container.resolve<ILogger>("WinstonLogger");
         const db = container.resolve<DatabaseServer>("DatabaseServer").getTables();
         const preAkiModLoader = container.resolve<PreAkiModLoader>("PreAkiModLoader");
-        const databaseImporter = container.resolve<DatabaseImporter>("DatabaseImporter");
+        const databaseImporter = container.resolve<ImporterUtil>("ImporterUtil");
         const locales = db.locales.global;
         this.pkg = require("../package.json");
         zeusdb = databaseImporter.loadRecursive(`${preAkiModLoader.getModPath(this.modName)}database/`);
