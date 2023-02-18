@@ -1639,6 +1639,56 @@
                 "UnlimitedCount": true,
                 "StackObjectsCount": 999999
             }
+        },
+        {
+            "_id": "a250_sr2m_20",
+            "_tpl": "a250_sr2m_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sr2m_30",
+            "_tpl": "a250_sr2m_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_aug_30",
+            "_tpl": "a250_aug_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_aug_10",
+            "_tpl": "a250_aug_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_aug_42",
+            "_tpl": "a250_aug_42",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
         }
     ]
 }

@@ -519,5 +519,20 @@
     "a250_usp45tac_12 Description": "HK USP Tactical .45 ACP 250-round magazine",
     "a250_vpo101_10 Name": "a250_vpo101_10",
     "a250_vpo101_10 ShortName": "a250_vpo101_10",
-    "a250_vpo101_10 Description": "VPO-101 Vepr-Hunter 7.62x51 250-round magazine"
+    "a250_vpo101_10 Description": "VPO-101 Vepr-Hunter 7.62x51 250-round magazine",
+    "a250_sr2m_20 Name": "a250_sr2m_20",
+    "a250_sr2m_20 ShortName": "a250_sr2m_20",
+    "a250_sr2m_20 Description": "250rd Ares Mag for 2R-2M (20rd Variant)",
+    "a250_sr2m_30 Name": "a250_sr2m_30",
+    "a250_sr2m_30 ShortName": "a250_sr2m_30",
+    "a250_sr2m_30 Description": "250rd Ares Mag for 2R-2M (30rd Variant)",
+    "a250_aug_30 Name": "a250_aug_30",
+    "a250_aug_30 ShortName": "a250_aug_30",
+    "a250_aug_30 Description": "250rd Ares Mag for Steyr Aug (30rd Variant)",
+    "a250_aug_10 Name": "a250_aug_10",
+    "a250_aug_10 ShortName": "a250_aug_10",
+    "a250_aug_10 Description": "250rd Ares Mag for Steyr Aug (10rd Variant)",
+    "a250_aug_42 Name": "a250_aug_42",
+    "a250_aug_42 ShortName": "a250_aug_42",
+    "a250_aug_42 Description": "250rd Ares Mag for Steyr Aug (42rd Variant)"
 }

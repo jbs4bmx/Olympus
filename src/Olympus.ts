@@ -1,8 +1,8 @@
 /**
  *      Name: Olympus
- *   Version: 350.0.1
+ *   Version: 350.0.2
  * Copyright: AssAssIn
- *    Update: [DMY] 12.02.2023
+ *    Update: [DMY] 17.02.2023
 */
 
 import { DependencyContainer } from "tsyringe";
@@ -1083,6 +1083,42 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         if ( data._props.Slots[i]._name == sectionName )
                         {
                             items["627e14b21713922ded6f2c15"]._props.Slots[i]._props.filters[0].Filter.push("a250_338axmc_10");
+                        }
+                    }
+                    break;
+                case "62e14904c2699c0ec93adc47":
+                    for ( i=0; i<data._props.Slots.length; i++ )
+                    {
+                        if ( data._props.Slots[i]._name == sectionName )
+                        {
+                            items["62e14904c2699c0ec93adc47"]._props.Slots[i]._props.filters[0].Filter.push("a250_sr2m_20","a250_sr2m_30");
+                        }
+                    }
+                    break;
+                case "63171672192e68c5460cebc5":
+                    for ( i=0; i<data._props.Slots.length; i++ )
+                    {
+                        if ( data._props.Slots[i]._name == sectionName )
+                        {
+                            items["63171672192e68c5460cebc5"]._props.Slots[i]._props.filters[0].Filter.push("a250_aug_30","a250_aug_10","a250_aug_42");
+                        }
+                    }
+                    break;
+                case "62e7c4fba689e8c9c50dfc38":
+                    for ( i=0; i<data._props.Slots.length; i++ )
+                    {
+                        if ( data._props.Slots[i]._name == sectionName )
+                        {
+                            items["62e7c4fba689e8c9c50dfc38"]._props.Slots[i]._props.filters[0].Filter.push("a250_aug_30","a250_aug_10","a250_aug_42");
+                        }
+                    }
+                    break;
+                case "63088377b5cd696784087147":
+                    for ( i=0; i<data._props.Slots.length; i++ )
+                    {
+                        if ( data._props.Slots[i]._name == sectionName )
+                        {
+                            items["63088377b5cd696784087147"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock919_17","a250_glock919_33","a250_glock919_50","a250_glock919_21");
                         }
                     }
                     break;
