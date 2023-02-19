@@ -1,6 +1,6 @@
 {
 	"name": "Olympus",
-	"version": "350.0.2",
+	"version": "350.0.3",
 	"main": "src/Olympus.js",
 	"license": "NCSA",
 	"author": "AssAssIn",

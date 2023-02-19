@@ -36,6 +36,9 @@ Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+350.0.3 (The Big Buffs Update)
+  - Added buffs to Apollos Propital so it will properly heal your PMC when used.
+
 350.0.2 (The Mag Update)
   - Add new magazines from 0.13
 
