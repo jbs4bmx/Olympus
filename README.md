@@ -27,8 +27,9 @@ Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, H
   - Armor of Athena
   - Atlas' Satchel
 
-169 new Magazine options offered by Jaeger
+~~169~~ 25 new Magazine options offered by Jaeger
   - 250rd mags for most firearms with OP buffs as well.
+  - Reduced to 25 mags as of v356.0.1 per popular demand.
 #
 
 ### To-Do?:
@@ -36,6 +37,10 @@ Hmm... There doesn't appear to be anything here.
 #
 
 ### Changelog:
+356.0.1 (Reduction Update)
+  - Per Popular Demand -- Number of mags reduced to 25 (previously 169).
+  - Don't ask me how I chose what I chose. I just did it.
+
 352.0.1 (The BSG is a Twat Update)
   - Update for SPT 3.5.2
 
