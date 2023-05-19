@@ -16,7 +16,6 @@
         "newHSize":7,
         "newVSize":7
     },
-
     "BLACKLISTS_COMMENT": "true/false: Setting this value to true will stop bots from generating with Olympus items in their inventory.",
     "blacklistMeds": false,
     "blacklistGear": false,
