@@ -1,42 +1,87 @@
 # AssAssIn's Olympus Mod
->Re-worked version of AssAssIn's Olympus mod for SPT 3.X.
+>Original Author: AssAssIn
 
-If at any time, AssAssIn comes back to the scene and wants take over his mod again, it will be here waiting. In the meantime, others can enjoy it as it is now.
+>Current Author: jbs4bmx
 
->Author  : AssAssIn & jbs4bmx
-
-
-### The gods favor you soldier.
->Zeus grants you access to enhanced mags, meds, and gear for your quests.
-
-Hestia's selflessness provides you the courage and power to smite your enemies.
-
-Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Hephaestus, Aphrodite, Hermes, and Dionysus rally you on as you storm into battle.
+All credit goes to AssAssIn: If at any time, AssAssIn comes back to the scene and wants take over his mod again, it will be here waiting. In the meantime, others can enjoy it as it is now.
 
 
-4 new Stims offered by Therapist
-  - Apollo's Pain -- Ultimate pain relief.
-  - Apollo's Stim -- The most OP Buffs ever?
-  - Apollo's Propital -- Cures ailments such as bleeding, diseases, and fractures. Also provides energy and hydration.
-  - Apollo's CMS -- Fixes blackened limbs
+<br>
 
-4 new Gear items offered by Ragman
-  - Hercules' Rig (Standard Rig)
-  - Hercules' Rig 2 (Armored Rig)
-  - Helmet of Hermes
-  - Armor of Athena
-  - Atlas' Satchel
+# Description
+This is a re-worked version of AssAssIn's Olympus mod for SPT 3.5+ versions.
 
-~~169~~ 25 new Magazine options offered by Jaeger
-  - 250rd mags for most firearms with OP buffs as well.
-  - Reduced to 25 mags as of v356.0.1 per popular demand.
-#
+This mod adds rigs, armor, a helmet, a backpack, stimulants, and magazines with OP properties.
 
-### To-Do?:
-Hmm... There doesn't appear to be anything here.
-#
+The items are all sold by Therapist, Ragman, or Jaeger depending on what type of item they are.
 
-### Changelog:
+
+<br>
+
+# Configuration
+Only use the items you want and nothing more. Select the corresponding option(s) in the configuration file.
+``` json
+{
+    "VERSION_SELECTION": "true/false: Choose only one option. Determines the version of the mod to load.",
+    "FullVersion": true,
+    "Minimal": false,
+    "MagsOnly": false,
+    "RigsOnly": false,
+    "StimsOnly": false,
+
+    "BLACKLIST_SELECTION": "true/false: Setting this value to true will stop bots from generating with Olympus items in their inventory.",
+    "blacklistMeds": false,
+    "blacklistGear": false,
+    "blacklistMags": false
+}
+```
+
+## Full Version
+This the full implementation of the mod and includes many new items to enhance your raids.
+  - 4 new Stims offered by Therapist
+    - Apollo's Pain -- Ultimate pain relief.
+    - Apollo's Stim -- The most OP Buffs ever?
+    - Apollo's Propital -- Cures ailments such as bleeding, diseases, and fractures. Also provides energy and hydration.
+    - Apollo's CMS -- Fixes blackened limbs
+  - 5 new Gear items offered by Ragman
+    - Hercules' Rig (Standard Rig)
+    - Hercules' Rig 2 (Armored Rig)
+    - Helmet of Hermes
+    - Armor of Athena
+    - Atlas' Satchel
+  - 169 new Magazine options offered by Jaeger
+    - 250rd mags for most firearms with OP buffs as well.
+
+## Minimal Version
+Same as the full version but with reduced magazine numbers.
+  - 4 new Stims offered by Therapist
+  - 5 new Gear items offered by Ragman
+  - 25 new 250rd Magazine options offered by Jaeger
+
+## Mags Only Version
+Only the full amount of new magazines from the mod are loaded.
+  - 169 new Magazine options offered by Jaeger
+
+## Rigs Only Version
+Only the rigs from the mod are loaded.
+  - 5 new Gear items offered by Ragman
+
+## Stims Only Version
+Only the stimulants from the mod are loaded.
+  - 4 new Stims offered by Therapist
+
+
+<br>
+
+# Changelog:
+358.0.1 (BIG Change Update)
+  - Refactored code to combine all variants into a single mod.
+  - Removed resizable containers options.
+
+357.0.1 (Combination Update) (Non-Released)
+  - Repositories combined for easier maintenance.
+  - Released in 5 variants; Full, Minimal, Mags Only, Gear Only, Stims Only.
+
 356.0.1 (Reduction Update)
   - Per Popular Demand -- Number of mags reduced to 25 (previously 169).
   - Don't ask me how I chose what I chose. I just did it.
@@ -146,7 +191,8 @@ Hmm... There doesn't appear to be anything here.
 211.1.0:
   - Last release by AssAssIn.
   - for SPT 2.1.1 and EFT 12.11
-#
 
-### End
+
+<br>
+
 #

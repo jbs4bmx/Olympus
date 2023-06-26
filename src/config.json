@@ -1,22 +1,12 @@
 {
-    "CONTAINERS_COMMENT": "true/false: Setting to true will allow you to resize the specified containers.",
-    "Resize": false,
-    "Sicc": {
-        "_COMMENT": "Default EFT Size 5x5: Set the horizontal and vertical size of this container.",
-        "newHSize":5,
-        "newVSize":5
-    },
-    "KeyTool": {
-        "_COMMENT": "Default EFT Size 4x4: Set the horizontal and vertical size of this container.",
-        "newHSize":4,
-        "newVSize":4
-    },
-    "MoneyCase": {
-        "_COMMENT": "Default EFT Size 7x7: Set the horizontal and vertical size of this container.",
-        "newHSize":7,
-        "newVSize":7
-    },
-    "BLACKLISTS_COMMENT": "true/false: Setting this value to true will stop bots from generating with Olympus items in their inventory.",
+    "VERSION_SELECTION": "true/false: Choose only one option. Determines the version of the mod to load.",
+    "FullVersion": true,
+    "Minimal": false,
+    "MagsOnly": false,
+    "RigsOnly": false,
+    "StimsOnly": false,
+
+    "BLACKLIST_SELECTION": "true/false: Setting this value to true will stop bots from generating with Olympus items in their inventory.",
     "blacklistMeds": false,
     "blacklistGear": false,
     "blacklistMags": false

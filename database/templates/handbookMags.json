@@ -1,51 +1,6 @@
 {
     "Items": [
         {
-            "Id": "apollosStim",
-            "ParentId": "5b47574386f77428ca22b33a",
-            "Price": 2000
-        },
-        {
-            "Id": "apollosPropital",
-            "ParentId": "5b47574386f77428ca22b33a",
-            "Price": 2000
-        },
-        {
-            "Id": "apollosPain",
-            "ParentId": "5b47574386f77428ca22b33a",
-            "Price": 2000
-        },
-        {
-            "Id": "apollosCMS",
-            "ParentId": "5b47574386f77428ca22b33a",
-            "Price": 10000
-        },
-        {
-            "Id": "armorOfAthena",
-            "ParentId": "5b5f701386f774093f2ecf0f",
-            "Price": 160000
-        },
-        {
-            "Id": "atlasSatchel",
-            "ParentId": "5b5f6f6c86f774093f2ecf0b",
-            "Price": 70000
-        },
-        {
-            "Id": "hercRig",
-            "ParentId": "5b5f6f8786f77447ed563642",
-            "Price": 90000
-        },
-        {
-            "Id":"hercRig2",
-            "ParentId": "5b5f6f8786f77447ed563642",
-            "Price": 130000
-        },
-        {
-            "Id": "helmetOfHermes",
-            "ParentId": "5b47574386f77428ca22b330",
-            "Price": 95000
-        },
-        {
             "Id": "a250_pm_84",
             "ParentId": "5b5f754a86f774094242f19b",
             "Price": 1000

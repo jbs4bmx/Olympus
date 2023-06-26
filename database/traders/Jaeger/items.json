@@ -1,48 +1,8 @@
 {
     "list": [
         {
-            "_id": "a250_545pmag_30",
-            "_tpl": "a250_545pmag_30",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_762pmag_30",
-            "_tpl": "a250_762pmag_30",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_ar10pmag_20",
-            "_tpl": "a250_ar10pmag_20",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_sa58falpoly_20",
-            "_tpl": "a250_sa58falpoly_20",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_mk17scarh_20",
-            "_tpl": "a250_mk17scarh_20",
+            "_id": "a250_pm_84",
+            "_tpl": "a250_pm_84",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -61,8 +21,8 @@
             }
         },
         {
-            "_id": "a250_ar10kac_20",
-            "_tpl": "a250_ar10kac_20",
+            "_id": "a250_mp133_6",
+            "_tpl": "a250_mp133_6",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -71,8 +31,198 @@
             }
         },
         {
-            "_id": "a250_762x14_50",
-            "_tpl": "a250_762x14_50",
+            "_id": "a250_ak74l26_45",
+            "_tpl": "a250_ak74l26_45",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak74l18_45",
+            "_tpl": "a250_ak74l18_45",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700aics_12",
+            "_tpl": "a250_m700aics_12",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp5_20",
+            "_tpl": "a250_mp5_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m3sup90_7",
+            "_tpl": "a250_m3sup90_7",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ar10_10",
+            "_tpl": "a250_ar10_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700aics_10",
+            "_tpl": "a250_m700aics_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_dvl10_10",
+            "_tpl": "a250_dvl10_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_glock919_17",
+            "_tpl": "a250_glock919_17",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700_10",
+            "_tpl": "a250_m700_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak74l23_30",
+            "_tpl": "a250_ak74l23_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mk17scarh_20",
+            "_tpl": "a250_mk17scarh_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762_75",
+            "_tpl": "a250_ak762_75",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ar15g36_30",
+            "_tpl": "a250_ar15g36_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak101l29_30",
+            "_tpl": "a250_ak101l29_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700_5",
+            "_tpl": "a250_m700_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp443_18",
+            "_tpl": "a250_mp443_18",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak30blk_30",
+            "_tpl": "a250_ak30blk_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sa58falpoly_20",
+            "_tpl": "a250_sa58falpoly_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ks23_3",
+            "_tpl": "a250_ks23_3",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -91,38 +241,8 @@
             }
         },
         {
-            "_id": "a250_556pmagwin_30",
-            "_tpl": "a250_556pmagwin_30",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_vss_30",
-            "_tpl": "a250_vss_30",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_glock45_30",
-            "_tpl": "a250_glock45_30",
-            "parentId": "hideout",
-            "slotId": "hideout",
-            "upd": {
-                "UnlimitedCount": true,
-                "StackObjectsCount": 999999
-            }
-        },
-        {
-            "_id": "a250_glock919_33",
-            "_tpl": "a250_glock919_33",
+            "_id": "a250_m9a3_17",
+            "_tpl": "a250_m9a3_17",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -141,8 +261,138 @@
             }
         },
         {
-            "_id": "a250_mp7_30",
-            "_tpl": "a250_mp7_30",
+            "_id": "a250_ak74l31_60",
+            "_tpl": "a250_ak74l31_60",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak30fde_30",
+            "_tpl": "a250_ak30fde_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak74l20_30",
+            "_tpl": "a250_ak74l20_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ar10kac_20",
+            "_tpl": "a250_ar10kac_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp7_20",
+            "_tpl": "a250_mp7_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp153_5",
+            "_tpl": "a250_mp153_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700aics_5",
+            "_tpl": "a250_m700aics_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_g28_10",
+            "_tpl": "a250_g28_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_akl10_30",
+            "_tpl": "a250_akl10_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700aa70_10",
+            "_tpl": "a250_m700aa70_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp153_8",
+            "_tpl": "a250_mp153_8",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_pm_8",
+            "_tpl": "a250_pm_8",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_vssl25_20",
+            "_tpl": "a250_vssl25_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp5_50",
+            "_tpl": "a250_mp5_50",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -161,8 +411,8 @@
             }
         },
         {
-            "_id": "a250_mpx_30",
-            "_tpl": "a250_mpx_30",
+            "_id": "a250_mpx_50",
+            "_tpl": "a250_mpx_50",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -171,8 +421,48 @@
             }
         },
         {
-            "_id": "a250_fn57_20",
-            "_tpl": "a250_fn57_20",
+            "_id": "a250_skspmag_20",
+            "_tpl": "a250_skspmag_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp9_15",
+            "_tpl": "a250_mp9_15",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_p226_15",
+            "_tpl": "a250_p226_15",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ump45_25",
+            "_tpl": "a250_ump45_25",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_usp45_12",
+            "_tpl": "a250_usp45_12",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -191,8 +481,8 @@
             }
         },
         {
-            "_id": "a250_mp133_6",
-            "_tpl": "a250_mp133_6",
+            "_id": "a250_mpx_20",
+            "_tpl": "a250_mpx_20",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -201,8 +491,8 @@
             }
         },
         {
-            "_id": "a250_saiga12_20",
-            "_tpl": "a250_saiga12_20",
+            "_id": "a250_ppsh_71",
+            "_tpl": "a250_ppsh_71",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -211,8 +501,618 @@
             }
         },
         {
-            "_id": "a250_m870_10",
-            "_tpl": "a250_m870_10",
+            "_id": "a250_sr1mp_18",
+            "_tpl": "a250_sr1mp_18",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp153_4",
+            "_tpl": "a250_mp153_4",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp7_30",
+            "_tpl": "a250_mp7_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_akx47_50",
+            "_tpl": "a250_akx47_50",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ppsh_35",
+            "_tpl": "a250_ppsh_35",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_saiga12_5",
+            "_tpl": "a250_saiga12_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp9_25",
+            "_tpl": "a250_mp9_25",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sks_75",
+            "_tpl": "a250_sks_75",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp153_6",
+            "_tpl": "a250_mp153_6",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_aps_20",
+            "_tpl": "a250_aps_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp155_6",
+            "_tpl": "a250_mp155_6",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak74l23plum_30",
+            "_tpl": "a250_ak74l23plum_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp9_20",
+            "_tpl": "a250_mp9_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp7_40",
+            "_tpl": "a250_mp7_40",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_vssl24_10",
+            "_tpl": "a250_vssl24_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ar10pmag_20",
+            "_tpl": "a250_ar10pmag_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_tt105_8",
+            "_tpl": "a250_tt105_8",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp133_8",
+            "_tpl": "a250_mp133_8",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762met_10",
+            "_tpl": "a250_ak762met_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mpx_30",
+            "_tpl": "a250_mpx_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mp153_7",
+            "_tpl": "a250_mp153_7",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762met_30",
+            "_tpl": "a250_ak762met_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak12_30",
+            "_tpl": "a250_ak12_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sa58fal_50",
+            "_tpl": "a250_sa58fal_50",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_rpk_95",
+            "_tpl": "a250_rpk_95",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762alu_10",
+            "_tpl": "a250_ak762alu_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_glock45_30",
+            "_tpl": "a250_glock45_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ags30box_30",
+            "_tpl": "a250_ags30box_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_590a1_8",
+            "_tpl": "a250_590a1_8",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ash12_20",
+            "_tpl": "a250_ash12_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m870_4",
+            "_tpl": "a250_m870_4",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ash12_10",
+            "_tpl": "a250_ash12_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sa58fal_10",
+            "_tpl": "a250_sa58fal_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_glock45_13",
+            "_tpl": "a250_glock45_13",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak556circ_30",
+            "_tpl": "a250_ak556circ_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m3sup90_5",
+            "_tpl": "a250_m3sup90_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_skspmag_35",
+            "_tpl": "a250_skspmag_35",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_1911_11",
+            "_tpl": "a250_1911_11",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_MK18_10",
+            "_tpl": "a250_MK18_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sa58slr_30",
+            "_tpl": "a250_sa58slr_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700pmag_5",
+            "_tpl": "a250_m700pmag_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sa58fal_30",
+            "_tpl": "a250_sa58fal_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sksbox_10",
+            "_tpl": "a250_sksbox_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ar15_30",
+            "_tpl": "a250_ar15_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_glock919_33",
+            "_tpl": "a250_glock919_33",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mpx_41",
+            "_tpl": "a250_mpx_41",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_1911_7",
+            "_tpl": "a250_1911_7",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_pp1901_30",
+            "_tpl": "a250_pp1901_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_kedr_30",
+            "_tpl": "a250_kedr_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762alu_30",
+            "_tpl": "a250_ak762alu_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_fn57_20",
+            "_tpl": "a250_fn57_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_saiga12_10",
+            "_tpl": "a250_saiga12_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak103_30",
+            "_tpl": "a250_ak103_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m1a_20",
+            "_tpl": "a250_m1a_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_kedr_20",
+            "_tpl": "a250_kedr_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sa58fal_20",
+            "_tpl": "a250_sa58fal_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_pl15_16",
+            "_tpl": "a250_pl15_16",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m700pmag_10",
+            "_tpl": "a250_m700pmag_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762pmag_73",
+            "_tpl": "a250_ak762pmag_73",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_glock919_50",
+            "_tpl": "a250_glock919_50",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m14_30",
+            "_tpl": "a250_m14_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_p226_20",
+            "_tpl": "a250_p226_20",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
@@ -231,6 +1131,276 @@
             }
         },
         {
+            "_id": "a250_glock919_21",
+            "_tpl": "a250_glock919_21",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_vpo101_5",
+            "_tpl": "a250_vpo101_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_vpo215_4",
+            "_tpl": "a250_vpo215_4",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_vss_30",
+            "_tpl": "a250_vss_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_1911a1_7",
+            "_tpl": "a250_1911a1_7",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mosin_5",
+            "_tpl": "a250_mosin_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_scarl_30",
+            "_tpl": "a250_scarl_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_scarhfde_20",
+            "_tpl": "a250_scarhfde_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_mosinangel_10",
+            "_tpl": "a250_mosinangel_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_scarlfde_30",
+            "_tpl": "a250_scarlfde_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmg2_30",
+            "_tpl": "a250_556pmg2_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556poly_30",
+            "_tpl": "a250_556poly_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m870_10",
+            "_tpl": "a250_m870_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556d60_60",
+            "_tpl": "a250_556d60_60",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmag_10",
+            "_tpl": "a250_556pmag_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmag_20",
+            "_tpl": "a250_556pmag_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmag_30",
+            "_tpl": "a250_556pmag_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_saiga545_10",
+            "_tpl": "a250_saiga545_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_545pmag_30",
+            "_tpl": "a250_545pmag_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m870_7",
+            "_tpl": "a250_m870_7",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmag_40",
+            "_tpl": "a250_556pmag_40",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556mag5_100",
+            "_tpl": "a250_556mag5_100",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556mag5_60",
+            "_tpl": "a250_556mag5_60",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_762fab_30",
+            "_tpl": "a250_762fab_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_762bake_40",
+            "_tpl": "a250_762bake_40",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_762pmag_30",
+            "_tpl": "a250_762pmag_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_762molot_40",
+            "_tpl": "a250_762molot_40",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
             "_id": "a250_338axmc_10",
             "_tpl": "a250_338axmc_10",
             "parentId": "hideout",
@@ -241,8 +1411,278 @@
             }
         },
         {
+            "_id": "a250_762x14_50",
+            "_tpl": "a250_762x14_50",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m3sup90_11",
+            "_tpl": "a250_m3sup90_11",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_m3sup90_13",
+            "_tpl": "a250_m3sup90_13",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_ak762banana_30",
+            "_tpl": "a250_ak762banana_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_pp19_10",
+            "_tpl": "a250_pp19_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_pp19_20",
+            "_tpl": "a250_pp19_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_pp19_30",
+            "_tpl": "a250_pp19_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_saiga12_20",
+            "_tpl": "a250_saiga12_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556steel_30",
+            "_tpl": "a250_556steel_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmagfde_30",
+            "_tpl": "a250_556pmagfde_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmagfde_40",
+            "_tpl": "a250_556pmagfde_40",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmagwin_30",
+            "_tpl": "a250_556pmagwin_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556pmagwinfde_30",
+            "_tpl": "a250_556pmagwinfde_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_556troy_30",
+            "_tpl": "a250_556troy_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sv98_10",
+            "_tpl": "a250_sv98_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_svd_10",
+            "_tpl": "a250_svd_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_svd_20",
+            "_tpl": "a250_svd_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_t5000_5",
+            "_tpl": "a250_t5000_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_toz106_2",
+            "_tpl": "a250_toz106_2",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_toz106_4",
+            "_tpl": "a250_toz106_4",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_toz106_5",
+            "_tpl": "a250_toz106_5",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_usp45tac_12",
+            "_tpl": "a250_usp45tac_12",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_vpo101_10",
+            "_tpl": "a250_vpo101_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sr2m_20",
+            "_tpl": "a250_sr2m_20",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_sr2m_30",
+            "_tpl": "a250_sr2m_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
             "_id": "a250_aug_30",
             "_tpl": "a250_aug_30",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_aug_10",
+            "_tpl": "a250_aug_10",
+            "parentId": "hideout",
+            "slotId": "hideout",
+            "upd": {
+                "UnlimitedCount": true,
+                "StackObjectsCount": 999999
+            }
+        },
+        {
+            "_id": "a250_aug_42",
+            "_tpl": "a250_aug_42",
             "parentId": "hideout",
             "slotId": "hideout",
             "upd": {
