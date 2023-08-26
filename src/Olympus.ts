@@ -65,8 +65,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const rb_item in zeusdb.traders.Ragman.barter_scheme){
                             db.traders[tradeName].assort.barter_scheme[rb_item] = zeusdb.traders.Ragman.barter_scheme[rb_item];
                         }
-                        for (const rl_item in zeusdb.traders.Ragman.loyal_level_items){
-                            db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyal_level_items[rl_item];
+                        for (const rl_item in zeusdb.traders.Ragman.loyalty_level_items){
+                            db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyalty_level_items[rl_item];
                         }
                     }
 
@@ -79,8 +79,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const jb_item in zeusdb.traders.Jaeger.barter_scheme){
                             db.traders[tradeName].assort.barter_scheme[jb_item] = zeusdb.traders.Jaeger.barter_scheme[jb_item];
                         }
-                        for (const jl_item in zeusdb.traders.Jaeger.loyal_level_items){
-                            db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyal_level_items[jl_item];
+                        for (const jl_item in zeusdb.traders.Jaeger.loyalty_level_items){
+                            db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyalty_level_items[jl_item];
                         }
                     }
 
@@ -93,8 +93,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const tb_item in zeusdb.traders.Therapist.barter_scheme){
                             db.traders[tradeName].assort.barter_scheme[tb_item] = zeusdb.traders.Therapist.barter_scheme[tb_item];
                         }
-                        for (const tl_item in zeusdb.traders.Therapist.loyal_level_items){
-                            db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyal_level_items[tl_item];
+                        for (const tl_item in zeusdb.traders.Therapist.loyalty_level_items){
+                            db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyalty_level_items[tl_item];
                         }
                     }
                 }
@@ -138,8 +138,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const rb_item in zeusdb.traders.Ragman.barter_schemeMin){
                             db.traders[tradeName].assort.barter_scheme[rb_item] = zeusdb.traders.Ragman.barter_schemeMin[rb_item];
                         }
-                        for (const rl_item in zeusdb.traders.Ragman.loyal_level_itemsMin){
-                            db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyal_level_itemsMin[rl_item];
+                        for (const rl_item in zeusdb.traders.Ragman.loyalty_level_itemsMin){
+                            db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyalty_level_itemsMin[rl_item];
                         }
                     }
 
@@ -152,13 +152,13 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const jb_item in zeusdb.traders.Jaeger.barter_schemeMin){
                             db.traders[tradeName].assort.barter_scheme[jb_item] = zeusdb.traders.Jaeger.barter_schemeMin[jb_item];
                         }
-                        for (const jl_item in zeusdb.traders.Jaeger.loyal_level_itemsMin){
-                            db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyal_level_itemsMin[jl_item];
+                        for (const jl_item in zeusdb.traders.Jaeger.loyalty_level_itemsMin){
+                            db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyalty_level_itemsMin[jl_item];
                         }
                     }
 
                     if ( tradeName === "54cb57776803fa99248b456e" ){
-                        for (const ti_item of zeusdb.traders.Therapist.items.list){
+                        for (const ti_item of zeusdb.traders.Therapist.itemsMin.list){
                             if (!db.traders[tradeName].assort.items.find(i=>i._id == ti_item._id)){
                                 db.traders[tradeName].assort.items.push(ti_item);
                             }
@@ -166,8 +166,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const tb_item in zeusdb.traders.Therapist.barter_schemeMin){
                             db.traders[tradeName].assort.barter_scheme[tb_item] = zeusdb.traders.Therapist.barter_schemeMin[tb_item];
                         }
-                        for (const tl_item in zeusdb.traders.Therapist.loyal_level_itemsMin){
-                            db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyal_level_itemsMin[tl_item];
+                        for (const tl_item in zeusdb.traders.Therapist.loyalty_level_itemsMin){
+                            db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyalty_level_itemsMin[tl_item];
                         }
                     }
                 }
@@ -211,8 +211,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const jb_item in zeusdb.traders.Jaeger.barter_scheme){
                             db.traders[tradeName].assort.barter_scheme[jb_item] = zeusdb.traders.Jaeger.barter_scheme[jb_item];
                         }
-                        for (const jl_item in zeusdb.traders.Jaeger.loyal_level_items){
-                            db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyal_level_items[jl_item];
+                        for (const jl_item in zeusdb.traders.Jaeger.loyalty_level_items){
+                            db.traders[tradeName].assort.loyal_level_items[jl_item] = zeusdb.traders.Jaeger.loyalty_level_items[jl_item];
                         }
                     }
                 }
@@ -255,8 +255,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const rb_item in zeusdb.traders.Ragman.barter_scheme){
                             db.traders[tradeName].assort.barter_scheme[rb_item] = zeusdb.traders.Ragman.barter_scheme[rb_item];
                         }
-                        for (const rl_item in zeusdb.traders.Ragman.loyal_level_items){
-                            db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyal_level_items[rl_item];
+                        for (const rl_item in zeusdb.traders.Ragman.loyalty_level_items){
+                            db.traders[tradeName].assort.loyal_level_items[rl_item] = zeusdb.traders.Ragman.loyalty_level_items[rl_item];
                         }
                     }
                 }
@@ -299,8 +299,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         for (const tb_item in zeusdb.traders.Therapist.barter_scheme){
                             db.traders[tradeName].assort.barter_scheme[tb_item] = zeusdb.traders.Therapist.barter_scheme[tb_item];
                         }
-                        for (const tl_item in zeusdb.traders.Therapist.loyal_level_items){
-                            db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyal_level_items[tl_item];
+                        for (const tl_item in zeusdb.traders.Therapist.loyalty_level_items){
+                            db.traders[tradeName].assort.loyal_level_items[tl_item] = zeusdb.traders.Therapist.loyalty_level_items[tl_item];
                         }
                     }
                 }
