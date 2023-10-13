@@ -74,6 +74,11 @@ Only the stimulants from the mod are loaded.
 <br>
 
 # Changelog:
+370.0.1 (MinorMajor Update)
+  - Fix Types.
+  - Correct issue with blacklisting items from bot generation.
+  - Updated to support AKI 3.7.0+
+
 358.0.1 (BIG Change Update)
   - Refactored code to combine all variants into a single mod.
   - Removed resizable containers options.
