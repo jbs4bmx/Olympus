@@ -1,7 +1,6 @@
 {
     "VERSION_SELECTION": "true/false: Choose only one option. Determines the version of the mod to load.",
     "FullVersion": true,
-    "Minimal": false,
     "MagsOnly": false,
     "RigsOnly": false,
     "StimsOnly": false,
