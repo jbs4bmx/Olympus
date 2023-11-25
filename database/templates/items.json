@@ -4745,7 +4745,7 @@
             "CantRemoveFromSlotsDuringRaid": [],
             "Cartridges": [
             {
-                "_id": "6183d53f1cb55961fa0fdcdc",
+                "_id": "618168dc8004cc50514c34fe",
                 "_max_count": 250,
                 "_name": "cartridges",
                 "_parent": "a250_scarhfde",
@@ -4801,7 +4801,7 @@
             "IsUngivable": false,
             "IsUnremovable": false,
             "IsUnsaleable": false,
-            "ItemSound": "magazine_metal",
+            "ItemSound": "mag_plastic",
             "LoadUnloadModifier": 0,
             "LootExperience": 20,
             "Loudness": -50,
@@ -4846,7 +4846,7 @@
         },
         "_proto": "55d480c04bdc2d1d4e8b456a",
         "_type": "Item",
-        "_orig": "6183d53f1cb55961fa0fdcda"
+        "_orig": "618168dc8004cc50514c34fc"
     },
     "a250_mk18": {
         "_id": "a250_mk18",

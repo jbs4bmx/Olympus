@@ -63,7 +63,7 @@ Only use the items you want and nothing more. Select the corresponding option(s)
 
 ``` json
 {
-    "VERSION_SELECTION": "true/false: Choose only one option. Determines the version of the mod to load.",
+    "VERSION_SELECTION": "true/false: Determines the version of the mod to load.",
     "FullVersion": true,
     "MagsOnly": false,
     "RigsOnly": false,
@@ -95,11 +95,12 @@ This the full implementation of the mod and includes many new items to enhance y
     - Armor of Athena
     - Atlas' Satchel
   - 60 new Magazine options offered by Jaeger
-    - 250rd mags for 111 supported firearms with OP buffs.
+    - 250rd mags for 112 supported firearms with OP buffs.
 
 ### Mags Only Version
 Only the full amount of new magazines from the mod are loaded.
   - 60 new Magazine options offered by Jaeger
+    - 250rd mags for 112 supported firearms with OP buffs.
 
 ### Rigs Only Version
 Only the rigs from the mod are loaded.
@@ -142,18 +143,22 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.
 | PP-9 "Klin" | ✅**Supported** |   | PP-91 "Kedr" | ✅**Supported** |   | PP-91-01 "Kedr-B" | ✅**Supported** |   | PPSh-41 | ✅**Supported** |
 | RD-704 | ✅**Supported** |   | RFB | ✅**Supported** |   | RPK-16 | ✅**Supported** |   | RSASS | ✅**Supported** |
 | RSh-12 | ❌ Unsupported |   | SA-58 | ✅**Supported** |   | SAG AK | ✅**Supported** |   | SAG AK Short | ✅**Supported** |
-| Saiga-12 | ✅**Supported** |   | Saiga-9 | ✅**Supported** |   | SCAR-H | ✅**Supported** |   | SCAR-L | ✅**Supported** |
-| SKS | ✅**Supported** |   | SP-81 | ❌ Unsupported |   | SR-1MP Gyurza, | ✅**Supported** |   | SR-25 | ✅**Supported** |
-| SR-2M | ✅**Supported** |   | STM-9 | ✅**Supported** |   | SV-98 | ✅**Supported** |   | SVDS | ✅**Supported** |
-| SVT-40 | ✅**Supported** |   | T-5000 | ✅**Supported** |   | TOZ-106 | ✅**Supported** |   | TT pistol (gold) | ✅**Supported** |
-| TT pistol | ✅**Supported** |   | TX-15 DML | ✅**Supported** |   | UMP 45 | ✅**Supported** |   | USP .45 | ✅**Supported** |
-| Vector .45 | ✅**Supported** |   | Vector 9x19 | ✅**Supported** |   | VPO-101 | ✅**Supported** |   | VPO-136 | ✅**Supported** |
-| VPO-209 | ✅**Supported** |   | VPO-215 | ✅**Supported** |   | VSS Vintorez | ✅**Supported** |   | - | - |
+| Saiga-12 | ✅**Supported** |   | Saiga-9 | ✅**Supported** |   | SCAR-H | ✅**Supported** |   | SCAR-H (FDE) | ✅**Supported** |
+| SCAR-L | ✅**Supported** |   | SKS | ✅**Supported** |   | SP-81 | ❌ Unsupported |   | SR-1MP Gyurza, | ✅**Supported** |
+| SR-25 | ✅**Supported** |   | SR-2M | ✅**Supported** |   | STM-9 | ✅**Supported** |   | SV-98 | ✅**Supported** |
+| SVDS | ✅**Supported** |   | SVT-40 | ✅**Supported** |   | T-5000 | ✅**Supported** |   | TOZ-106 | ✅**Supported** |
+| TT pistol (gold) | ✅**Supported** |   | TT pistol | ✅**Supported** |   | TX-15 DML | ✅**Supported** |   | UMP 45 | ✅**Supported** |
+| USP .45 | ✅**Supported** |   | Vector .45 | ✅**Supported** |   | Vector 9x19 | ✅**Supported** |   | VPO-101 | ✅**Supported** |
+| VPO-136 | ✅**Supported** |   | VPO-209 | ✅**Supported** |   | VPO-215 | ✅**Supported** |   | VSS Vintorez | ✅**Supported** |
 
 
 <br>
 
 ## Changelog:
+
+373.0.2 (Quick Fix Update)
+  - Correct missing entries for Scar-H FDE
+  - Update support to 112 firearms from 111 firearms.
 
 373.0.1 (Overhaul Update)
   - Add support for PKM, PKP, SVT-40, and​​ AVT-40 firearms.

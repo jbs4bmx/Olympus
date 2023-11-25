@@ -848,6 +848,15 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                             }
                         }
                     break;
+                    case "6183afd850224f204c1da514":
+                        for ( i=0; i<data._props.Slots.length; i++ )
+                        {
+                            if ( data._props.Slots[i]._name == sectionName )
+                            {
+                                items["6183afd850224f204c1da514"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
+                            }
+                        }
+                    break;
                     case "5fc22d7c187fea44d52eda44":
                         for ( i=0; i<data._props.Slots.length; i++ )
                         {
@@ -1855,6 +1864,15 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                             if ( data._props.Slots[i]._name == sectionName )
                             {
                                 items["6165ac306ef05c2ce828ef74"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
+                            }
+                        }
+                    break;
+                    case "6183afd850224f204c1da514":
+                        for ( i=0; i<data._props.Slots.length; i++ )
+                        {
+                            if ( data._props.Slots[i]._name == sectionName )
+                            {
+                                items["6183afd850224f204c1da514"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
                             }
                         }
                     break;
