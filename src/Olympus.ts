@@ -259,7 +259,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e81c3cbac2bb513793cdc75"]._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
                             }
                         }
                     break;
@@ -268,7 +268,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5f36a0e5fbf956000b716b65"]._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
                             }
                         }
                     break;
@@ -277,7 +277,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["627e14b21713922ded6f2c15"]._props.Slots[i]._props.filters[0].Filter.push("a250_axmc");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_axmc");
                             }
                         }
                     break;
@@ -286,7 +286,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d9b5acfc4001633997a"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -295,7 +295,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6499849fc93611967b034949"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -304,7 +304,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bf3e03b0db834001d2c4a9c"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -313,7 +313,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac4cd105acfc40016339859"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -322,7 +322,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5644bd2b4bdc2d3b4c8b4572"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -331,7 +331,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bf3e0490db83400196199af"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -340,7 +340,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ab8e9fcd8ce870019439434"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -349,7 +349,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57dc2fa62459775949412633"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -358,7 +358,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5839a40f24597726f856b511"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -367,7 +367,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["583990e32459771419544dd2"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -376,7 +376,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["628b5638ad252a16da6dd245"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -385,7 +385,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["628b9c37a733087d0d7fe84b"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -394,7 +394,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5beed0f50db834001c062b12"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -403,7 +403,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c488a752e221602b412af63"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -412,7 +412,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bb2475ed4351e00853264e3"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -421,7 +421,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["623063e994fc3f7b302a9696"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -430,7 +430,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5447a9cd4bdc2dbd208b4567"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -439,7 +439,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fbcc1d9016cce60e8341ab3"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -448,7 +448,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6184055050224f204c1da540"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -457,7 +457,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c07c60e0db834002330051f"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -466,7 +466,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d43021ca4b9362eab4b5e25"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -475,7 +475,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e870397991fd70db46995c8"]._props.Slots[i]._props.filters[0].Filter.push("a250_590a1");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_590a1");
                             }
                         }
                     break;
@@ -484,7 +484,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d2e5acfc43b321d4b53"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -493,7 +493,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d725acfc43b321d4b60"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -502,7 +502,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59d6088586f774275f37482f"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -511,7 +511,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a0ec13bfcdbcb00165aa685"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -520,7 +520,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59ff346386f77477562ff5e2"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -529,7 +529,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5abcbc27d8ce8700182eceeb"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -538,7 +538,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["606587252535c57a13424cfd"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -547,7 +547,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["628a60ae6b1d481ff772e9c8"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -556,7 +556,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59e6152586f77473dc057aa1"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -565,7 +565,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59e6687d86f77411d949b251"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -574,7 +574,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66cb05acfc40198510a10"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
                             }
                         }
                     break;
@@ -583,7 +583,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d015acfc400180ae6e4"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
                             }
                         }
                     break;
@@ -592,7 +592,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5abccb7dd8ce87001773e277"]._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
                             }
                         }
                     break;
@@ -601,7 +601,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a17f98cfcdbcb0980087290"]._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
                             }
                         }
                     break;
@@ -610,7 +610,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5dcbd56fdbd3d91b3e5468d5"]._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
                             }
                         }
                     break;
@@ -619,7 +619,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a367e5dc4a282000e49738f"]._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
                             }
                         }
                     break;
@@ -628,7 +628,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5df8ce05b11454561e39243b"]._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
                             }
                         }
                     break;
@@ -637,7 +637,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5cadfbf7ae92152ac412eeef"]._props.Slots[i]._props.filters[0].Filter.push("a250_ash12");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ash12");
                             }
                         }
                     break;
@@ -646,7 +646,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["62e7c4fba689e8c9c50dfc38"]._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
                             }
                         }
                     break;
@@ -655,7 +655,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["63171672192e68c5460cebc5"]._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
                             }
                         }
                     break;
@@ -664,7 +664,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6410733d5dd49d77bd07847e"]._props.Slots[i]._props.filters[0].Filter.push("a250_avt");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_avt");
                             }
                         }
                     break;
@@ -673,7 +673,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["588892092459774ac91d4b11"]._props.Slots[i]._props.filters[0].Filter.push("a250_dvl");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_dvl");
                             }
                         }
                     break;
@@ -682,7 +682,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d3eb3b0a4b93615055e84d2"]._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
                             }
                         }
                     break;
@@ -691,7 +691,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d67abc1a4b93614ec50137f"]._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
                             }
                         }
                     break;
@@ -700,7 +700,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6176aca650224f204c1da3fb"]._props.Slots[i]._props.filters[0].Filter.push("a250_g28");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_g28");
                             }
                         }
                     break;
@@ -709,7 +709,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fb64bc92b1b027b1f50bcf2"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock45");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock45");
                             }
                         }
                     break;
@@ -718,7 +718,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fc3f2d5900b1d5091531e57"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -727,7 +727,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a7ae0c351dfba0017554310"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -736,7 +736,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5b1fa9b25acfc40018633c01"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -745,7 +745,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["63088377b5cd696784087147"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -754,7 +754,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["60339954d62c9b14ed777c06"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -763,7 +763,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57f4c844245977379d5c14d1"]._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
                             }
                         }
                     break;
@@ -772,7 +772,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57d14d2524597714373db789"]._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
                             }
                         }
                     break;
@@ -781,7 +781,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57f3c6bd24597738e730fa2f"]._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
                             }
                         }
                     break;
@@ -790,7 +790,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e848cc2988a8701445df1e8"]._props.Slots[i]._props.filters[0].Filter.push("a250_ks23");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ks23");
                             }
                         }
                     break;
@@ -799,7 +799,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5aafa857e5b5b00018480968"]._props.Slots[i]._props.filters[0].Filter.push("a250_m1a");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m1a");
                             }
                         }
                     break;
@@ -808,7 +808,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6259b864ebedf17603599e88"]._props.Slots[i]._props.filters[0].Filter.push("a250_m3sup90");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m3sup90");
                             }
                         }
                     break;
@@ -817,7 +817,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bfea6e90db834001b7347f3"]._props.Slots[i]._props.filters[0].Filter.push("a250_m700");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m700");
                             }
                         }
                     break;
@@ -826,7 +826,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a7828548dc32e5a9c28b516"]._props.Slots[i]._props.filters[0].Filter.push("a250_m870");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m870");
                             }
                         }
                     break;
@@ -835,7 +835,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5cadc190ae921500103bb3b6"]._props.Slots[i]._props.filters[0].Filter.push("a250_m9a3");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m9a3");
                             }
                         }
                     break;
@@ -844,7 +844,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6165ac306ef05c2ce828ef74"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
                             }
                         }
                     break;
@@ -853,7 +853,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6183afd850224f204c1da514"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
                             }
                         }
                     break;
@@ -862,7 +862,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fc22d7c187fea44d52eda44"]._props.Slots[i]._props.filters[0].Filter.push("a250_mk18");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mk18");
                             }
                         }
                     break;
@@ -871,7 +871,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bfd297f0db834001a669119"]._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
                             }
                         }
                     break;
@@ -880,7 +880,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ae08f0a5acfc408fb1398a1"]._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
                             }
                         }
                     break;
@@ -889,7 +889,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["54491c4f4bdc2db1078b4568"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
                             }
                         }
                     break;
@@ -898,7 +898,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["56dee2bdd2720bc8328b4567"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
                             }
                         }
                     break;
@@ -907,7 +907,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["606dae0ab0e443224b421bb7"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
                             }
                         }
                     break;
@@ -916,7 +916,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["576a581d2459771e7b1bc4f1"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp443");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp443");
                             }
                         }
                     break;
@@ -925,7 +925,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d2f0d8048f0356c925bc3b0"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
                             }
                         }
                     break;
@@ -934,7 +934,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5926bb2186f7744b1c6c6e60"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
                             }
                         }
                     break;
@@ -943,7 +943,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ba26383d4351e00334c93d9"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
                             }
                         }
                     break;
@@ -952,7 +952,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bd70322209c4d00d7167b8f"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
                             }
                         }
                     break;
@@ -961,7 +961,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e00903ae9dc277128008b87"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
                             }
                         }
                     break;
@@ -970,7 +970,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5de7bd7bfd6b4e6e2276dc25"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
                             }
                         }
                     break;
@@ -979,7 +979,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["58948c8e86f77409493f7266"]._props.Slots[i]._props.filters[0].Filter.push("a250_mpx");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mpx");
                             }
                         }
                     break;
@@ -988,7 +988,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["56d59856d2720bd8418b456a"]._props.Slots[i]._props.filters[0].Filter.push("a250_p226");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_p226");
                             }
                         }
                     break;
@@ -997,7 +997,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5cc82d76e24e8d00134b4b83"]._props.Slots[i]._props.filters[0].Filter.push("a250_p90");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_p90");
                             }
                         }
                     break;
@@ -1006,7 +1006,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["64637076203536ad5600c990"]._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
                             }
                         }
                     break;
@@ -1015,7 +1015,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["64ca3d3954fc657e230529cc"]._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
                             }
                         }
                     break;
@@ -1024,7 +1024,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["602a9740da11d6478d5a06dc"]._props.Slots[i]._props.filters[0].Filter.push("a250_pl15");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pl15");
                             }
                         }
                     break;
@@ -1033,7 +1033,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["56e0598dd2720bb5668b45a6"]._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
                             }
                         }
                     break;
@@ -1042,7 +1042,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["579204f224597773d619e051"]._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
                             }
                         }
                     break;
@@ -1051,7 +1051,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5448bd6b4bdc2dfc2f8b4569"]._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
                             }
                         }
                     break;
@@ -1060,7 +1060,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59f9cabd86f7743a10721f46"]._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
                             }
                         }
                     break;
@@ -1069,7 +1069,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59984ab886f7743e98271174"]._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
                             }
                         }
                     break;
@@ -1078,7 +1078,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ea03f7400685063ec28bfa8"]._props.Slots[i]._props.filters[0].Filter.push("a250_ppsh");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ppsh");
                             }
                         }
                     break;
@@ -1087,7 +1087,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5b0bbe4e5acfc40dc528a72d"]._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
                             }
                         }
                     break;
@@ -1096,7 +1096,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5f2a9575926fd9352339381f"]._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
                             }
                         }
                     break;
@@ -1105,7 +1105,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["576165642459773c7a400233"]._props.Slots[i]._props.filters[0].Filter.push("a250_saiga12");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_saiga12");
                             }
                         }
                     break;
@@ -1114,7 +1114,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["587e02ff24597743df3deaeb"]._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
                             }
                         }
                     break;
@@ -1123,7 +1123,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["574d967124597745970e7c94"]._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
                             }
                         }
                     break;
@@ -1132,7 +1132,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59f98b4986f7746f546d2cef"]._props.Slots[i]._props.filters[0].Filter.push("a250_sr1mp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sr1mp");
                             }
                         }
                     break;
@@ -1141,7 +1141,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["62e14904c2699c0ec93adc47"]._props.Slots[i]._props.filters[0].Filter.push("a250_sr2m");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sr2m");
                             }
                         }
                     break;
@@ -1150,7 +1150,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["55801eed4bdc2d89578b4588"]._props.Slots[i]._props.filters[0].Filter.push("a250_sv98");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sv98");
                             }
                         }
                     break;
@@ -1159,7 +1159,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c46fbd72e2216398b5a8c9c"]._props.Slots[i]._props.filters[0].Filter.push("a250_svd");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_svd");
                             }
                         }
                     break;
@@ -1168,7 +1168,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["643ea5b23db6f9f57107d9fd"]._props.Slots[i]._props.filters[0].Filter.push("a250_svt");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_svt");
                             }
                         }
                     break;
@@ -1177,7 +1177,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5df24cf80dee1b22f862e9bc"]._props.Slots[i]._props.filters[0].Filter.push("a250_t5000");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_t5000");
                             }
                         }
                     break;
@@ -1186,7 +1186,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a38e6bac4a2826c6e06d79b"]._props.Slots[i]._props.filters[0].Filter.push("a250_toz");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_toz");
                             }
                         }
                     break;
@@ -1195,7 +1195,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["571a12c42459771f627b58a0"]._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
                             }
                         }
                     break;
@@ -1204,7 +1204,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5b3b713c5acfc4330140bd8d"]._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
                             }
                         }
                     break;
@@ -1213,7 +1213,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fc3e272f8b6a877a729eac5"]._props.Slots[i]._props.filters[0].Filter.push("a250_ump");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ump");
                             }
                         }
                     break;
@@ -1222,7 +1222,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6193a720f8ee7e52e42109ed"]._props.Slots[i]._props.filters[0].Filter.push("a250_usp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_usp");
                             }
                         }
                     break;
@@ -1231,7 +1231,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c501a4d2e221602b412b540"]._props.Slots[i]._props.filters[0].Filter.push("a250_vpo101");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vpo101");
                             }
                         }
                     break;
@@ -1240,7 +1240,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5de652c31b7e3716273428be"]._props.Slots[i]._props.filters[0].Filter.push("a250_vpo215");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vpo215");
                             }
                         }
                     break;
@@ -1249,7 +1249,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57c44b372459772d2b39b8ce"]._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
                             }
                         }
                     break;
@@ -1258,7 +1258,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57838ad32459774a17445cd2"]._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
                             }
                         }
                     break;
@@ -1278,7 +1278,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e81c3cbac2bb513793cdc75"]._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
                             }
                         }
                     break;
@@ -1287,7 +1287,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5f36a0e5fbf956000b716b65"]._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_1911");
                             }
                         }
                     break;
@@ -1296,7 +1296,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["627e14b21713922ded6f2c15"]._props.Slots[i]._props.filters[0].Filter.push("a250_axmc");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_axmc");
                             }
                         }
                     break;
@@ -1305,7 +1305,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d9b5acfc4001633997a"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1314,7 +1314,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6499849fc93611967b034949"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1323,7 +1323,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bf3e03b0db834001d2c4a9c"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1332,7 +1332,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac4cd105acfc40016339859"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1341,7 +1341,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5644bd2b4bdc2d3b4c8b4572"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1350,7 +1350,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bf3e0490db83400196199af"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1359,7 +1359,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ab8e9fcd8ce870019439434"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1368,7 +1368,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57dc2fa62459775949412633"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1377,7 +1377,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5839a40f24597726f856b511"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1386,7 +1386,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["583990e32459771419544dd2"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1395,7 +1395,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["628b5638ad252a16da6dd245"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1404,7 +1404,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["628b9c37a733087d0d7fe84b"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1413,7 +1413,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5beed0f50db834001c062b12"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak545");
                             }
                         }
                     break;
@@ -1422,7 +1422,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c488a752e221602b412af63"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1431,7 +1431,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bb2475ed4351e00853264e3"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1440,7 +1440,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["623063e994fc3f7b302a9696"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1449,7 +1449,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5447a9cd4bdc2dbd208b4567"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1458,7 +1458,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fbcc1d9016cce60e8341ab3"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1467,7 +1467,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6184055050224f204c1da540"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1476,7 +1476,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c07c60e0db834002330051f"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1485,7 +1485,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d43021ca4b9362eab4b5e25"]._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_556","a250_556fde");
                             }
                         }
                     break;
@@ -1494,7 +1494,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e870397991fd70db46995c8"]._props.Slots[i]._props.filters[0].Filter.push("a250_590a1");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_590a1");
                             }
                         }
                     break;
@@ -1503,7 +1503,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d2e5acfc43b321d4b53"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1512,7 +1512,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d725acfc43b321d4b60"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1521,7 +1521,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59d6088586f774275f37482f"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1530,7 +1530,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a0ec13bfcdbcb00165aa685"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1539,7 +1539,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59ff346386f77477562ff5e2"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1548,7 +1548,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5abcbc27d8ce8700182eceeb"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1557,7 +1557,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["606587252535c57a13424cfd"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1566,7 +1566,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["628a60ae6b1d481ff772e9c8"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1575,7 +1575,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59e6152586f77473dc057aa1"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1584,7 +1584,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59e6687d86f77411d949b251"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak762");
                             }
                         }
                     break;
@@ -1593,7 +1593,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66cb05acfc40198510a10"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
                             }
                         }
                     break;
@@ -1602,7 +1602,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ac66d015acfc400180ae6e4"]._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ak556");
                             }
                         }
                     break;
@@ -1611,7 +1611,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5abccb7dd8ce87001773e277"]._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
                             }
                         }
                     break;
@@ -1620,7 +1620,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a17f98cfcdbcb0980087290"]._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aps");
                             }
                         }
                     break;
@@ -1629,7 +1629,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5dcbd56fdbd3d91b3e5468d5"]._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
                             }
                         }
                     break;
@@ -1638,7 +1638,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a367e5dc4a282000e49738f"]._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
                             }
                         }
                     break;
@@ -1647,7 +1647,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5df8ce05b11454561e39243b"]._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ar10");
                             }
                         }
                     break;
@@ -1656,7 +1656,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5cadfbf7ae92152ac412eeef"]._props.Slots[i]._props.filters[0].Filter.push("a250_ash12");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ash12");
                             }
                         }
                     break;
@@ -1665,7 +1665,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["62e7c4fba689e8c9c50dfc38"]._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
                             }
                         }
                     break;
@@ -1674,7 +1674,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["63171672192e68c5460cebc5"]._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_aug");
                             }
                         }
                     break;
@@ -1683,7 +1683,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6410733d5dd49d77bd07847e"]._props.Slots[i]._props.filters[0].Filter.push("a250_avt");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_avt");
                             }
                         }
                     break;
@@ -1692,7 +1692,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["588892092459774ac91d4b11"]._props.Slots[i]._props.filters[0].Filter.push("a250_dvl");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_dvl");
                             }
                         }
                     break;
@@ -1701,7 +1701,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d3eb3b0a4b93615055e84d2"]._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
                             }
                         }
                     break;
@@ -1710,7 +1710,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d67abc1a4b93614ec50137f"]._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_fn57");
                             }
                         }
                     break;
@@ -1719,7 +1719,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6176aca650224f204c1da3fb"]._props.Slots[i]._props.filters[0].Filter.push("a250_g28");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_g28");
                             }
                         }
                     break;
@@ -1728,7 +1728,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fb64bc92b1b027b1f50bcf2"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock45");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock45");
                             }
                         }
                     break;
@@ -1737,7 +1737,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fc3f2d5900b1d5091531e57"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -1746,7 +1746,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a7ae0c351dfba0017554310"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -1755,7 +1755,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5b1fa9b25acfc40018633c01"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -1764,7 +1764,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["63088377b5cd696784087147"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -1773,7 +1773,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["60339954d62c9b14ed777c06"]._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_glock9");
                             }
                         }
                     break;
@@ -1782,7 +1782,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57f4c844245977379d5c14d1"]._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
                             }
                         }
                     break;
@@ -1791,7 +1791,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57d14d2524597714373db789"]._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
                             }
                         }
                     break;
@@ -1800,7 +1800,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57f3c6bd24597738e730fa2f"]._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_kedr");
                             }
                         }
                     break;
@@ -1809,7 +1809,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e848cc2988a8701445df1e8"]._props.Slots[i]._props.filters[0].Filter.push("a250_ks23");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ks23");
                             }
                         }
                     break;
@@ -1818,7 +1818,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5aafa857e5b5b00018480968"]._props.Slots[i]._props.filters[0].Filter.push("a250_m1a");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m1a");
                             }
                         }
                     break;
@@ -1827,7 +1827,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6259b864ebedf17603599e88"]._props.Slots[i]._props.filters[0].Filter.push("a250_m3sup90");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m3sup90");
                             }
                         }
                     break;
@@ -1836,7 +1836,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bfea6e90db834001b7347f3"]._props.Slots[i]._props.filters[0].Filter.push("a250_m700");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m700");
                             }
                         }
                     break;
@@ -1845,7 +1845,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a7828548dc32e5a9c28b516"]._props.Slots[i]._props.filters[0].Filter.push("a250_m870");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m870");
                             }
                         }
                     break;
@@ -1854,7 +1854,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5cadc190ae921500103bb3b6"]._props.Slots[i]._props.filters[0].Filter.push("a250_m9a3");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_m9a3");
                             }
                         }
                     break;
@@ -1863,7 +1863,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6165ac306ef05c2ce828ef74"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
                             }
                         }
                     break;
@@ -1872,7 +1872,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6183afd850224f204c1da514"]._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_scarh","a250_scarhfde");
                             }
                         }
                     break;
@@ -1881,7 +1881,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fc22d7c187fea44d52eda44"]._props.Slots[i]._props.filters[0].Filter.push("a250_mk18");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mk18");
                             }
                         }
                     break;
@@ -1890,7 +1890,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bfd297f0db834001a669119"]._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
                             }
                         }
                     break;
@@ -1899,7 +1899,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ae08f0a5acfc408fb1398a1"]._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mosinbox","a250_mosinaa");
                             }
                         }
                     break;
@@ -1908,7 +1908,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["54491c4f4bdc2db1078b4568"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
                             }
                         }
                     break;
@@ -1917,7 +1917,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["56dee2bdd2720bc8328b4567"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
                             }
                         }
                     break;
@@ -1926,7 +1926,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["606dae0ab0e443224b421bb7"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp133");
                             }
                         }
                     break;
@@ -1935,7 +1935,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["576a581d2459771e7b1bc4f1"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp443");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp443");
                             }
                         }
                     break;
@@ -1944,7 +1944,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5d2f0d8048f0356c925bc3b0"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
                             }
                         }
                     break;
@@ -1953,7 +1953,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5926bb2186f7744b1c6c6e60"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp5");
                             }
                         }
                     break;
@@ -1962,7 +1962,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ba26383d4351e00334c93d9"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
                             }
                         }
                     break;
@@ -1971,7 +1971,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5bd70322209c4d00d7167b8f"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp7");
                             }
                         }
                     break;
@@ -1980,7 +1980,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5e00903ae9dc277128008b87"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
                             }
                         }
                     break;
@@ -1989,7 +1989,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5de7bd7bfd6b4e6e2276dc25"]._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mp9");
                             }
                         }
                     break;
@@ -1998,7 +1998,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["58948c8e86f77409493f7266"]._props.Slots[i]._props.filters[0].Filter.push("a250_mpx");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_mpx");
                             }
                         }
                     break;
@@ -2007,7 +2007,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["56d59856d2720bd8418b456a"]._props.Slots[i]._props.filters[0].Filter.push("a250_p226");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_p226");
                             }
                         }
                     break;
@@ -2016,7 +2016,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5cc82d76e24e8d00134b4b83"]._props.Slots[i]._props.filters[0].Filter.push("a250_p90");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_p90");
                             }
                         }
                     break;
@@ -2025,7 +2025,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["64637076203536ad5600c990"]._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
                             }
                         }
                     break;
@@ -2034,7 +2034,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["64ca3d3954fc657e230529cc"]._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pkp");
                             }
                         }
                     break;
@@ -2043,7 +2043,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["602a9740da11d6478d5a06dc"]._props.Slots[i]._props.filters[0].Filter.push("a250_pl15");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pl15");
                             }
                         }
                     break;
@@ -2052,7 +2052,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["56e0598dd2720bb5668b45a6"]._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
                             }
                         }
                     break;
@@ -2061,7 +2061,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["579204f224597773d619e051"]._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
                             }
                         }
                     break;
@@ -2070,7 +2070,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5448bd6b4bdc2dfc2f8b4569"]._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pm");
                             }
                         }
                     break;
@@ -2079,7 +2079,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59f9cabd86f7743a10721f46"]._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
                             }
                         }
                     break;
@@ -2088,7 +2088,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59984ab886f7743e98271174"]._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_pp1901");
                             }
                         }
                     break;
@@ -2097,7 +2097,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5ea03f7400685063ec28bfa8"]._props.Slots[i]._props.filters[0].Filter.push("a250_ppsh");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ppsh");
                             }
                         }
                     break;
@@ -2106,7 +2106,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5b0bbe4e5acfc40dc528a72d"]._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
                             }
                         }
                     break;
@@ -2115,7 +2115,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5f2a9575926fd9352339381f"]._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sa58");
                             }
                         }
                     break;
@@ -2124,7 +2124,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["576165642459773c7a400233"]._props.Slots[i]._props.filters[0].Filter.push("a250_saiga12");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_saiga12");
                             }
                         }
                     break;
@@ -2133,7 +2133,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["587e02ff24597743df3deaeb"]._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
                             }
                         }
                     break;
@@ -2142,7 +2142,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["574d967124597745970e7c94"]._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sksbox","a250_skspmag");
                             }
                         }
                     break;
@@ -2151,7 +2151,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["59f98b4986f7746f546d2cef"]._props.Slots[i]._props.filters[0].Filter.push("a250_sr1mp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sr1mp");
                             }
                         }
                     break;
@@ -2160,7 +2160,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["62e14904c2699c0ec93adc47"]._props.Slots[i]._props.filters[0].Filter.push("a250_sr2m");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sr2m");
                             }
                         }
                     break;
@@ -2169,7 +2169,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["55801eed4bdc2d89578b4588"]._props.Slots[i]._props.filters[0].Filter.push("a250_sv98");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_sv98");
                             }
                         }
                     break;
@@ -2178,7 +2178,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c46fbd72e2216398b5a8c9c"]._props.Slots[i]._props.filters[0].Filter.push("a250_svd");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_svd");
                             }
                         }
                     break;
@@ -2187,7 +2187,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["643ea5b23db6f9f57107d9fd"]._props.Slots[i]._props.filters[0].Filter.push("a250_svt");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_svt");
                             }
                         }
                     break;
@@ -2196,7 +2196,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5df24cf80dee1b22f862e9bc"]._props.Slots[i]._props.filters[0].Filter.push("a250_t5000");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_t5000");
                             }
                         }
                     break;
@@ -2205,7 +2205,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5a38e6bac4a2826c6e06d79b"]._props.Slots[i]._props.filters[0].Filter.push("a250_toz");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_toz");
                             }
                         }
                     break;
@@ -2214,7 +2214,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["571a12c42459771f627b58a0"]._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
                             }
                         }
                     break;
@@ -2223,7 +2223,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5b3b713c5acfc4330140bd8d"]._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_tt105");
                             }
                         }
                     break;
@@ -2232,7 +2232,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5fc3e272f8b6a877a729eac5"]._props.Slots[i]._props.filters[0].Filter.push("a250_ump");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_ump");
                             }
                         }
                     break;
@@ -2241,7 +2241,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["6193a720f8ee7e52e42109ed"]._props.Slots[i]._props.filters[0].Filter.push("a250_usp");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_usp");
                             }
                         }
                     break;
@@ -2250,7 +2250,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5c501a4d2e221602b412b540"]._props.Slots[i]._props.filters[0].Filter.push("a250_vpo101");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vpo101");
                             }
                         }
                     break;
@@ -2259,7 +2259,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["5de652c31b7e3716273428be"]._props.Slots[i]._props.filters[0].Filter.push("a250_vpo215");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vpo215");
                             }
                         }
                     break;
@@ -2268,7 +2268,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57c44b372459772d2b39b8ce"]._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
                             }
                         }
                     break;
@@ -2277,7 +2277,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         {
                             if ( data._props.Slots[i]._name == sectionName )
                             {
-                                items["57838ad32459774a17445cd2"]._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
+                                data._props.Slots[i]._props.filters[0].Filter.push("a250_vss");
                             }
                         }
                     break;
