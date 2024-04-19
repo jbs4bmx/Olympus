@@ -1,7 +1,7 @@
 {
     "buffs": {
         "BuffsApolloStim": [
-            {
+           {
                 "BuffType": "SkillRate",
                 "Chance": 1,
                 "Delay": 1,

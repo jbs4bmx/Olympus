@@ -19,7 +19,7 @@ This is a re-worked version of AssAssIn's Olympus mod for SPT 3.7+ versions. Thi
 
 ### Items Added
 **Apollo's Magazines (60 in total):**
-  - 250 round capacity.
+  - Configurable capacity.
   - OP Accuracy.
   - OP Ergonomics.
   - Reduced Recoil.
@@ -33,25 +33,26 @@ This is a re-worked version of AssAssIn's Olympus mod for SPT 3.7+ versions. Thi
   - OP stats boost depending on stimulant used.
   - OP pain relief or damage repair depending on stimulant used.
   - No negative side affects from usage.
-  - Length of aid from stimulants increased to 900 seconds of bliss.
-  - 4 uses per Stimulant.
+  - 360 seconds of positive effects from each usage.
+  - Configurable uses per Stimulant.
 
 **Armor Of Athena:**
-  - Full body armor protecting the Chest, Legs, Arms, and Stomach.
-  - Greatly increased armor protection.
+  - Full body armor protecting the chest/back/sides/upper arms/stomach.
+  - Configurable armor protection.
   - Class 10 Armor. (The highest available.)
 
 **Atlas' Satchel:**
   - An incredibly spacious bag to hold the spoils of battle.
   - It may look small, but it's bigger on the inside.
+  - Configurable sizes
 
 **Hercules' Rig v1/Rig v2:**
   - Grants the wearer immense strength to carry more spoils from their battle. (aka. Greatly decreased item weight.)
-  - Increased armor protection for chest. (Rig version 2 only.)
+  - Configurable armor protection for chest/back/sides. (Rig version 2 only.)
 
 **Helmet Of Hermes:**
-  - Full protection of the Head (Ears, Eyes, Jaws, Top, Nape).
-  - Greatly increased armor protection.
+  - Full protection of the Head (top/back/ears/eyes/jaws).
+  - Configurable armor protection.
   - Class 10 Armor. (The highest available.)
 
 
@@ -59,20 +60,59 @@ This is a re-worked version of AssAssIn's Olympus mod for SPT 3.7+ versions. Thi
 
 ## Configuration
 
-Only use the items you want and nothing more. Select the corresponding option(s) in the configuration file.
+Although you can run it default, there are configuration options to tweak it a bit. Edit the corresponding option(s) in the configuration file to make the mod work in the way that you want it to. By default, the entire database of this mod is loaded, but you can also limit it to one of the 3 categories, or a combination of the 3.
 
-``` json
+For example: If you only want to use the stimulants and the magazines from this mod, then change "FullVersion" to false and change "MagOnly" and "StimsOnly" to true.
+
+``` jsonc
 {
-    "VERSION_SELECTION": "true/false: Determines the version of the mod to load.",
-    "FullVersion": true,
-    "MagsOnly": false,
-    "RigsOnly": false,
-    "StimsOnly": false,
+  // ====================================================================================================
+  // VERSION_SELECTION
+  // Choose 1 or more options.
+  // Determines the version of the mod to load. (Default = FullVersion)
+  // If FullVersion is set to "true", the other 3 options will be ignored.
+  // ====================================================================================================
+  "FullVersion": true,
+  "MagsOnly": false,
+  "RigsOnly": false,
+  "StimsOnly": false,
 
-    "BLACKLIST_SELECTION": "true/false: Setting this value to true will stop bots from generating with Olympus items in their inventory.",
-    "blacklistMeds": false,
-    "blacklistGear": false,
-    "blacklistMags": false
+
+  // ====================================================================================================
+  // MAGAZINE_CONFIGURATION
+  // This is the number of cartridges a magazine can hold.
+  // Setting is ignored if magazines are disabled.
+  // ====================================================================================================
+  "cartridgeCount": 250,
+
+
+  // ====================================================================================================
+  // RIG_OPTIONS
+  // ====================================================================================================
+  "athenaArmorAmount": 10000,
+  "herculesRig2ArmorAmount": 10000,
+  "helmetofhermesArmorAmount": 10000,
+  // Maximum recommended values based on screen size for following options:
+  // Recommended: 24x14 for 1080p, 32x16 for 1440p
+  "atlassatchelHorizontal": 24,
+  "atlassatchelVertical": 14,
+
+
+  // ====================================================================================================
+  // STIM_OPTIONS
+  // ====================================================================================================
+  "numberOfStimUses": 4,
+  "stimUseTimeInSeconds": 3,
+
+
+  // ====================================================================================================
+  // BLACKLISTING
+  // Choose 1 or more options.
+  // Setting this value to true will stop bots from generating with Olympus items in their inventory.
+  // ====================================================================================================
+  "blacklistStims": false,
+  "blacklistRigs": false,
+  "blacklistMags": false
 }
 ```
 
@@ -100,7 +140,6 @@ This the full implementation of the mod and includes many new items to enhance y
 ### Mags Only Version
 Only the full amount of new magazines from the mod are loaded.
   - 60 new Magazine options offered by Jaeger
-    - 250rd mags for 112 supported firearms with OP buffs.
 
 ### Rigs Only Version
 Only the rigs from the mod are loaded.
@@ -155,6 +194,17 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.
 <br>
 
 ## Changelog:
+
+380.0.1 (The 'Jesus Christ Holy Fuck BSG' Update)
+  - Update support for SPT 3.8.0
+  - Complete overhaul of database files.
+  - Conversion to use newly generated MongoDB IDs.
+  - Switch to using jsonc for config file so comments can be included.
+  - Add more customizable options in configuration file.
+  - Minor code optimizations here and there.
+  - Move config file to root of mod directory.
+  - Correct missing magazine item push for 2 of the 112 supported firearms.
+  - Minor changes in item asthetic properties.
 
 373.0.2 (Quick Fix Update)
   - Correct missing entries for Scar-H FDE
