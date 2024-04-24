@@ -1453,7 +1453,7 @@
           "BackHead",
           "Ears",
           "Eyes",
-          "Jaws"
+          "Jaw"
         ],
         "armorPlateColliders": [],
         "mousePenalty": 0,
@@ -7543,7 +7543,9 @@
                     "5a269f97c4a282000b151807",
                     "5a26abfac4a28232980eabff",
                     "5a26ac06c4a282000c5a90a8",
-                    "5a26ac0ec4a28200741e1e18"
+                    "5a26ac0ec4a28200741e1e18",
+                    "6576f93989f0062e741ba952",
+                    "6576f4708ca9c4381d16cd9d"
                   ]
                 }
               ]

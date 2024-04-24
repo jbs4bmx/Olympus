@@ -70,7 +70,8 @@ For example: If you only want to use the stimulants and the magazines from this 
   // VERSION_SELECTION
   // Choose 1 or more options.
   // Determines the version of the mod to load. (Default = FullVersion)
-  // If FullVersion is set to "true", the other 3 options will be ignored.
+  // NOTE 1: If FullVersion is set to "true", the other 3 options will be ignored.
+  // NOTE 2: Set FullVersion to false if using the any of the other 3 options.
   // ====================================================================================================
   "FullVersion": true,
   "MagsOnly": false,
@@ -88,18 +89,20 @@ For example: If you only want to use the stimulants and the magazines from this 
 
   // ====================================================================================================
   // RIG_OPTIONS
+  // Settings are ignored if rigs are disabled.
   // ====================================================================================================
   "athenaArmorAmount": 10000,
   "herculesRig2ArmorAmount": 10000,
   "helmetofhermesArmorAmount": 10000,
   // Maximum recommended values based on screen size for following options:
-  // Recommended: 24x14 for 1080p, 32x16 for 1440p
+  // 1080p -> [24h x 14v], 1440p -> [32h x 16v]
   "atlassatchelHorizontal": 24,
   "atlassatchelVertical": 14,
 
 
   // ====================================================================================================
   // STIM_OPTIONS
+  // Settings are ignored if stims are disabled.
   // ====================================================================================================
   "numberOfStimUses": 4,
   "stimUseTimeInSeconds": 3,
@@ -122,7 +125,7 @@ For example: If you only want to use the stimulants and the magazines from this 
 ## Mod Variations
 
 ### Full Version
-This the full implementation of the mod and includes many new items to enhance your raids.
+This the full implementation of the mod and includes many new items to enhance your raids. If enabled, this version will ignore the other 3 options listed below.
   - 4 new Stims offered by Therapist
     - Apollo's Pain -- Ultimate pain relief.
     - Apollo's Stim -- The most OP Buffs ever?
@@ -136,6 +139,8 @@ This the full implementation of the mod and includes many new items to enhance y
     - Atlas' Satchel
   - 60 new Magazine options offered by Jaeger
     - 250rd mags for 112 supported firearms with OP buffs.
+
+### NOTE: Any combination of the following 3 options can be enabled. Remember to set FullVersion to false.
 
 ### Mags Only Version
 Only the full amount of new magazines from the mod are loaded.
@@ -194,6 +199,12 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.
 <br>
 
 ## Changelog:
+
+380.0.2 (Mini Fix)
+  - Minor code optimizations. Nothing too fancy.
+  - Add missing ammo for SR-2M magazine.
+  - Fix number rounding function.
+  - Fix magazine capacity assignment.
 
 380.0.1 (The 'Jesus Christ Holy Fuck BSG' Update)
   - Update support for SPT 3.8.0

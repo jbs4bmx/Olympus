@@ -3,7 +3,8 @@
     // VERSION_SELECTION
     // Choose 1 or more options.
     // Determines the version of the mod to load. (Default = FullVersion)
-    // If FullVersion is set to "true", the other 3 options will be ignored.
+    // NOTE 1: If FullVersion is set to "true", the other 3 options will be ignored.
+    // NOTE 2: Set FullVersion to false if using the any of the other 3 options.
     // ====================================================================================================
     "FullVersion": true,
     "MagsOnly": false,
@@ -21,18 +22,20 @@
 
     // ====================================================================================================
     // RIG_OPTIONS
+    // Settings are ignored if rigs are disabled.
     // ====================================================================================================
     "athenaArmorAmount": 10000,
     "herculesRig2ArmorAmount": 10000,
     "helmetofhermesArmorAmount": 10000,
     // Maximum recommended values based on screen size for following options:
-    // Recommended: 24x14 for 1080p, 32x16 for 1440p
+    // 1080p -> [24h x 14v], 1440p -> [32h x 16v]
     "atlassatchelHorizontal": 24,
     "atlassatchelVertical": 14,
 
 
     // ====================================================================================================
     // STIM_OPTIONS
+    // Settings are ignored if stims are disabled.
     // ====================================================================================================
     "numberOfStimUses": 4,
     "stimUseTimeInSeconds": 3,

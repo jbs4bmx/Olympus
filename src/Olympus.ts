@@ -50,27 +50,17 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
 
         zeusdb = databaseImporter.loadRecursive(`${preAkiModLoader.getModPath(this.modName)}database/`);
 
-        function roundToNearest50(number) {
-            if (number < 50) {return 50;}
-            return Math.round(number / 50) * 50;
-        }
-
         if ( FullVersion === true ) {
-            // Load the whole shebang!
             // TEMPLATE ITEM ENTRIES
             for (const i_item in zeusdb.dbItems.templatesStims) {
-                logger.info(`Adding Olympus database item: ${i_item}`);
                 iData[i_item] = zeusdb.dbItems.templatesStims[i_item];
             }
             for (const i_item in zeusdb.dbItems.templatesRigs) {
-                logger.info(`Adding Olympus database item: ${i_item}`);
                 iData[i_item] = zeusdb.dbItems.templatesRigs[i_item];
             }
             for (const i_item in zeusdb.dbItems.templatesMags) {
-                logger.info(`Adding Olympus database item: ${i_item}`);
                 iData[i_item] = zeusdb.dbItems.templatesMags[i_item];
             }
-
             // HANDBOOK ENTRIES
             for (const h_item of zeusdb.dbItems.handbookStims.Items) {
                 if (!handbook.find(i=>i.Id == h_item.Id)) {
@@ -87,7 +77,6 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                     handbook.push(h_item);
                 }
             }
-
             // LOCALE ENTRIES
             for (const localeID in locales) {
                 for (const locale in zeusdb.dbItems.localesStims.en) {
@@ -104,7 +93,6 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                     locales[localeID][locale] = zeusdb.dbItems.localesMags.en[locale];
                 }
             }
-
             // PRICE ENTRIES
             for (const p_item in zeusdb.dbItems.pricesStims){
                 pData[p_item] = zeusdb.dbItems.pricesStims[p_item];
@@ -115,7 +103,6 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
             for (const p_item in zeusdb.dbItems.pricesMags){
                 pData[p_item] = zeusdb.dbItems.pricesMags[p_item];
             }
-
             // TRADER ENTRIES
             for (const tradeName in tData){
                 if ( tradeName === "5ac3b934156ae10c4430e83c" ){
@@ -158,19 +145,10 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                     }
                 }
             }
-
-            if (!isNaN(cartridgeCount)) {
-                var roundedNumber = roundToNearest50(cartridgeCount);
-                logger.info(`Cartridge count for Apollo's Mags set to: ${roundedNumber}`);
-            } else {
-                logger.info(`Invalid input. Cartridge count for Apollo's Mags not set. Please enter a valid number.`);
-            }
-
+            // Make changes to items loaded into memory
             this.pushMags(container);
             this.pushRigs(container);
             this.pushBuffs(container);
-            this.updateItems(container);
-            this.checkExclusions(container);
 
         } else {
             if ( MagsOnly === true ){
@@ -178,26 +156,22 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                 for (const i_item in zeusdb.dbItems.templatesMags) {
                     iData[i_item] = zeusdb.dbItems.templatesMags[i_item];
                 }
-
                 // HANDBOOK ENTRIES
                 for (const h_item of zeusdb.dbItems.handbookMags.Items) {
                     if (!handbook.find(i=>i.Id == h_item.Id)) {
                         handbook.push(h_item);
                     }
                 }
-
                 // LOCALE ENTRIES
                 for (const localeID in locales) {
                     for (const locale in zeusdb.dbItems.localesMags.en) {
                         locales[localeID][locale] = zeusdb.dbItems.localesMags.en[locale];
                     }
                 }
-
                 // PRICE ENTRIES
                 for (const p_item in zeusdb.dbItems.pricesMags){
                     pData[p_item] = zeusdb.dbItems.pricesMags[p_item];
                 }
-
                 // TRADER ENTRIES
                 for (const tradeName in tData){
                     if ( tradeName === "5c0647fdd443bc2504c2d371" ){
@@ -214,18 +188,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         }
                     }
                 }
-
-                if (!isNaN(cartridgeCount)) {
-                    var roundedNumber = roundToNearest50(cartridgeCount);
-
-                    logger.info(`Cartridge count for Apollo's Mags set to: ${roundedNumber}`);
-                } else {
-                    logger.info(`Invalid input. Cartridge count for Apollo's Mags set to default: 250`);
-                }
-
+                // Make changes to items loaded into memory
                 this.pushMags(container);
-                this.updateItems(container);
-                this.checkExclusions(container);
             }
 
             if ( RigsOnly === true ){
@@ -233,26 +197,22 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                 for (const i_item in zeusdb.dbItems.templatesRigs) {
                     iData[i_item] = zeusdb.dbItems.templatesRigs[i_item];
                 }
-
                 // HANDBOOK ENTRIES
                 for (const h_item of zeusdb.dbItems.handbookRigs.Items) {
                     if (!handbook.find(i=>i.Id == h_item.Id)) {
                         handbook.push(h_item);
                     }
                 }
-
                 // LOCALE ENTRIES
                 for (const localeID in locales) {
                     for (const locale in zeusdb.dbItems.localesRigs.en) {
                         locales[localeID][locale] = zeusdb.dbItems.localesRigs.en[locale];
                     }
                 }
-
                 // PRICE ENTRIES
                 for (const p_item in zeusdb.dbItems.pricesRigs){
                     pData[p_item] = zeusdb.dbItems.pricesRigs[p_item];
                 }
-
                 // TRADER ENTRIES
                 for (const tradeName in tData){
                     if ( tradeName === "5ac3b934156ae10c4430e83c" ){
@@ -269,10 +229,8 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         }
                     }
                 }
-
+                // Make changes to items loaded into memory
                 this.pushRigs(container);
-                this.updateItems(container);
-                this.checkExclusions(container);
             }
 
             if ( StimsOnly === true ){
@@ -280,26 +238,22 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                 for (const i_item in zeusdb.dbItems.templatesStims) {
                     iData[i_item] = zeusdb.dbItems.templatesStims[i_item];
                 }
-
                 // HANDBOOK ENTRIES
                 for (const h_item of zeusdb.dbItems.handbookStims.Items) {
                     if (!handbook.find(i=>i.Id == h_item.Id)) {
                         handbook.push(h_item);
                     }
                 }
-
                 // LOCALE ENTRIES
                 for (const localeID in locales) {
                     for (const locale in zeusdb.dbItems.localesStims.en) {
                         locales[localeID][locale] = zeusdb.dbItems.localesStims.en[locale];
                     }
                 }
-
                 // PRICE ENTRIES
                 for (const p_item in zeusdb.dbItems.pricesStims){
                     pData[p_item] = zeusdb.dbItems.pricesStims[p_item];
                 }
-
                 // TRADER ENTRIES
                 for (const tradeName in tData){
                     if ( tradeName === "54cb57776803fa99248b456e" ){
@@ -316,12 +270,14 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
                         }
                     }
                 }
-
+                // Make changes to items loaded into memory
                 this.pushBuffs(container);
-                this.updateItems(container);
-                this.checkExclusions(container);
             }
         }
+
+        // Make changes to items loaded into memory
+        this.updateItems(container);
+        this.checkExclusions(container);
 
         logger.info(`${this.pkg.author}-${this.pkg.name} v${this.pkg.version}: Cached successfully`);
     }
@@ -1374,12 +1330,26 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
     }
 
     public updateItems(container: DependencyContainer): void {
+        const logger = container.resolve<ILogger>("WinstonLogger");
         const db = container.resolve<DatabaseServer>("DatabaseServer").getTables();
         const items = db.templates.items;
         const vfs = container.resolve<VFS>("VFS");
         const { FullVersion, MagsOnly, RigsOnly, StimsOnly, cartridgeCount, athenaArmorAmount, herculesRig2ArmorAmount, helmetofhermesArmorAmount, atlassatchelHorizontal, atlassatchelVertical, numberOfStimUses, stimUseTimeInSeconds } = jsonc.parse(vfs.readFile(path.resolve(__dirname, "../config.jsonc")));
 
-        let stringValue: string = "1-" + cartridgeCount.toString();
+        function roundToNearest50(number) {
+            if (number < 50) {return 50;}
+            return Math.round(number / 50) * 50;
+        }
+        // Make sure cartridgeCount is a number and round it to the nearest 50
+        if (!isNaN(cartridgeCount)) {
+            var roundedNumber = roundToNearest50(cartridgeCount);
+            logger.info(`Cartridge count for Apollo's Mags set to: ${roundedNumber}`);
+        } else {
+            var roundedNumber = 250;
+            logger.info(`Invalid input. Cartridge count for Apollo's Mags is not valid. Setting to default value: ${roundedNumber}.`);
+        }
+
+        let stringValue: string = "1-" + roundedNumber.toString();
 
         const stimItems: string[] = [
             "661c91746c391e0f5ba82d47",
@@ -1452,7 +1422,7 @@ class Olympus implements IPreAkiLoadMod, IPostDBLoadMod
 
         if ( FullVersion === true ) {
             magItems.forEach(mag => {
-                items[mag]._props.Cartridges[0]._max_count = cartridgeCount;
+                items[mag]._props.Cartridges[0]._max_count = roundedNumber;
                 items[mag]._props.VisibleAmmoRangesString = stringValue;
             });
 
