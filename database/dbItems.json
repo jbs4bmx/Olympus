@@ -841,7 +841,7 @@
         },
         "Weight": -2000,
         "Width": 4,
-        "armorClass": "10",
+        "armorClass": 0,
         "armorZone": [],
         "mousePenalty": 0,
         "speedPenaltyPercent": 0,
