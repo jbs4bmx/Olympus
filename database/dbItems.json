@@ -841,7 +841,7 @@
         },
         "Weight": -2000,
         "Width": 4,
-        "armorClass": 0,
+        "armorClass": "10",
         "armorZone": [],
         "mousePenalty": 0,
         "speedPenaltyPercent": 0,
@@ -1285,7 +1285,7 @@
         },
         "Weight": -1000,
         "Width": 4,
-        "armorClass": 10,
+        "armorClass": "10",
         "armorColliders": [
           "RightSideChestUp",
           "RightSideChestDown",
