@@ -18,7 +18,7 @@ All credit goes to AssAssIn: If at any time, AssAssIn comes back to the scene an
 This is a re-worked version of AssAssIn's Olympus mod for SPT 3.7+ versions. This mod adds rigs, armor, a helmet, a backpack, stimulants, and magazines with OP properties. The items are all sold by Therapist, Ragman, or Jaeger depending on what type of item they are.
 
 ### Items Added
-**Apollo's Magazines (60 in total):**
+**Apollo's Magazines (62 in total):**
   - Configurable capacity.
   - OP Accuracy.
   - OP Ergonomics.
@@ -137,14 +137,14 @@ This the full implementation of the mod and includes many new items to enhance y
     - Helmet of Hermes
     - Armor of Athena
     - Atlas' Satchel
-  - 60 new Magazine options offered by Jaeger
-    - 250rd mags for 112 supported firearms with OP buffs.
+  - 62 new Magazine options offered by Jaeger
+    - 250rd mags for 116 supported firearms with OP buffs. (Cartridge count can be edited in the config file.)
 
 ### NOTE: Any combination of the following 3 options can be enabled. Remember to set FullVersion to false.
 
 ### Mags Only Version
 Only the full amount of new magazines from the mod are loaded.
-  - 60 new Magazine options offered by Jaeger
+  - 62 new Magazine options offered by Jaeger
 
 ### Rigs Only Version
 Only the rigs from the mod are loaded.
@@ -194,11 +194,19 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.
 | TT pistol (gold) | ✅**Supported** |   | TT pistol | ✅**Supported** |   | TX-15 DML | ✅**Supported** |   | UMP 45 | ✅**Supported** |
 | USP .45 | ✅**Supported** |   | Vector .45 | ✅**Supported** |   | Vector 9x19 | ✅**Supported** |   | VPO-101 | ✅**Supported** |
 | VPO-136 | ✅**Supported** |   | VPO-209 | ✅**Supported** |   | VPO-215 | ✅**Supported** |   | VSS Vintorez | ✅**Supported** |
+| 9A-91 | ✅**Supported** |   | VSK-94 | ✅**Supported** |   | RPD | ❌ Unsupported |   | RPDN | ❌ Unsupported |
+| MCX Spear | ✅**Supported** |   | Blicky | ✅**Supported** |   |   |   |   |   |   |
 
 
 <br>
 
 ## Changelog:
+
+390.0.1 (The "It's not called AKI anymore. It's just SPT now!" update) 😆
+  - Add support for MCX Spear, 9A-91, VSK-94, and even the Blicky toy gun. (That's 116 total supported firearms!)
+  - Fix some coding issues. (Me smooth brain.)
+  - Update code to new SPT naming convention.
+
 
 380.0.2 (Mini Fix)
   - Minor code optimizations. Nothing too fancy.
@@ -206,7 +214,7 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.
   - Fix number rounding function.
   - Fix magazine capacity assignment.
 
-380.0.1 (The 'Jesus Christ Holy Fuck BSG' Update)
+380.0.1 (The 'Jesus Christ Holy Fuck BSG' Update) 💩
   - Update support for SPT 3.8.0
   - Complete overhaul of database files.
   - Conversion to use newly generated MongoDB IDs.
