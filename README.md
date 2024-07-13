@@ -202,6 +202,12 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.
 
 ## Changelog:
 
+390.0.2 (patch .2)
+  - Fix armorClass entry on some items.
+  - Updated logging information.
+  - Fixed PMC loot blacklisting code.
+  - Fixed global loot blacklisting code.
+
 390.0.1 (The "It's not called AKI anymore. It's just SPT now!" update) 😆
   - Add support for MCX Spear, 9A-91, VSK-94, and even the Blicky toy gun. (That's 116 total supported firearms!)
   - Fix some coding issues. (Me smooth brain.)
