@@ -9282,6 +9282,251 @@
       },
       "_orig": "66015dc4aaad2f54cb04c56a",
       "_proto": ""
+    },
+	"6762309f35d9d9410ab67517": {
+      "_id": "6762309f35d9d9410ab67517",
+      "_name": "apollo_deagle",
+      "_parent": "5448bc234bdc2d3c308b4569",
+      "_type": "Item",
+      "_props": {
+        "Accuracy": 100,
+        "AnimationVariantsNumber": 0,
+        "BackgroundColor": "grey",
+        "BeltMagazineRefreshCount": 0,
+        "BlocksCollapsible": false,
+        "BlocksFolding": false,
+        "CanAdmin": false,
+        "CanFast": true,
+        "CanHit": false,
+        "CanPutIntoDuringTheRaid": true,
+        "CanRequireOnRagfair": false,
+        "CanSellOnRagfair": true,
+        "CantRemoveFromSlotsDuringRaid": [],
+        "Cartridges": [
+          {
+            "_name": "cartridges",
+            "_id": "66015dc4aaad2f54cb04c56b",
+            "_parent": "6762309f35d9d9410ab67517",
+            "_max_count": 250,
+            "_props": {
+              "filters": [
+                {
+                  "Filter": [
+                    "668fe62ac62660a5d8071446",
+					"66a0d1e0ed648d72fe064d06",
+					"66a0d1c87d0d369e270bb9de",
+					"66a0d1f88486c69fce00fdf6"
+                  ]
+                }
+              ]
+            },
+            "_proto": "5748538b2459770af276a261"
+          }
+        ],
+        "CheckOverride": 0,
+        "CheckTimeModifier": -50,
+        "ConflictingItems": [],
+        "Description": "Apollo's Magazine for Desert Eagle.",
+        "DiscardLimit": -1,
+        "DiscardingBlock": false,
+        "DoubleActionAccuracyPenaltyMult": 1,
+        "DropSoundType": "None",
+        "Durability": 100,
+        "EffectiveDistance": 0,
+        "Ergonomics": 100,
+        "ExamineExperience": 10,
+        "ExamineTime": 1,
+        "ExaminedByDefault": false,
+        "ExtraSizeDown": 0,
+        "ExtraSizeForceAdd": false,
+        "ExtraSizeLeft": 0,
+        "ExtraSizeRight": 0,
+        "ExtraSizeUp": 0,
+        "Grids": [],
+        "HasShoulderContact": false,
+        "Height": 1,
+        "HideEntrails": false,
+        "InsuranceDisabled": false,
+        "IsAlwaysAvailableForInsurance": false,
+        "IsAnimated": false,
+        "IsLockedafterEquip": false,
+        "IsMagazineForStationaryWeapon": false,
+        "IsSpecialSlotOnly": false,
+        "IsUnbuyable": false,
+        "IsUndiscardable": false,
+        "IsUngivable": false,
+        "IsUnremovable": false,
+        "IsUnsaleable": false,
+        "ItemSound": "mag_plastic",
+        "LoadUnloadModifier": 0,
+        "LootExperience": 20,
+        "Loudness": -50,
+        "MagazineWithBelt": false,
+        "MalfunctionChance": 0.01,
+        "MergesWithChildren": true,
+        "Name": "apollo_deagle",
+        "NotShownInSlot": false,
+        "Prefab": {
+          "path": "assets/content/items/mods/magazines/mag_deagle_magnum_research_std_127x33_7.bundle",
+          "rcid": ""
+        },
+        "QuestItem": false,
+        "QuestStashMaxCount": 0,
+        "RagFairCommissionModifier": 1,
+        "RaidModdable": true,
+        "RarityPvE": "Rare",
+        "Recoil": -100,
+        "ReloadMagType": "ExternalMagazine",
+        "RepairCost": 0,
+        "RepairSpeed": 0,
+        "ShortName": "apollo_deagle",
+        "SightingRange": 0,
+        "Slots": [],
+        "StackMaxSize": 1,
+        "StackObjectsCount": 1,
+        "TagColor": 0,
+        "TagName": "",
+        "ToolModdable": false,
+        "UniqueAnimationModID": 0,
+        "Unlootable": false,
+        "UnlootableFromSide": [],
+        "UnlootableFromSlot": "FirstPrimaryWeapon",
+        "UsePrefab": {
+          "path": "",
+          "rcid": ""
+        },
+        "Velocity": 0,
+        "VisibleAmmoRangesString": "1-250",
+        "Weight": 0.01,
+        "Width": 1,
+        "magAnimationIndex": 1
+      },
+      "_orig": "668fe5c5f35310705d02b696",
+      "_proto": ""
+    },
+	"67623d18ef309c4a2e59ee15": {
+      "_id": "67623d18ef309c4a2e59ee15",
+      "_name": "apollo_M60",
+      "_parent": "5448bc234bdc2d3c308b4569",
+      "_props": {
+        "Accuracy": 100,
+        "AnimationVariantsNumber": 0,
+        "BackgroundColor": "grey",
+        "BeltMagazineRefreshCount": 0,
+        "BlocksCollapsible": false,
+        "BlocksFolding": false,
+        "CanAdmin": false,
+        "CanFast": true,
+        "CanHit": false,
+        "CanPutIntoDuringTheRaid": true,
+        "CanRequireOnRagfair": false,
+        "CanSellOnRagfair": true,
+        "CantRemoveFromSlotsDuringRaid": [],
+        "Cartridges": [
+          {
+            "_id": "62e7c98b550c8218d602cbb5",
+            "_max_count": 500,
+            "_name": "cartridges",
+            "_parent": "67623d18ef309c4a2e59ee15",
+            "_props": {
+              "filters": [
+                {
+                  "Filter": [
+                    "5a6086ea4f39f99cd479502f",
+					"5a608bf24f39f98ffc77720e",
+					"58dd3ad986f77403051cba8f",
+					"5e023e53d4353e3302577c4c",
+					"5efb0c1bd79ff02a1f5e68d9",
+					"5e023e6e34d52a55c3304f71",
+					"5e023e88277cce2b522ff2b1"
+                  ]
+                }
+              ]
+            },
+            "_proto": "5748538b2459770af276a261"
+          }
+        ],
+        "CheckOverride": 0,
+        "CheckTimeModifier": -50,
+        "ConflictingItems": [],
+        "Description": "Apollo's Magazine for U.S. Ordnance M60E4 7.62x51 light machine gun",
+        "DiscardLimit": -1,
+        "DiscardingBlock": false,
+        "DoubleActionAccuracyPenaltyMult": 1,
+        "DropSoundType": "None",
+        "Durability": 100,
+        "EffectiveDistance": 0,
+        "Ergonomics": 100,
+        "ExamineExperience": 10,
+        "ExamineTime": 1,
+        "ExaminedByDefault": false,
+        "ExtraSizeDown": 0,
+        "ExtraSizeForceAdd": false,
+        "ExtraSizeLeft": 0,
+        "ExtraSizeRight": 0,
+        "ExtraSizeUp": 0,
+        "Grids": [],
+        "HasShoulderContact": false,
+        "Height": 2,
+        "HideEntrails": false,
+        "InsuranceDisabled": false,
+        "IsAlwaysAvailableForInsurance": false,
+        "IsAnimated": false,
+        "IsLockedafterEquip": false,
+        "IsMagazineForStationaryWeapon": false,
+        "IsSpecialSlotOnly": false,
+        "IsUnbuyable": false,
+        "IsUndiscardable": false,
+        "IsUngivable": false,
+        "IsUnremovable": false,
+        "IsUnsaleable": false,
+        "ItemSound": "mag_plastic",
+        "LoadUnloadModifier": 0,
+        "LootExperience": 20,
+        "Loudness": -50,
+        "MagazineWithBelt": false,
+        "MalfunctionChance": 0.01,
+        "MergesWithChildren": true,
+        "Name": "apollo_M60",
+        "NotShownInSlot": false,
+        "Prefab": {
+          "path": "assets/content/items/mods/magazines/mag_m60_capco_m60e3_assault_box_762x51_100.bundle",
+          "rcid": ""
+        },
+        "QuestItem": false,
+        "QuestStashMaxCount": 0,
+        "RagFairCommissionModifier": 1,
+        "RaidModdable": true,
+        "RarityPvE": "Rare",
+        "Recoil": -100,
+        "ReloadMagType": "ExternalMagazine",
+        "RepairCost": 0,
+        "RepairSpeed": 0,
+        "ShortName": "apollo_M60",
+        "SightingRange": 0,
+        "Slots": [],
+        "StackMaxSize": 1,
+        "StackObjectsCount": 1,
+        "TagColor": 0,
+        "TagName": "",
+        "ToolModdable": false,
+        "UniqueAnimationModID": 0,
+        "Unlootable": false,
+        "UnlootableFromSide": [],
+        "UnlootableFromSlot": "FirstPrimaryWeapon",
+        "UsePrefab": {
+          "path": "",
+          "rcid": ""
+        },
+        "Velocity": 0,
+        "VisibleAmmoRangesString": "1-250",
+        "Weight": 0.01,
+        "Width": 2,
+        "magAnimationIndex": 0
+      },
+      "_proto": "55802d5f4bdc2dac148b458e",
+      "_type": "Item",
+      "_orig": "660ea4453786cc0af808a1be"
     }
   },
   "===== PRICES =====": "===== PRICES =====",
@@ -9360,7 +9605,9 @@
     "661c9174cd684a0be15793f2": 10000,
     "661c91741fb2a035c97486ed": 10000,
     "661c917469a3fc05e2d74b18": 10000,
-    "661c91746ea308dc91725f4b": 10000
+    "661c91746ea308dc91725f4b": 10000,
+	"6762309f35d9d9410ab67517": 10000,
+	"67623d18ef309c4a2e59ee15": 10000
   },
   "===== HANDBOOK =====": "===== HANDBOOK =====",
   "handbookStims": {
@@ -9723,8 +9970,13 @@
         "ParentId": "5b5f754a86f774094242f19b",
         "Price": 10000
       },
-      {
-        "Id": "661c91746ea308dc91725f4b",
+	  {
+        "Id": "6762309f35d9d9410ab67517",
+        "ParentId": "5b5f754a86f774094242f19b",
+        "Price": 10000
+      },
+	  {
+        "Id": "67623d18ef309c4a2e59ee15",
         "ParentId": "5b5f754a86f774094242f19b",
         "Price": 10000
       }
@@ -9953,7 +10205,13 @@
       "661c917469a3fc05e2d74b18 Description": "Apollo's Magazine for 9A-91; VSK-94",
       "661c91746ea308dc91725f4b Name": "apollo_blik",
       "661c91746ea308dc91725f4b ShortName": "apollo_blik",
-      "661c91746ea308dc91725f4b Description": "Apollo's Magazine for Blicky toy gun."
+      "661c91746ea308dc91725f4b Description": "Apollo's Magazine for Blicky toy gun.",
+	  "6762309f35d9d9410ab67517 Name": "apollo_deagle",
+      "6762309f35d9d9410ab67517 ShortName": "apollo_deagle",
+      "6762309f35d9d9410ab67517 Description": "Apollo's Magazine for Desert Eagle.",
+	  "67623d18ef309c4a2e59ee15 Name": "apollo_M60",
+      "67623d18ef309c4a2e59ee15 ShortName": "apollo_M60",
+      "67623d18ef309c4a2e59ee15 Description": "Apollo's Magazine for U.S. Ordnance M60E4 7.62x51 light machine gun."
     }
   }
 }

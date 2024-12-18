@@ -1,10 +1,12 @@
 {
-	"name": "Olympus",
-	"version": "390.0.2",
-	"main": "src/Olympus.js",
-	"license": "NCSA",
-	"author": "AssAssIn",
-	"sptVersion": "3.9.*",
+    "name": "Olympus",
+    "version": "310.0.0",
+    "sptVersion": "3.10.*",
+    "loadBefore": [],
+    "loadAfter": [],
+    "incompatibilities": [],
+    "isBundleMod": false,
+    "main": "src/Olympus.js",
     "scripts": {
         "setup": "npm i",
         "build": "node ./build.mjs",
@@ -18,10 +20,11 @@
         "eslint": "8.57",
         "fs-extra": "11.2",
         "ignore": "^5.2",
-        "os": "^0.1",
         "tsyringe": "4.8.0",
         "typescript": "5.4",
         "winston": "3.12"
     },
-	"updateBy": "jbs4bmx"
+    "author": "AssAssIn",
+    "contributors": ["jbs4bmx"],
+    "license": "MIT"
 }
