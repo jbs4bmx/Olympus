@@ -1355,6 +1355,69 @@ class Olympus implements IPreSptLoadMod, IPostDBLoadMod
                         }
                     }
                 break;
+				case "669fa39b48fc9f8db6035a0c":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["669fa39b48fc9f8db6035a0c"]._props.Slots[i]._props.filters[0].Filter.push("6762309f35d9d9410ab67517");
+                        }
+                    }
+                break;
+				case "668fe5a998b5ad715703ddd6":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["668fe5a998b5ad715703ddd6"]._props.Slots[i]._props.filters[0].Filter.push("6762309f35d9d9410ab67517");
+                        }
+                    }
+                break;
+				case "669fa3d876116c89840b1217":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["669fa3d876116c89840b1217"]._props.Slots[i]._props.filters[0].Filter.push("6762309f35d9d9410ab67517");
+                        }
+                    }
+                break;
+				case "669fa3f88abd2662d80eee77":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["669fa3f88abd2662d80eee77"]._props.Slots[i]._props.filters[0].Filter.push("6762309f35d9d9410ab67517");
+                        }
+                    }
+                break;
+				case "65fb023261d5829b2d090755":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["65fb023261d5829b2d090755"]._props.Slots[i]._props.filters[0].Filter.push("67623d18ef309c4a2e59ee15");
+                        }
+                    }
+                break;
+				case "661ceb1b9311543c7104149b":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["661ceb1b9311543c7104149b"]._props.Slots[i]._props.filters[0].Filter.push("67623d18ef309c4a2e59ee15");
+                        }
+                    }
+                break;
+				case "661cec09b2c6356b4d0c7a36":
+                    for (i = 0; i < data._props.Slots.length; i++)
+                    {
+                        if (data._props.Slots[i]._name == sectionName)
+                        {
+                            items["661cec09b2c6356b4d0c7a36"]._props.Slots[i]._props.filters[0].Filter.push("67623d18ef309c4a2e59ee15");
+                        }
+                    }
+                break;
                 default:
                 break;
             }
