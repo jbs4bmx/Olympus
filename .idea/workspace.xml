@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="92b29f52-a3a6-4a70-90e2-4acadf58b90b" name="Changes" comment="Update for SPT 3.11">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.buildignore" beforeDir="false" afterPath="$PROJECT_DIR$/mod/.buildignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/SPT-Olympus.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/mod/build.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/dbItems.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/database/dbItems.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/globals.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/database/globals.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/jaegerAssort.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/database/jaegerAssort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/ragmanAssort.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/database/ragmanAssort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/therapistAssort.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/database/therapistAssort.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Olympus.js" beforeDir="false" afterPath="$PROJECT_DIR$/mod/src/Olympus.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Olympus.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/mod/src/Olympus.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Olympus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/mod/src/Olympus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod/tsconfig.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2wXgiBg2rNvfRcFgiX73JCOMy9S" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.codeium.enabled&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/SPT-Dev/user/mods/SPT-Olympus&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\PhpStorm 2024.1.7\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\SPT-Dev\user\mods\SPT-Olympus" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\SPT-Dev\user\mods\Olympus\mod" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PS-241.19416.23" />
+        <option value="bundled-php-predefined-ba97393d7c68-48a1a656d44e-com.jetbrains.php.sharedIndexes-PS-241.19416.23" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="92b29f52-a3a6-4a70-90e2-4acadf58b90b" name="Changes" comment="" />
+      <created>1746193456984</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1746193456984</updated>
+      <workItem from="1746193458083" duration="91000" />
+      <workItem from="1746193584652" duration="77000" />
+      <workItem from="1746193668532" duration="11154000" />
+      <workItem from="1746214584315" duration="956000" />
+      <workItem from="1746215553537" duration="712000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update for SPT 3.11">
+      <option name="closed" value="true" />
+      <created>1746215492368</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1746215492368</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.eslintignore" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Update for SPT 3.11" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update for SPT 3.11" />
+  </component>
+</project>
