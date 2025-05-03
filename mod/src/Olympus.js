@@ -2,137 +2,148 @@
 /**
  * Copyright: AssAssIn
  * Continued By: jbs4bmx
-*/
+ */
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const ConfigTypes_1 = require("C:/snapshot/project/obj/models/enums/ConfigTypes");
 const jsonc_1 = require("C:/snapshot/project/node_modules/jsonc");
-const path_1 = __importDefault(require("path"));
-let zeusdb;
+const node_path_1 = __importDefault(require("node:path"));
 let itemConfig;
 let botConfig;
 let pmcConfig;
 let configServer;
 class Olympus {
     pkg;
-    path = require('path');
-    modName = this.path.basename(this.path.dirname(__dirname.split('/').pop()));
-    postDBLoad(container) {
-        const logger = container.resolve("WinstonLogger");
-        const db = container.resolve("DatabaseServer").getTables();
-        const preSptModLoader = container.resolve("PreSptModLoader");
+    path = require("path");
+    modName = this.path.basename(this.path.dirname(__dirname.split("/").pop()));
+    modConfig;
+    modPath;
+    fileSystem;
+    zeusdb;
+    logger;
+    preSptModLoader;
+    async preSptLoadAsync(container) {
+        this.logger = container.resolve("WinstonLogger");
+        this.fileSystem = container.resolve("FileSystemSync");
+        this.preSptModLoader = container.resolve("PreSptModLoader");
+        this.modPath = this.preSptModLoader.getModPath(this.modName);
         const databaseImporter = container.resolve("ImporterUtil");
+        return databaseImporter.loadAsync(this.modPath + "database/").then((configs) => {
+            this.zeusdb = configs;
+        });
+    }
+    postDBLoad(container) {
+        const db = container.resolve("DatabaseServer").getTables();
         const iData = db.templates.items;
         const pData = db.templates.prices;
         const locales = db.locales.global;
         const handbook = db.templates.handbook.Items;
         const tData = db.traders;
         this.pkg = require("../package.json");
-        const vfs = container.resolve("VFS");
-        const { FullVersion, MagsOnly, RigsOnly, StimsOnly } = jsonc_1.jsonc.parse(vfs.readFile(path_1.default.resolve(__dirname, "../config.jsonc")));
-        if (typeof FullVersion !== 'boolean' || typeof MagsOnly !== 'boolean' || typeof RigsOnly !== 'boolean' || typeof StimsOnly !== 'boolean') {
-            logger.error(`Olympus: One or more version selection values are not a boolean value of true or false.`);
-            logger.error(`Please fix your configuration file and restart your server.`);
+        this.modConfig = jsonc_1.jsonc.parse(this.fileSystem.read(node_path_1.default.resolve(__dirname, "../config.jsonc")));
+        const { FullVersion, MagsOnly, RigsOnly, StimsOnly } = this.modConfig;
+        if (typeof FullVersion !== "boolean" || typeof MagsOnly !== "boolean" || typeof RigsOnly !== "boolean" || typeof StimsOnly !== "boolean") {
+            this.logger.error("Olympus: One or more version selection values are not a boolean value of true or false.");
+            this.logger.error("Please fix your configuration file and restart your server.");
             return;
         }
         else {
-            logger.info(`Olympus config looks correct. Continuing to load mod...`);
+            this.logger.info("Olympus config looks correct. Continuing to load mod...");
         }
-        zeusdb = databaseImporter.loadRecursive(`${preSptModLoader.getModPath(this.modName)}database/`);
         if (FullVersion === true) {
             // TEMPLATE ITEM ENTRIES
-            for (const i_item in zeusdb.dbItems.templatesStims) {
-                iData[i_item] = zeusdb.dbItems.templatesStims[i_item];
+            for (const i_item in this.zeusdb.dbItems.templatesStims) {
+                iData[i_item] = this.zeusdb.dbItems.templatesStims[i_item];
             }
-            for (const i_item in zeusdb.dbItems.templatesRigs) {
-                iData[i_item] = zeusdb.dbItems.templatesRigs[i_item];
+            for (const i_item in this.zeusdb.dbItems.templatesRigs) {
+                iData[i_item] = this.zeusdb.dbItems.templatesRigs[i_item];
             }
-            for (const i_item in zeusdb.dbItems.templatesMags) {
-                iData[i_item] = zeusdb.dbItems.templatesMags[i_item];
+            for (const i_item in this.zeusdb.dbItems.templatesMags) {
+                iData[i_item] = this.zeusdb.dbItems.templatesMags[i_item];
             }
             // HANDBOOK ENTRIES
-            for (const h_item of zeusdb.dbItems.handbookStims.Items) {
+            for (const h_item of this.zeusdb.dbItems.handbookStims.Items) {
                 if (!handbook.find(i => i.Id == h_item.Id)) {
                     handbook.push(h_item);
                 }
             }
-            for (const h_item of zeusdb.dbItems.handbookRigs.Items) {
+            for (const h_item of this.zeusdb.dbItems.handbookRigs.Items) {
                 if (!handbook.find(i => i.Id == h_item.Id)) {
                     handbook.push(h_item);
                 }
             }
-            for (const h_item of zeusdb.dbItems.handbookMags.Items) {
+            for (const h_item of this.zeusdb.dbItems.handbookMags.Items) {
                 if (!handbook.find(i => i.Id == h_item.Id)) {
                     handbook.push(h_item);
                 }
             }
             // LOCALE ENTRIES
             for (const localeID in locales) {
-                for (const locale in zeusdb.dbItems.localesStims.en) {
-                    locales[localeID][locale] = zeusdb.dbItems.localesStims.en[locale];
+                for (const locale in this.zeusdb.dbItems.localesStims.en) {
+                    locales[localeID][locale] = this.zeusdb.dbItems.localesStims.en[locale];
                 }
             }
             for (const localeID in locales) {
-                for (const locale in zeusdb.dbItems.localesRigs.en) {
-                    locales[localeID][locale] = zeusdb.dbItems.localesRigs.en[locale];
+                for (const locale in this.zeusdb.dbItems.localesRigs.en) {
+                    locales[localeID][locale] = this.zeusdb.dbItems.localesRigs.en[locale];
                 }
             }
             for (const localeID in locales) {
-                for (const locale in zeusdb.dbItems.localesMags.en) {
-                    locales[localeID][locale] = zeusdb.dbItems.localesMags.en[locale];
+                for (const locale in this.zeusdb.dbItems.localesMags.en) {
+                    locales[localeID][locale] = this.zeusdb.dbItems.localesMags.en[locale];
                 }
             }
             // PRICE ENTRIES
-            for (const p_item in zeusdb.dbItems.pricesStims) {
-                pData[p_item] = zeusdb.dbItems.pricesStims[p_item];
+            for (const p_item in this.zeusdb.dbItems.pricesStims) {
+                pData[p_item] = this.zeusdb.dbItems.pricesStims[p_item];
             }
-            for (const p_item in zeusdb.dbItems.pricesRigs) {
-                pData[p_item] = zeusdb.dbItems.pricesRigs[p_item];
+            for (const p_item in this.zeusdb.dbItems.pricesRigs) {
+                pData[p_item] = this.zeusdb.dbItems.pricesRigs[p_item];
             }
-            for (const p_item in zeusdb.dbItems.pricesMags) {
-                pData[p_item] = zeusdb.dbItems.pricesMags[p_item];
+            for (const p_item in this.zeusdb.dbItems.pricesMags) {
+                pData[p_item] = this.zeusdb.dbItems.pricesMags[p_item];
             }
             // TRADER ENTRIES
             for (const tradeName in tData) {
                 if (tradeName === "5ac3b934156ae10c4430e83c") {
-                    for (const ri_item of zeusdb.ragmanAssort.items) {
+                    for (const ri_item of this.zeusdb.ragmanAssort.items) {
                         if (!tData[tradeName].assort.items.find(i => i._id == ri_item._id)) {
                             tData[tradeName].assort.items.push(ri_item);
                         }
                     }
-                    for (const rb_item in zeusdb.ragmanAssort.barter_scheme) {
-                        tData[tradeName].assort.barter_scheme[rb_item] = zeusdb.ragmanAssort.barter_scheme[rb_item];
+                    for (const rb_item in this.zeusdb.ragmanAssort.barter_scheme) {
+                        tData[tradeName].assort.barter_scheme[rb_item] = this.zeusdb.ragmanAssort.barter_scheme[rb_item];
                     }
-                    for (const rl_item in zeusdb.ragmanAssort.loyalty_level_items) {
-                        tData[tradeName].assort.loyal_level_items[rl_item] = zeusdb.ragmanAssort.loyalty_level_items[rl_item];
+                    for (const rl_item in this.zeusdb.ragmanAssort.loyalty_level_items) {
+                        tData[tradeName].assort.loyal_level_items[rl_item] = this.zeusdb.ragmanAssort.loyalty_level_items[rl_item];
                     }
                 }
                 if (tradeName === "5c0647fdd443bc2504c2d371") {
-                    for (const ji_item of zeusdb.jaegerAssort.items) {
+                    for (const ji_item of this.zeusdb.jaegerAssort.items) {
                         if (!tData[tradeName].assort.items.find(i => i._id == ji_item._id)) {
                             tData[tradeName].assort.items.push(ji_item);
                         }
                     }
-                    for (const jb_item in zeusdb.jaegerAssort.barter_scheme) {
-                        tData[tradeName].assort.barter_scheme[jb_item] = zeusdb.jaegerAssort.barter_scheme[jb_item];
+                    for (const jb_item in this.zeusdb.jaegerAssort.barter_scheme) {
+                        tData[tradeName].assort.barter_scheme[jb_item] = this.zeusdb.jaegerAssort.barter_scheme[jb_item];
                     }
-                    for (const jl_item in zeusdb.jaegerAssort.loyalty_level_items) {
-                        tData[tradeName].assort.loyal_level_items[jl_item] = zeusdb.jaegerAssort.loyalty_level_items[jl_item];
+                    for (const jl_item in this.zeusdb.jaegerAssort.loyalty_level_items) {
+                        tData[tradeName].assort.loyal_level_items[jl_item] = this.zeusdb.jaegerAssort.loyalty_level_items[jl_item];
                     }
                 }
                 if (tradeName === "54cb57776803fa99248b456e") {
-                    for (const ti_item of zeusdb.therapistAssort.items) {
+                    for (const ti_item of this.zeusdb.therapistAssort.items) {
                         if (!tData[tradeName].assort.items.find(i => i._id == ti_item._id)) {
                             tData[tradeName].assort.items.push(ti_item);
                         }
                     }
-                    for (const tb_item in zeusdb.therapistAssort.barter_scheme) {
-                        tData[tradeName].assort.barter_scheme[tb_item] = zeusdb.therapistAssort.barter_scheme[tb_item];
+                    for (const tb_item in this.zeusdb.therapistAssort.barter_scheme) {
+                        tData[tradeName].assort.barter_scheme[tb_item] = this.zeusdb.therapistAssort.barter_scheme[tb_item];
                     }
-                    for (const tl_item in zeusdb.therapistAssort.loyalty_level_items) {
-                        tData[tradeName].assort.loyal_level_items[tl_item] = zeusdb.therapistAssort.loyalty_level_items[tl_item];
+                    for (const tl_item in this.zeusdb.therapistAssort.loyalty_level_items) {
+                        tData[tradeName].assort.loyal_level_items[tl_item] = this.zeusdb.therapistAssort.loyalty_level_items[tl_item];
                     }
                 }
             }
@@ -144,38 +155,38 @@ class Olympus {
         else {
             if (MagsOnly === true) {
                 // TEMPLATE ITEM ENTRIES
-                for (const i_item in zeusdb.dbItems.templatesMags) {
-                    iData[i_item] = zeusdb.dbItems.templatesMags[i_item];
+                for (const i_item in this.zeusdb.dbItems.templatesMags) {
+                    iData[i_item] = this.zeusdb.dbItems.templatesMags[i_item];
                 }
                 // HANDBOOK ENTRIES
-                for (const h_item of zeusdb.dbItems.handbookMags.Items) {
+                for (const h_item of this.zeusdb.dbItems.handbookMags.Items) {
                     if (!handbook.find(i => i.Id == h_item.Id)) {
                         handbook.push(h_item);
                     }
                 }
                 // LOCALE ENTRIES
                 for (const localeID in locales) {
-                    for (const locale in zeusdb.dbItems.localesMags.en) {
-                        locales[localeID][locale] = zeusdb.dbItems.localesMags.en[locale];
+                    for (const locale in this.zeusdb.dbItems.localesMags.en) {
+                        locales[localeID][locale] = this.zeusdb.dbItems.localesMags.en[locale];
                     }
                 }
                 // PRICE ENTRIES
-                for (const p_item in zeusdb.dbItems.pricesMags) {
-                    pData[p_item] = zeusdb.dbItems.pricesMags[p_item];
+                for (const p_item in this.zeusdb.dbItems.pricesMags) {
+                    pData[p_item] = this.zeusdb.dbItems.pricesMags[p_item];
                 }
                 // TRADER ENTRIES
                 for (const tradeName in tData) {
                     if (tradeName === "5c0647fdd443bc2504c2d371") {
-                        for (const ji_item of zeusdb.jaegerAssort.items) {
+                        for (const ji_item of this.zeusdb.jaegerAssort.items) {
                             if (!tData[tradeName].assort.items.find(i => i._id == ji_item._id)) {
                                 tData[tradeName].assort.items.push(ji_item);
                             }
                         }
-                        for (const jb_item in zeusdb.jaegerAssort.barter_scheme) {
-                            tData[tradeName].assort.barter_scheme[jb_item] = zeusdb.jaegerAssort.barter_scheme[jb_item];
+                        for (const jb_item in this.zeusdb.jaegerAssort.barter_scheme) {
+                            tData[tradeName].assort.barter_scheme[jb_item] = this.zeusdb.jaegerAssort.barter_scheme[jb_item];
                         }
-                        for (const jl_item in zeusdb.jaegerAssort.loyalty_level_items) {
-                            tData[tradeName].assort.loyal_level_items[jl_item] = zeusdb.jaegerAssort.loyalty_level_items[jl_item];
+                        for (const jl_item in this.zeusdb.jaegerAssort.loyalty_level_items) {
+                            tData[tradeName].assort.loyal_level_items[jl_item] = this.zeusdb.jaegerAssort.loyalty_level_items[jl_item];
                         }
                     }
                 }
@@ -184,38 +195,38 @@ class Olympus {
             }
             if (RigsOnly === true) {
                 // TEMPLATE ITEM ENTRIES
-                for (const i_item in zeusdb.dbItems.templatesRigs) {
-                    iData[i_item] = zeusdb.dbItems.templatesRigs[i_item];
+                for (const i_item in this.zeusdb.dbItems.templatesRigs) {
+                    iData[i_item] = this.zeusdb.dbItems.templatesRigs[i_item];
                 }
                 // HANDBOOK ENTRIES
-                for (const h_item of zeusdb.dbItems.handbookRigs.Items) {
+                for (const h_item of this.zeusdb.dbItems.handbookRigs.Items) {
                     if (!handbook.find(i => i.Id == h_item.Id)) {
                         handbook.push(h_item);
                     }
                 }
                 // LOCALE ENTRIES
                 for (const localeID in locales) {
-                    for (const locale in zeusdb.dbItems.localesRigs.en) {
-                        locales[localeID][locale] = zeusdb.dbItems.localesRigs.en[locale];
+                    for (const locale in this.zeusdb.dbItems.localesRigs.en) {
+                        locales[localeID][locale] = this.zeusdb.dbItems.localesRigs.en[locale];
                     }
                 }
                 // PRICE ENTRIES
-                for (const p_item in zeusdb.dbItems.pricesRigs) {
-                    pData[p_item] = zeusdb.dbItems.pricesRigs[p_item];
+                for (const p_item in this.zeusdb.dbItems.pricesRigs) {
+                    pData[p_item] = this.zeusdb.dbItems.pricesRigs[p_item];
                 }
                 // TRADER ENTRIES
                 for (const tradeName in tData) {
                     if (tradeName === "5ac3b934156ae10c4430e83c") {
-                        for (const ri_item of zeusdb.ragmanAssort.items) {
+                        for (const ri_item of this.zeusdb.ragmanAssort.items) {
                             if (!tData[tradeName].assort.items.find(i => i._id == ri_item._id)) {
                                 tData[tradeName].assort.items.push(ri_item);
                             }
                         }
-                        for (const rb_item in zeusdb.ragmanAssort.barter_scheme) {
-                            tData[tradeName].assort.barter_scheme[rb_item] = zeusdb.ragmanAssort.barter_scheme[rb_item];
+                        for (const rb_item in this.zeusdb.ragmanAssort.barter_scheme) {
+                            tData[tradeName].assort.barter_scheme[rb_item] = this.zeusdb.ragmanAssort.barter_scheme[rb_item];
                         }
-                        for (const rl_item in zeusdb.ragmanAssort.loyalty_level_items) {
-                            tData[tradeName].assort.loyal_level_items[rl_item] = zeusdb.ragmanAssort.loyalty_level_items[rl_item];
+                        for (const rl_item in this.zeusdb.ragmanAssort.loyalty_level_items) {
+                            tData[tradeName].assort.loyal_level_items[rl_item] = this.zeusdb.ragmanAssort.loyalty_level_items[rl_item];
                         }
                     }
                 }
@@ -224,38 +235,38 @@ class Olympus {
             }
             if (StimsOnly === true) {
                 // TEMPLATE ITEM ENTRIES
-                for (const i_item in zeusdb.dbItems.templatesStims) {
-                    iData[i_item] = zeusdb.dbItems.templatesStims[i_item];
+                for (const i_item in this.zeusdb.dbItems.templatesStims) {
+                    iData[i_item] = this.zeusdb.dbItems.templatesStims[i_item];
                 }
                 // HANDBOOK ENTRIES
-                for (const h_item of zeusdb.dbItems.handbookStims.Items) {
+                for (const h_item of this.zeusdb.dbItems.handbookStims.Items) {
                     if (!handbook.find(i => i.Id == h_item.Id)) {
                         handbook.push(h_item);
                     }
                 }
                 // LOCALE ENTRIES
                 for (const localeID in locales) {
-                    for (const locale in zeusdb.dbItems.localesStims.en) {
-                        locales[localeID][locale] = zeusdb.dbItems.localesStims.en[locale];
+                    for (const locale in this.zeusdb.dbItems.localesStims.en) {
+                        locales[localeID][locale] = this.zeusdb.dbItems.localesStims.en[locale];
                     }
                 }
                 // PRICE ENTRIES
-                for (const p_item in zeusdb.dbItems.pricesStims) {
-                    pData[p_item] = zeusdb.dbItems.pricesStims[p_item];
+                for (const p_item in this.zeusdb.dbItems.pricesStims) {
+                    pData[p_item] = this.zeusdb.dbItems.pricesStims[p_item];
                 }
                 // TRADER ENTRIES
                 for (const tradeName in tData) {
                     if (tradeName === "54cb57776803fa99248b456e") {
-                        for (const ti_item of zeusdb.therapistAssort.items) {
+                        for (const ti_item of this.zeusdb.therapistAssort.items) {
                             if (!tData[tradeName].assort.items.find(i => i._id == ti_item._id)) {
                                 tData[tradeName].assort.items.push(ti_item);
                             }
                         }
-                        for (const tb_item in zeusdb.therapistAssort.barter_scheme) {
-                            tData[tradeName].assort.barter_scheme[tb_item] = zeusdb.therapistAssort.barter_scheme[tb_item];
+                        for (const tb_item in this.zeusdb.therapistAssort.barter_scheme) {
+                            tData[tradeName].assort.barter_scheme[tb_item] = this.zeusdb.therapistAssort.barter_scheme[tb_item];
                         }
-                        for (const tl_item in zeusdb.therapistAssort.loyalty_level_items) {
-                            tData[tradeName].assort.loyal_level_items[tl_item] = zeusdb.therapistAssort.loyalty_level_items[tl_item];
+                        for (const tl_item in this.zeusdb.therapistAssort.loyalty_level_items) {
+                            tData[tradeName].assort.loyal_level_items[tl_item] = this.zeusdb.therapistAssort.loyalty_level_items[tl_item];
                         }
                     }
                 }
@@ -266,7 +277,7 @@ class Olympus {
         // Make changes to items loaded into memory
         this.updateItems(container);
         this.checkExclusions(container);
-        logger.info(`${this.pkg.author}-${this.pkg.name} v${this.pkg.version}: Cached successfully`);
+        this.logger.info(`${this.pkg.author}-${this.pkg.name} v${this.pkg.version}: Cached successfully`);
     }
     pushRigs(container) {
         const db = container.resolve("DatabaseServer").getTables();
@@ -274,12 +285,12 @@ class Olympus {
         items["55d7217a4bdc2d86028b456d"]._props.Slots[5]._props.filters[0].Filter.push("661c9174a371d90e62b8f5c4");
     }
     pushMags(container) {
-        let sectionName = "mod_magazine";
-        var i;
+        const sectionName = "mod_magazine";
+        let i;
         const db = container.resolve("DatabaseServer").getTables();
         const items = db.templates.items;
-        for (let item in items) {
-            let data = items[item];
+        for (const item in items) {
+            const data = items[item];
             switch (data._id) {
                 case "5e81c3cbac2bb513793cdc75":
                     for (i = 0; i < data._props.Slots.length; i++) {
@@ -750,13 +761,6 @@ class Olympus {
                         }
                     }
                     break;
-                case "6183afd850224f204c1da514":
-                    for (i = 0; i < data._props.Slots.length; i++) {
-                        if (data._props.Slots[i]._name == sectionName) {
-                            items["6183afd850224f204c1da514"]._props.Slots[i]._props.filters[0].Filter.push("661c9174da5c873b62041e9f", "661c9174c73d928a50f41eb6");
-                        }
-                    }
-                    break;
                 case "5fc22d7c187fea44d52eda44":
                     for (i = 0; i < data._props.Slots.length; i++) {
                         if (data._props.Slots[i]._name == sectionName) {
@@ -1157,35 +1161,34 @@ class Olympus {
     pushBuffs(container) {
         const gameGlobals = container.resolve("DatabaseServer").getTables().globals.config;
         const gameBuffs = gameGlobals.Health.Effects.Stimulator.Buffs;
-        const additions = zeusdb.globals.buffs;
+        const additions = this.zeusdb.globals.buffs;
         for (const stimBuff in additions) {
             gameBuffs[stimBuff] = additions[stimBuff];
         }
     }
     updateItems(container) {
-        const logger = container.resolve("WinstonLogger");
         const db = container.resolve("DatabaseServer").getTables();
         const items = db.templates.items;
-        const vfs = container.resolve("VFS");
-        const { FullVersion, MagsOnly, RigsOnly, StimsOnly, cartridgeCount, athenaArmorAmount, herculesRig2ArmorAmount, helmetofhermesArmorAmount, atlassatchelHorizontal, atlassatchelVertical, numberOfStimUses, stimUseTimeInSeconds } = jsonc_1.jsonc.parse(vfs.readFile(path_1.default.resolve(__dirname, "../config.jsonc")));
+        const { FullVersion, MagsOnly, RigsOnly, StimsOnly, cartridgeCount, athenaArmorAmount, herculesRig2ArmorAmount, helmetofhermesArmorAmount, atlassatchelHorizontal, atlassatchelVertical, numberOfStimUses, stimUseTimeInSeconds } = this.modConfig;
         function roundToNearest50(number) {
             if (number < 50) {
                 return 50;
             }
             return Math.round(number / 50) * 50;
         }
+        let roundedNumber;
         // Make sure cartridgeCount is a number and round it to the nearest 50
         if (!isNaN(cartridgeCount)) {
-            var roundedNumber = roundToNearest50(cartridgeCount);
-            logger.info(`Cartridge count rounded to nearest 50.`);
-            logger.info(`Cartridge count for Apollo's Mags set to: ${roundedNumber}`);
+            roundedNumber = roundToNearest50(cartridgeCount);
+            this.logger.info("Cartridge count rounded to nearest 50.");
+            this.logger.info(`Cartridge count for Apollo's Mags set to: ${roundedNumber}`);
         }
         else {
-            var roundedNumber = 250;
-            logger.error(`Invalid input. Cartridge count for Apollo's Mags is not valid.`);
-            logger.info(`Setting to default value: 250.`);
+            roundedNumber = 250;
+            this.logger.error("Invalid input. Cartridge count for Apollo's Mags is not valid.");
+            this.logger.info("Setting to default value: 250.");
         }
-        let stringValue = "1-" + roundedNumber.toString();
+        const stringValue = "1-" + String(roundedNumber);
         const stimItems = [
             "661c91746c391e0f5ba82d47",
             "661c91741ba0f93d4287c5e6",
@@ -1259,12 +1262,12 @@ class Olympus {
                 items[mag]._props.Cartridges[0]._max_count = roundedNumber;
                 items[mag]._props.VisibleAmmoRangesString = stringValue;
             });
-            items["661c91744502ba91ef63c8d7"]._props.Durabilty = athenaArmorAmount;
-            items["661c91744502ba91ef63c8d7"]._props.MaxDurabilty = athenaArmorAmount;
-            items["661c9174d9718c60a32fe5b4"]._props.Durabilty = herculesRig2ArmorAmount;
-            items["661c9174d9718c60a32fe5b4"]._props.MaxDurabilty = herculesRig2ArmorAmount;
-            items["661c9174a371d90e62b8f5c4"]._props.Durabilty = helmetofhermesArmorAmount;
-            items["661c9174a371d90e62b8f5c4"]._props.MaxDurabilty = helmetofhermesArmorAmount;
+            items["661c91744502ba91ef63c8d7"]._props.Durability = athenaArmorAmount;
+            items["661c91744502ba91ef63c8d7"]._props.MaxDurability = athenaArmorAmount;
+            items["661c9174d9718c60a32fe5b4"]._props.Durability = herculesRig2ArmorAmount;
+            items["661c9174d9718c60a32fe5b4"]._props.MaxDurability = herculesRig2ArmorAmount;
+            items["661c9174a371d90e62b8f5c4"]._props.Durability = helmetofhermesArmorAmount;
+            items["661c9174a371d90e62b8f5c4"]._props.MaxDurability = helmetofhermesArmorAmount;
             items["661c917426ba940d7138e5cf"]._props.Grids[0]._props.cellsH = atlassatchelHorizontal;
             items["661c917426ba940d7138e5cf"]._props.Grids[0]._props.cellsV = atlassatchelVertical;
             stimItems.forEach(stim => {
@@ -1280,12 +1283,12 @@ class Olympus {
                 });
             }
             if (RigsOnly === true) {
-                items["661c91744502ba91ef63c8d7"]._props.Durabilty = athenaArmorAmount;
-                items["661c91744502ba91ef63c8d7"]._props.MaxDurabilty = athenaArmorAmount;
-                items["661c9174d9718c60a32fe5b4"]._props.Durabilty = herculesRig2ArmorAmount;
-                items["661c9174d9718c60a32fe5b4"]._props.MaxDurabilty = herculesRig2ArmorAmount;
-                items["661c9174a371d90e62b8f5c4"]._props.Durabilty = helmetofhermesArmorAmount;
-                items["661c9174a371d90e62b8f5c4"]._props.MaxDurabilty = helmetofhermesArmorAmount;
+                items["661c91744502ba91ef63c8d7"]._props.Durability = athenaArmorAmount;
+                items["661c91744502ba91ef63c8d7"]._props.MaxDurability = athenaArmorAmount;
+                items["661c9174d9718c60a32fe5b4"]._props.Durability = herculesRig2ArmorAmount;
+                items["661c9174d9718c60a32fe5b4"]._props.MaxDurability = herculesRig2ArmorAmount;
+                items["661c9174a371d90e62b8f5c4"]._props.Durability = helmetofhermesArmorAmount;
+                items["661c9174a371d90e62b8f5c4"]._props.MaxDurability = helmetofhermesArmorAmount;
                 items["661c917426ba940d7138e5cf"]._props.Grids[0]._props.cellsH = atlassatchelHorizontal;
                 items["661c917426ba940d7138e5cf"]._props.Grids[0]._props.cellsV = atlassatchelVertical;
             }
@@ -1302,8 +1305,7 @@ class Olympus {
         const botConfig = configServer.getConfig(ConfigTypes_1.ConfigTypes.BOT);
         const pmcConfig = configServer.getConfig(ConfigTypes_1.ConfigTypes.PMC);
         const itemConfig = configServer.getConfig(ConfigTypes_1.ConfigTypes.ITEM);
-        const vfs = container.resolve("VFS");
-        const { FullVersion, MagsOnly, RigsOnly, StimsOnly, blacklistStims, blacklistRigs, blacklistMags } = jsonc_1.jsonc.parse(vfs.readFile(path_1.default.resolve(__dirname, "../config.jsonc")));
+        const { FullVersion, MagsOnly, RigsOnly, StimsOnly, blacklistStims, blacklistRigs, blacklistMags } = this.modConfig;
         if (FullVersion === true) {
             if (typeof blacklistStims === "boolean") {
                 if (blacklistStims === true) {
