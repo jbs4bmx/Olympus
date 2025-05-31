@@ -2,7 +2,7 @@
 
 ### 31 May, 2025 - 311.3.1 (The "I'm taking too long to update the mod because there are too many changes, so here's a placeholder" update.) ⏱
   - Support SPT 3.11.0+
-  - Added support for more firearms.
+  - Added support for more firearms (Now totals 139).
   - Improved item conflicts for magazines/receivers.
   - Added more magazines for a total of 210 magazines.
   - Added loyalty level requirements for magazines.

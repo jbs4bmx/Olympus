@@ -68,7 +68,7 @@ Disclaimer: **This mod is provided _as-is_ with _no guarantee_ of support.**
 This is a re-worked version of AssAssIn's Olympus mod for SPT. This mod adds rigs, armor, a helmet, a backpack, stimulants, and magazines with OP properties. The items are all sold by Therapist, Ragman, or Jaeger depending on what type of item they are.
 
 ### Items Added
-**Apollo's Magazines (62 in total):**
+**Apollo's Magazines (210 in total):**
   - Configurable capacity.
   - OP Accuracy.
   - OP Ergonomics.
@@ -120,8 +120,8 @@ This the full implementation of the mod and includes many new items to enhance y
     - Helmet of Hermes
     - Armor of Athena
     - Atlas' Satchel
-  - 62 new Magazine options offered by Jaeger
-    - 250rd mags for 116 supported firearms with OP buffs. (Cartridge count can be edited in the config file.)
+  - 210 new Magazine options offered by Jaeger
+    - For 139 supported firearms with OP buffs. (Cartridge count can be edited in the config file.)
 
 _NOTE: Any combination of the following 3 options can be enabled. Remember to set FullVersion to false._
 
@@ -141,41 +141,38 @@ Only the stimulants from the mod are loaded.
 
 ### Firearm Support
 There is no support for stationary, revolvers, grenade launchers, or single-shot firearms.</br>
-| Firearm | Status |   | Firearm | Status |   | Firearm | Status |   | Firearm | Status |
-| ---: | :--- | --- | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- |
-| ADAR 2-15 | ✅**Supported** |   | AGS-30 | ❌ Unsupported |   | AK-101 | ✅**Supported** |   | AK-102 | ✅**Supported** |
-| AK-103 | ✅**Supported** |   | AK-104 | ✅**Supported** |   | AK-105 | ✅**Supported** |   | AK-12 | ✅**Supported** |
-| AK-74 | ✅**Supported** |   | AK-74M | ✅**Supported** |   | AK-74N | ✅**Supported** |   | AKM | ✅**Supported** |
-| AKMN | ✅**Supported** |   | AKMS | ✅**Supported** |   | AKMSN | ✅**Supported** |   | AKS-74 | ✅**Supported** |
-| AKS-74N | ✅**Supported** |   | AKS-74U | ✅**Supported** |   | AKS-74UB | ✅**Supported** |   | AKS-74UN | ✅**Supported** |
-| APB | ✅**Supported** |   | APS | ✅**Supported** |   | AS VAL | ✅**Supported** |   | ASh-12 | ✅**Supported** |
-| AUG A1 | ✅**Supported** |   | AUG A3 | ✅**Supported** |   | AVT-40 | ✅**Supported** |   | AXMC | ✅**Supported** |
-| CR 200DS | ❌ Unsupported |   | CR 50DS | ❌ Unsupported |   | DT MDR 5.56x45 | ✅**Supported** |   | DT MDR 7.62x51 | ✅**Supported** |
-| DVL-10 | ✅**Supported** |   | FN 5-7 | ✅**Supported** |   | FN 5-7 (FDE) | ✅**Supported** |   | FN40GL | ❌ Unsupported |
-| Glock 17 | ✅**Supported** |   | Glock 18C | ✅**Supported** |   | Glock 19X | ✅**Supported** |   | HK 416A5 | ✅**Supported** |
-| HK G28 | ✅**Supported** |   | HK G36 | ✅**Supported** |   | KS-23M | ✅**Supported** |   | M1911A1 | ✅**Supported** |
-| M1A | ✅**Supported** |   | M3 Super 90 | ✅**Supported** |   | M32A1 | ❌ Unsupported |   | M45A1 | ✅**Supported** |
-| M4A1 | ✅**Supported** |   | M590A1 | ✅**Supported** |   | M700 | ✅**Supported** |   | M870 | ✅**Supported** |
-| M9A3 | ✅**Supported** |   | MCX | ✅**Supported** |   | Mk-18 | ✅**Supported** |   | Mk47 | ✅**Supported** |
-| Mosin (Infantry) | ✅**Supported** |   | Mosin (Sniper) | ✅**Supported** |   | MP-133 | ✅**Supported** |   | MP-153 | ✅**Supported** |
-| MP-155 | ✅**Supported** |   | MP-18 | ❌ Unsupported |   | MP-43 sawed-off | ❌ Unsupported |   | MP-43-1C | ❌ Unsupported |
-| MP-443 "Grach" | ✅**Supported** |   | MP5 | ✅**Supported** |   | MP5K-N | ✅**Supported** |   | MP7A1 | ✅**Supported** |
-| MP7A2 | ✅**Supported** |   | MP9 | ✅**Supported** |   | MP9-N | ✅**Supported** |   | MPX | ✅**Supported** |
-| MTs-255-12 | ❌ Unsupported |   | NSV "Utyos" | ❌ Unsupported |   | OP-SKS | ✅**Supported** |   | P226R | ✅**Supported** |
-| P90 | ✅**Supported** |   | PB pistol | ✅**Supported** |   | PKM | ✅**Supported** |   | PKP | ✅**Supported** |
-| PL-15 | ✅**Supported** |   | PM pistol | ✅**Supported** |   | PM(t) pistol | ✅**Supported** |   | PP-19-01 Vityaz-SN | ✅**Supported** |
-| PP-9 "Klin" | ✅**Supported** |   | PP-91 "Kedr" | ✅**Supported** |   | PP-91-01 "Kedr-B" | ✅**Supported** |   | PPSh-41 | ✅**Supported** |
-| RD-704 | ✅**Supported** |   | RFB | ✅**Supported** |   | RPK-16 | ✅**Supported** |   | RSASS | ✅**Supported** |
-| RSh-12 | ❌ Unsupported |   | SA-58 | ✅**Supported** |   | SAG AK | ✅**Supported** |   | SAG AK Short | ✅**Supported** |
-| Saiga-12 | ✅**Supported** |   | Saiga-9 | ✅**Supported** |   | SCAR-H | ✅**Supported** |   | SCAR-H (FDE) | ✅**Supported** |
-| SCAR-L | ✅**Supported** |   | SKS | ✅**Supported** |   | SP-81 | ❌ Unsupported |   | SR-1MP Gyurza, | ✅**Supported** |
-| SR-25 | ✅**Supported** |   | SR-2M | ✅**Supported** |   | STM-9 | ✅**Supported** |   | SV-98 | ✅**Supported** |
-| SVDS | ✅**Supported** |   | SVT-40 | ✅**Supported** |   | T-5000 | ✅**Supported** |   | TOZ-106 | ✅**Supported** |
-| TT pistol (gold) | ✅**Supported** |   | TT pistol | ✅**Supported** |   | TX-15 DML | ✅**Supported** |   | UMP 45 | ✅**Supported** |
-| USP .45 | ✅**Supported** |   | Vector .45 | ✅**Supported** |   | Vector 9x19 | ✅**Supported** |   | VPO-101 | ✅**Supported** |
-| VPO-136 | ✅**Supported** |   | VPO-209 | ✅**Supported** |   | VPO-215 | ✅**Supported** |   | VSS Vintorez | ✅**Supported** |
-| 9A-91 | ✅**Supported** |   | VSK-94 | ✅**Supported** |   | RPD | ✅**Supported**|   | RPDN | ✅**Supported** |
-| MCX Spear | ✅**Supported** |   | Blicky | ✅**Supported** |   |   |   |   |   |   |
+| Firearm | Supported |   | Firearm | Supported |   | Firearm | Supported |   | Firearm | Supported |   | Firearm | Supported |
+| ---: | :--- | --- | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- |
+| 9A-91 | ✅ |   | AA-12 Gen 1 | ✅ |   | AA-12 Gen 2 | ✅ |   | ADAR 2-15 | ✅ |   | AK-101 | ✅ |
+| AK-102 | ✅ |   | AK-103 | ✅ |   | AK-104 | ✅ |   | AK-105 | ✅ |   | AK-12 | ✅ |
+| AK-74 | ✅ |   | AK-74M | ✅ |   | AK-74N | ✅ |   | AKM | ✅ |   | AKMN | ✅ |
+| AKMS | ✅ |   | AKMSN | ✅ |   | AKS-74 | ✅ |   | AKS-74N | ✅ |   | AKS-74U | ✅ |
+| AKS-74UB | ✅ |   | AKS-74UN | ✅ |   | APB | ✅ |   | APS | ✅ |   | AS VAL | ✅ |
+| ASh-12 | ✅ |   | AUG A1 | ✅ |   | AUG A3 | ✅ |   | AUG A3 (Black) | ✅ |   | AVT-40 | ✅ |
+| AXMC | ✅ |   | Blicky | ✅ |   | Desert Eagle L5 .357 | ✅ |   | Desert Eagle L5 .50 AE | ✅ |   | Desert Eagle L6 | ✅ |
+| Desert Eagle L6 (WTS) | ✅ |   | Desert Eagle Mk XIX | ✅ |   | DT MDR 5.56x45 | ✅ |   | DT MDR 7.62x51 | ✅ |   | DVL-10 | ✅ |
+| FN 5-7 | ✅ |   | FN 5-7 (FDE) | ✅ |   | G28 | ✅ |   | G36 | ✅ |   | Glock 17 | ✅ |
+| Glock 18C | ✅ |   | Glock 19X | ✅ |   | HK 416A5 | ✅ |   | KS-23M | ✅ |   | M1911A1 | ✅ |
+| M1A | ✅ |   | M3 Super 90 | ✅ |   | M45A1 | ✅ |   | M4A1 | ✅ |   | M590A1 | ✅ |
+| M60E4 | ✅ |   | M60E6 | ✅ |   | M60E6 (FDE) | ✅ |   | M700 | ✅ |   | M870 | ✅ |
+| M9A3 | ✅ |   | MCX | ✅ |   | MCX-SPEAR | ✅ |   | Mk-18 | ✅ |   | Mk47 | ✅ |
+| Mosin Infantry | ✅ |   | Mosin Sniper | ✅ |   | MP-133 | ✅ |   | MP-153 | ✅ |   | MP-155 | ✅ |
+| MP-443 Grach | ✅ |   | MP5 | ✅ |   | MP5K-N | ✅ |   | MP7A1 | ✅ |   | MP7A2 | ✅ |
+| MP9 | ✅ |   | MP9-N | ✅ |   | MPX | ✅ |   | OP-SKS | ✅ |   | P226R | ✅ |
+| P90 | ✅ |   | PB pistol | ✅ |   | PKM | ✅ |   | PKP | ✅ |   | PKTM | ✅ |
+| PL-15 | ✅ |   | PM (t) pistol | ✅ |   | PM pistol | ✅ |   | PP-19-01 | ✅ |   | PP-9 Klin | ✅ |
+| PP-91 Kedr | ✅ |   | PP-91-01 Kedr-B | ✅ |   | PPSh-41 | ✅ |   | RD-704 | ✅ |   | RFB | ✅ |
+| RPD | ✅ |   | RPDN | ✅ |   | RPK-16 | ✅ |   | RSASS | ✅ |   | SA58 | ✅ |
+| SAG AK | ✅ |   | SAG AK Short | ✅ |   | Saiga-12K | ✅ |   | Saiga-12K FA | ✅ |   | Saiga-9 | ✅ |
+| SCAR-H | ✅ |   | SCAR-H (FDE) | ✅ |   | SCAR-H X-17 | ✅ |   | SCAR-L | ✅ |   | SCAR-L (FDE) | ✅ |
+| SKS | ✅ |   | SR-1MP Gyurza | ✅ |   | SR-25 | ✅ |   | SR-2M | ✅ |   | SR-3M | ✅ |
+| STM-9 | ✅ |   | SV-98 | ✅ |   | SVDS | ✅ |   | SVT-40 | ✅ |   | T-5000M | ✅ |
+| TOZ-106 | ✅ |   | TRG M10 | ✅ |   | TT pistol | ✅ |   | TT pistol (gold) | ✅ |   | TX-15 DML | ✅ |
+| UMP 45 | ✅ |   | USP .45 | ✅ |   | UZI | ✅ |   | UZI PRO Pistol | ✅ |   | UZI PRO SMG | ✅ |
+| Vector .45 | ✅ |   | Vector 9x19 | ✅ |   | Velociraptor | ✅ |   | VPO-101 | ✅ |   | VPO-136 | ✅ |
+| VPO-209 | ✅ |   | VPO-215 | ✅ |   | VSK-94 | ✅ |   | VSS Vintorez | ✅ |   | CR 200DS | ❌ |
+| CR 50DS | ❌ |   | FN40GL | ❌ |   | M32A1 | ❌ |   | MP-18 | ❌ |   | MP-43 sawed-off | ❌ |
+| MP-43-1C | ❌ |   | MTs-255-12 | ❌ |   | RSh-12 | ❌ |   |   |   |   |   |   |   |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
