@@ -140,7 +140,7 @@ Only the stimulants from the mod are loaded.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Firearm Support
-There is no support for revolvers, grenade launchers, or single-shot firearms.</br>
+There is no support for stationary, revolvers, grenade launchers, or single-shot firearms.</br>
 | Firearm | Status |   | Firearm | Status |   | Firearm | Status |   | Firearm | Status |
 | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- |
 | ADAR 2-15 | ✅**Supported** |   | AGS-30 | ❌ Unsupported |   | AK-101 | ✅**Supported** |   | AK-102 | ✅**Supported** |
@@ -174,7 +174,7 @@ There is no support for revolvers, grenade launchers, or single-shot firearms.</
 | TT pistol (gold) | ✅**Supported** |   | TT pistol | ✅**Supported** |   | TX-15 DML | ✅**Supported** |   | UMP 45 | ✅**Supported** |
 | USP .45 | ✅**Supported** |   | Vector .45 | ✅**Supported** |   | Vector 9x19 | ✅**Supported** |   | VPO-101 | ✅**Supported** |
 | VPO-136 | ✅**Supported** |   | VPO-209 | ✅**Supported** |   | VPO-215 | ✅**Supported** |   | VSS Vintorez | ✅**Supported** |
-| 9A-91 | ✅**Supported** |   | VSK-94 | ✅**Supported** |   | RPD | ❌ Unsupported |   | RPDN | ❌ Unsupported |
+| 9A-91 | ✅**Supported** |   | VSK-94 | ✅**Supported** |   | RPD | ✅**Supported**|   | RPDN | ✅**Supported** |
 | MCX Spear | ✅**Supported** |   | Blicky | ✅**Supported** |   |   |   |   |   |   |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -238,14 +238,6 @@ For example: If you only want to use the stimulants and the magazines from this 
 
 
   // ====================================================================================================
-  // MAGAZINE_CONFIGURATION
-  // This is the number of cartridges a magazine can hold.
-  // Setting is ignored if magazines are disabled.
-  // ====================================================================================================
-  "cartridgeCount": 250,
-
-
-  // ====================================================================================================
   // RIG_OPTIONS
   // Settings are ignored if rigs are disabled.
   // ====================================================================================================
@@ -253,7 +245,7 @@ For example: If you only want to use the stimulants and the magazines from this 
   "herculesRig2ArmorAmount": 10000,
   "helmetofhermesArmorAmount": 10000,
   // Maximum recommended values based on screen size for following options:
-  // 1080p -> [24h x 14v], 1440p -> [32h x 16v]
+  // 1080p -> [24h x 14v], 1440p -> [32h x 16v], 4K -> [40h? x 20v?] (4K is currently untested)
   "atlassatchelHorizontal": 24,
   "atlassatchelVertical": 14,
 
@@ -281,7 +273,7 @@ For example: If you only want to use the stimulants and the magazines from this 
 
 ### Mod FAQ
 **Q: Where do I report bugs found with the current version of the mod?** <br>
-A: You can report bugs for the current version of this mod on the [AO Mod Page](https://hub.sp-tarkov.com/files/file/713-olympus/).
+A: You can report bugs for the current version of this mod on the [AO Mod Forum Page](https://hub.sp-tarkov.com/forum/thread/2008-olympus/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -289,11 +281,15 @@ A: You can report bugs for the current version of this mod on the [AO Mod Page](
 
 <!-- ROADMAP -->
 ## Roadmap
-- [x] Add Changelog
-- [ ] Fix rig armor class not instantiating correctly.
-- [ ] Verify weight system. (mod incompatability?)
+- [ ] Add new trader for selling of custom items.
+- [ ] Add custom trader avatar for new trader.
+- [ ] Add alternative trader avatar for use with trader image switching mods.
+- [ ] Add new questline for advancement with new trader.
+- [ ] Add even more variations of magazines with different properties based on item levels.
+- [ ] Update code for SPT Server v4.0.0 (New server is written in C#)
 
-Suggest changes or view/report issues [here](https://github.com/jbs4bmx/Olympus/issues).
+Suggest changes [here](https://github.com/jbs4bmx/Olympus/issues).
+Report issues [here](https://hub.sp-tarkov.com/forum/thread/2008-olympus/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
