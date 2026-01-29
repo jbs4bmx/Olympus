@@ -1,11 +1,11 @@
 <a id="readme-top"></a>
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 
-<!-- PROJECT LOGO -->
 <br />
 <div align="center">
   <a href="https://github.com/jbs4bmx/Olympus">
@@ -14,52 +14,20 @@
 
   <h3 align="center">AssAssIn's Olympus</h3>
 
-  <p align="center">The clouds above Mt. Olympus crack with a thunderous roar. Your time has come. The gods beckon you to their battle.<br /></p>
+  <p align="center">
+    The clouds above Mt. Olympus crack with a thunderous roar.<br>
+    Your time has come. The gods beckon you to their battle.
+  </p>
 
   [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X611JH15)
 </div>
 
+---
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#items-added">Items Added</a></li>
-        <li><a href="#mod-variations">Mod Variations</a></li>
-        <li><a href="#firearm-support">Firearm Support</a></li>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#configuration">Configuration</a>
-      <ul>
-        <li><a href="#mod-faq">Mod FAQ</a></li>
-      </ul>
-    </li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
-
-
-<!-- ABOUT THE PROJECT -->
-## About The Project
-Type: Server Mod</br>
-Disclaimer: **This mod is provided _as-is_ with _no guarantee_ of support.**
+## About the Project
+**Type:** Server Mod<br>
+**Requires:** N/A<br>
+**Disclaimer:** Provided *as-is* with no guarantee of support.
 
 >***⚡ Zeus grants you access to enhanced gear for your quests.***<br>
 >***⚡ Hestia's selflessness provides you the courage and power to smite your enemies.***<br>
@@ -68,7 +36,7 @@ Disclaimer: **This mod is provided _as-is_ with _no guarantee_ of support.**
 This is a re-worked version of AssAssIn's Olympus mod for SPT. This mod adds rigs, armor, a helmet, a backpack, stimulants, and magazines with OP properties. The items are all sold by Therapist, Ragman, or Jaeger depending on what type of item they are.
 
 ### Items Added
-**Apollo's Magazines (210 in total):**
+**Ares' Magazines (80 in total):**
   - Configurable capacity.
   - OP Accuracy.
   - OP Ergonomics.
@@ -83,8 +51,8 @@ This is a re-worked version of AssAssIn's Olympus mod for SPT. This mod adds rig
   - OP stats boost depending on stimulant used.
   - OP pain relief or damage repair depending on stimulant used.
   - No negative side affects from usage.
-  - 360 seconds of positive effects from each usage.
   - Configurable uses per Stimulant.
+  - Configurable length of benefits.(Currently WIP)
 
 **Armor Of Athena:**
   - Full body armor protecting the chest/back/sides/upper arms/stomach.
@@ -106,41 +74,9 @@ This is a re-worked version of AssAssIn's Olympus mod for SPT. This mod adds rig
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Mod Variations
-**Full Version**</br>
-This the full implementation of the mod and includes many new items to enhance your raids. If enabled, this version will ignore the other 3 options listed below.
-  - 4 new Stims offered by Therapist
-    - Apollo's Pain -- Ultimate pain relief.
-    - Apollo's Stim -- The most OP Buffs ever?
-    - Apollo's Propital -- Cures ailments such as bleeding, diseases, and fractures. Also provides energy and hydration.
-    - Apollo's CMS -- Fixes blackened limbs
-  - 5 new Gear items offered by Ragman
-    - Hercules' Rig (Standard Rig)
-    - Hercules' Rig 2 (Armored Rig)
-    - Helmet of Hermes
-    - Armor of Athena
-    - Atlas' Satchel
-  - 210 new Magazine options offered by Jaeger
-    - For 139 supported firearms with OP buffs. (Cartridge count can be edited in the config file.)
-
-_NOTE: Any combination of the following 3 options can be enabled. Remember to set FullVersion to false._
-
-**Mags Only Version**</br>
-Only the full amount of new magazines from the mod are loaded.
-  - 62 new Magazine options offered by Jaeger
-
-**Rigs Only Version**</br>
-Only the rigs from the mod are loaded.
-  - 5 new Gear items offered by Ragman
-
-**Stims Only Version**</br>
-Only the stimulants from the mod are loaded.
-  - 4 new Stims offered by Therapist
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 ### Firearm Support
-There is no support for stationary, revolvers, grenade launchers, or single-shot firearms.</br>
+There is no support for grenade launchers as well as no support for stationary, revolving, or single-shot firearms.</br>
+If a firearm doesn't have a "magazine", then it is not supported.</br>
 | Firearm | Supported |   | Firearm | Supported |   | Firearm | Supported |   | Firearm | Supported |   | Firearm | Supported |
 | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- | --- | ---: | :--- |
 | 9A-91 | ✅ |   | AA-12 Gen 1 | ✅ |   | AA-12 Gen 2 | ✅ |   | ADAR 2-15 | ✅ |   | AK-101 | ✅ |
@@ -176,30 +112,20 @@ There is no support for stationary, revolvers, grenade launchers, or single-shot
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Built With
-| Frameworks/Libraries                                      | Name         | Link                                       |
-| :-------------------------------------------------------: | :----------: | :----------------------------------------: |
-| <img src="./images/icons/TypeScript.svg" width="48">      | `TypeScript` | [TypeScript Website][TypeScript-url]       |
+---
 
-|                         IDEs                                |      Name       | Link                                      |
-| :---------------------------------------------------------: | :-------------: | :---------------------------------------: |
-| <img src="./images/icons/VSCodium-Dark.svg" width="48">     | `VSCodium`      | [VSCodium Website][Vscodium-url]          |
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
-This section will explain how to install and use this mod.
 
 ### Prerequisites
-EFT and SPT are required to use this mod.
+- SPT 4.0.0+
+- EFT 40087 installed
 
 ### Installation
-_For the purpose of these directions, "[SPT]" represents your SPT folder path._
-
-Start by downloading the mod from the [Releases](https://github.com/jbs4bmx/Olympus/releases) page.
+1. Download the latest release from the [Releases](https://github.com/jbs4bmx/Olympus/releases) page..
+2. Extract the contents into your **SPT root folder** (same location as `EscapeFromTarkov.exe`).
+3. Edit `config.jsonc` to customize coverage, prefab, and item properties.
+4. Start `SPT.Server.exe` and wait for it to fully load.
+5. Launch the game through `SPT.Launcher.exe`.
 
 Follow these steps to install and configure the mod:
   1. Extract the contents of the zip file into the root of your [SPT] folder.
@@ -211,119 +137,147 @@ Follow these steps to install and configure the mod:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- CONFIGURATION EXAMPLES -->
 ## Configuration
-Although you can run it default, there are configuration options to tweak it a bit. Edit the corresponding option(s) in the configuration file to make the mod work in the way that you want it to. By default, the entire database of this mod is loaded, but you can also limit it to one of the 3 categories, or a combination of the 3.
+All settings are controlled through `config.jsonc`. You can adjust:
+  - How long it takes to use a stim. (default: 2)
+  - Carry more weight by setting Hercules' rig or Hercules' rig 2 to a lower value.
+  - Increase or decrease armor amounts for armored items.
+  - Adjust the capacity of Atlas' Satchel.
+  - Modify magazine stats.
 
-For example: If you only want to use the stimulants and the magazines from this mod, then change "FullVersion" to false and change "MagOnly" and "StimsOnly" to true.
-
+The values that you see in the example below are the default values of the mod.<br>
 ``` jsonc
 {
-  // ====================================================================================================
-  // VERSION_SELECTION
-  // Choose 1 or more options.
-  // Determines the version of the mod to load. (Default = FullVersion)
-  // NOTE 1: If FullVersion is set to "true", the other 3 options will be ignored.
-  // NOTE 2: Set FullVersion to false if using the any of the other 3 options.
-  // ====================================================================================================
-  "FullVersion": true,
-  "MagsOnly": false,
-  "RigsOnly": false,
-  "StimsOnly": false,
+	//==STIMCONFIG=============================================================
+	// How long should it take to use a stim?
+	"StimUseTimeSeconds": 2,
+
+	// How long should pain suppression last? Default is 120. (0 to disable)
+	// WIP: Not sure if this is working yet.
+	"PainSuppressionDurationSeconds": 0,
+
+	// How long should energy regeneration last? Default is 180. (0 to disable)
+	// WIP: Not sure if this is working yet.
+	"EnergyRegenDurationSeconds": 0,
+
+	// How long should hydration regeneration last? Default is 180. (0 to disable)
+	// WIP: Not sure if this is working yet.
+	"HydrationRegenDurationSeconds": 0,
 
 
-  // ====================================================================================================
-  // RIG_OPTIONS
-  // Settings are ignored if rigs are disabled.
-  // ====================================================================================================
-  "athenaArmorAmount": 10000,
-  "herculesRig2ArmorAmount": 10000,
-  "helmetofhermesArmorAmount": 10000,
-  // Maximum recommended values based on screen size for following options:
-  // 1080p -> [24h x 14v], 1440p -> [32h x 16v], 4K -> [40h? x 20v?] (4K is currently untested)
-  "atlassatchelHorizontal": 24,
-  "atlassatchelVertical": 14,
+	//==RIGSCONFIG=============================================================
+	// Hecules' rig. (weight must be negative)
+	// Double the value of this setting. The game halves it for some reason.
+	// If you want the value in game to be -1000, set this to -2000.
+	"Herc1RigWeightDrop": -1000,
+
+	// Hercules' armored rig. (weight must be negative)
+	// Double the value of this setting. The game halves it for some reason.
+	// If you want the value in game to be -1000, set this to -2000.
+	"Herc2RigWeightDrop": -500,
+
+	// Hercules' armored rig armor amount.
+	"Herc2ArmorAmount": 2000,
+
+	// Atlas' satchel. Default is set to 1080p compatibility.
+	// Maximum recommended values based on screen size for following options:
+	// 1080p -> [24h x 14v]
+	// 1440p -> [32h x 16v]
+	// 2160p -> [40h? x 20v?] (4K is currently untested)
+	"PackGridVertical": 14,
+	"PackGridHorizontal": 24,
+
+	// Athena's armor.
+	"AthenaArmorAmount": 2000,
+
+	// Hermes' helmet.
+	"HelmetArmorAmount": 2000,
 
 
-  // ====================================================================================================
-  // STIM_OPTIONS
-  // Settings are ignored if stims are disabled.
-  // ====================================================================================================
-  "numberOfStimUses": 4,
-  "stimUseTimeInSeconds": 3,
+	//==MAGSCONFIG=============================================================
+	// Accuracy bonus for all mags. (Negative values reduce accuracy)
+	"AccuracyBonusAmount": 50,
+
+	// Reduce recoil by this amount for all mags. (Negative values reduce recoil)
+	"RecoilReductionAmount": -75,
+
+	// Increase ergo by this amount for all mags.
+	"ErgoIncreaseAmount": 50,
+
+	// Increase velocity by this amount for all mags.
+	"VelocityIncreaseAmount": 50,
+
+	// Chance for a mag to malfunction when used. (0 = 0% Chance; 1.0 = 100% Chance)
+	"MalfunctionChance": 0,
+
+	// Make it easier to get better mags? Sets all mags to loyalty level 1 if true. (WIP: May not work properly)
+	"SetAllMagsLoyaltyLevelOne": false,
 
 
-  // ====================================================================================================
-  // BLACKLISTING
-  // Choose 1 or more options.
-  // Setting this value to true will stop bots from generating with Olympus items in their inventory.
-  // ====================================================================================================
-  "blacklistStims": false,
-  "blacklistRigs": false,
-  "blacklistMags": false
+	//==BLACKLISTCONFIG========================================================
+	"BlacklistStims": false,
+	"BlacklistRigs": false,
+	"BlacklistMags": false,
+
+
+	//==DEVELOPERCONFIG========================================================
+	"EnableDebugLogging": false
 }
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Mod FAQ
-**Q: Where do I report bugs found with the current version of the mod?** <br>
-A: You can report bugs for the current version of this mod on the [AO Mod Forum Page](https://hub.sp-tarkov.com/forum/thread/2008-olympus/).
+---
+
+## Troubleshooting
+
+**Rig 2 doesn't show armor areas**
+- A slight bug but the armor still works, I assure you. You have my "Trust Me Bro" guarantee.
+
+**Not all magazines are showing under Jaeger LL1**
+- The current option to set all magazines to LL1 is a WIP. It will likely not work at this time.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- ROADMAP -->
 ## Roadmap
-- [ ] Add new trader for selling of custom items.
-- [ ] Add custom trader avatar for new trader.
-- [ ] Add alternative trader avatar for use with trader image switching mods.
-- [ ] Add new questline for advancement with new trader.
-- [ ] Add even more variations of magazines with different properties based on item levels.
-- [ ] Update code for SPT Server v4.0.0 (New server is written in C#)
+- [❓] Add new trader for selling of custom items. (Not yet implemented in current release.)
+- [✅] Add custom trader avatar for new trader. (Not yet implemented in current release.)
+- [✅] Add alternative trader avatar for use with trader image switching mods. (Not yet implemented in current release.)
+- [❓] Add new questline for advancement with new trader.
+- [❓] Add even more variations of magazines with different properties based on item levels.
+- [✅] Update code for SPT Server v4.0.0 (New server is written in C#)
 
-Suggest changes [here](https://github.com/jbs4bmx/Olympus/issues).
-Report issues [here](https://hub.sp-tarkov.com/forum/thread/2008-olympus/).
+Suggest changes or report issues here: [ISSUES](https://github.com/jbs4bmx/Olympus/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- CONTRIBUTING -->
 ## Contributing
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are welcome!
+If you have ideas or improvements:
 
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a pull request
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+Or simply open an issue tagged **enhancement**.
 
-You can also buy me a coffee! (This is not required, but I greatly appreciate any support provided.)</br>
+If you'd like to support development:
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/X8X611JH15)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+---
 
-
-<!-- LICENSE -->
 ## License
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- ACKNOWLEDGMENTS -->
-## Acknowledgments
-Contributors:</br>
-None yet.
+Distributed under the MIT License.
+See `LICENSE` for details.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -340,9 +294,3 @@ None yet.
 [issues-url]: https://github.com/jbs4bmx/Olympus/issues
 [license-shield]: https://img.shields.io/github/license/jbs4bmx/Olympus.svg?style=for-the-badge
 [license-url]: https://github.com/jbs4bmx/Olympus/blob/master/LICENSE.txt
-
-
-
-<!-- Framwork/Library URLs -->
-[TypeScript-url]: https://www.typescriptlang.org/
-[Vscodium-url]: https://vscodium.com/

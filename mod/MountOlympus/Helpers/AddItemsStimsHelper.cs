@@ -1,0 +1,191 @@
+﻿using SPTarkov.DI.Annotations;
+using SPTarkov.Server.Core.DI;
+using SPTarkov.Server.Core.Helpers;
+using SPTarkov.Server.Core.Models.Eft.Common.Tables;
+using SPTarkov.Server.Core.Models.Spt.Mod;
+using SPTarkov.Server.Core.Models.Utils;
+using SPTarkov.Server.Core.Services.Mod;
+using System.Reflection;
+
+namespace MountOlympus.Helpers;
+
+[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 3)]
+internal class AddItemsStimsHelper(ISptLogger<AddItemsStimsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
+{
+    public void Apply()
+    {
+        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
+        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+        var debug = cfgPath?.EnableDebugLogging == true;
+
+        customItemService.CreateItemFromClone(ApoStim());
+        if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoStim");
+        customItemService.CreateItemFromClone(ApoProp());
+        if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoProp");
+        customItemService.CreateItemFromClone(ApoPain());
+        if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoPain");
+        customItemService.CreateItemFromClone(ApoCMS());
+        if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoCMS");
+    }
+
+    public NewItemFromCloneDetails ApoStim()
+    {
+        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
+        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+
+        return new NewItemFromCloneDetails
+        {
+            ItemTplToClone = "5ed5166ad380ab312177c100",
+            NewId = "661c91746c391e0f5ba82d47",
+            ParentId = BaseClasses.STIMULATOR,
+            HandbookPriceRoubles = 15545,
+            HandbookParentId = "5b47574386f77428ca22b33a",
+            FleaPriceRoubles = 12000,
+            Locales = new Dictionary<string, LocaleDetails>
+            {
+                ["en"] = new LocaleDetails
+                {
+                    Name = "Apollo's Stim",
+                    ShortName = "ApoStim",
+                    Description = "Apollo's own concoction made from the root of the peony and many other godly essences. It temporarily enhances many of your skills."
+                }
+            },
+            OverrideProperties = new TemplateItemProperties
+            {
+                BackgroundColor = "red",
+                ExaminedByDefault = false,
+                Description = "Apollo's own concoction made from the root of the peony and many other godly essences. It temporarily enhances many of your skills.",
+                ExamineExperience = 100,
+                LootExperience = 20,
+                Name = "Apollo's Stim",
+                ShortName = "ApoStim",
+                StimulatorBuffs = "BuffsApolloStim",
+                Weight = 0.01,
+                EffectsDamage = [],
+                EffectsHealth = [],
+                MedUseTime = cfgPath.StimUseTimeSeconds
+            }
+        };
+    }
+
+    public NewItemFromCloneDetails ApoProp()
+    {
+        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
+        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+
+        return new NewItemFromCloneDetails
+        {
+            ItemTplToClone = "5c0e530286f7747fa1419862",
+            NewId = "661c91741ba0f93d4287c5e6",
+            ParentId = BaseClasses.STIMULATOR,
+            HandbookPriceRoubles = 15545,
+            HandbookParentId = "5b47574386f77428ca22b33a",
+            FleaPriceRoubles = 12000,
+            Locales = new Dictionary<string, LocaleDetails>
+            {
+                ["en"] = new LocaleDetails
+                {
+                    Name = "Apollo's Propital",
+                    ShortName = "ApoProp",
+                    Description = "The ultimate first-aid stimulant, said to have been used by Apollo himself to heal the wounds of fallen warriors on the battlefield."
+                }
+            },
+            OverrideProperties = new TemplateItemProperties
+            {
+                BackgroundColor = "red",
+                Description = "The ultimate first-aid stimulant, said to have been used by Apollo himself to heal the wounds of fallen warriors on the battlefield.",
+                ExaminedByDefault = false,
+                ExamineExperience = 100,
+                LootExperience = 20,
+                Name = "Apollo's Propital",
+                ShortName = "ApoProp",
+                StimulatorBuffs = "BuffsApollosPropital",
+                Weight = 0.01,
+                EffectsDamage = [],
+                EffectsHealth = [],
+                MedUseTime = cfgPath.StimUseTimeSeconds
+            }
+        };
+    }
+
+    public NewItemFromCloneDetails ApoPain()
+    {
+        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
+        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+
+        return new NewItemFromCloneDetails
+        {
+            ItemTplToClone = "5c0e533786f7747fa23f4d47",
+            NewId = "661c91742b5c1493806daf7e",
+            ParentId = "5448f3a64bdc2d60728b456a",
+            HandbookPriceRoubles = 15545,
+            HandbookParentId = "5b47574386f77428ca22b33a",
+            FleaPriceRoubles = 12000,
+            Locales = new Dictionary<string, LocaleDetails>
+            {
+                ["en"] = new LocaleDetails
+                {
+                    Name = "Apollo's Pain",
+                    ShortName = "ApoPain",
+                    Description = "Created by Apollo's son Asclepius, this simple pain medication helped many warriors push through the pain to win victories over their enemies."
+                }
+            },
+            OverrideProperties = new TemplateItemProperties
+            {
+                BackgroundColor = "red",
+                Description = "Created by Apollo's son Asclepius, this simple pain medication helped many warriors push through the pain to win victories over their enemies.",
+                ExaminedByDefault = false,
+                ExamineExperience = 100,
+                LootExperience = 20,
+                Name = "Apollo's Pain",
+                ShortName = "ApoPain",
+                StimulatorBuffs = "BuffsApolloPain",
+                Weight = 0.01,
+                EffectsDamage = [],
+                EffectsHealth = [],
+                MedUseTime = cfgPath.StimUseTimeSeconds
+            }
+        };
+    }
+
+    public NewItemFromCloneDetails ApoCMS()
+    {
+        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
+        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+
+        return new NewItemFromCloneDetails
+        {
+            ItemTplToClone = "5c10c8fd86f7743d7d706df3",
+            NewId = "661c9174e9365c70fa18b4d2",
+            ParentId = "5448f3a64bdc2d60728b456a",
+            HandbookPriceRoubles = 15545,
+            HandbookParentId = "5b47574386f77428ca22b33a",
+            FleaPriceRoubles = 12000,
+            Locales = new Dictionary<string, LocaleDetails>
+            {
+                ["en"] = new LocaleDetails
+                {
+                    Name = "Apollo's CMS",
+                    ShortName = "ApoCMS",
+                    Description = "Not even 100 Blackened limbs can stop the god of healing ! "
+                }
+            },
+            OverrideProperties = new TemplateItemProperties
+            {
+                BackgroundColor = "red",
+                Description = "Not even 100 blackened limbs can stop the god of healing!",
+                ExaminedByDefault = false,
+                ExamineExperience = 100,
+                LootExperience = 20,
+                Name = "Apollo's CMS",
+                ShortName = "ApoCMS",
+                StimulatorBuffs = "BuffsApolloCMS",
+                Weight = 0.01,
+                EffectsDamage = [],
+                EffectsHealth = [],
+                MedUseTime = cfgPath.StimUseTimeSeconds
+            }
+        };
+    }
+
+}

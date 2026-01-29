@@ -1,0 +1,61 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64</Platforms>
+    <Title>Mount Olympus</Title>
+    <Authors>jbs4bmx</Authors>
+    <Copyright>jbs4bmx 2018-2026</Copyright>
+    <AssemblyVersion>4.0.11.0</AssemblyVersion>
+    <FileVersion>4.0.11.0</FileVersion>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <Version>4.0.11</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Misc\**" />
+    <EmbeddedResource Remove="Misc\**" />
+    <None Remove="Misc\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="SemanticVersioning">
+      <HintPath>D:\SPT\SPT\SemanticVersioning.dll</HintPath>
+    </Reference>
+    <Reference Include="SPT.Server">
+      <HintPath>D:\SPT\SPT\SPT.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="SPTarkov.Common">
+      <HintPath>D:\SPT\SPT\SPTarkov.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="SPTarkov.DI">
+      <HintPath>D:\SPT\SPT\SPTarkov.DI.dll</HintPath>
+    </Reference>
+    <Reference Include="SPTarkov.Reflection">
+      <HintPath>D:\SPT\SPT\SPTarkov.Reflection.dll</HintPath>
+    </Reference>
+    <Reference Include="SPTarkov.Server.Assets">
+      <HintPath>D:\SPT\SPT\SPTarkov.Server.Assets.dll</HintPath>
+    </Reference>
+    <Reference Include="SPTarkov.Server.Core">
+      <HintPath>D:\SPT\SPT\SPTarkov.Server.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Hashing">
+      <HintPath>D:\SPT\SPT\System.IO.Hashing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>

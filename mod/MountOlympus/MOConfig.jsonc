@@ -1,0 +1,76 @@
+﻿{
+	//==STIMCONFIG=============================================================
+	// How long should it take to use a stim?
+	"StimUseTimeSeconds": 2,
+
+	// How long should pain suppression last? Default is 120. (0 to disable)
+	// WIP: Not sure if this is working yet.
+	"PainSuppressionDurationSeconds": 0,
+
+	// How long should energy regeneration last? Default is 180. (0 to disable)
+	// WIP: Not sure if this is working yet.
+	"EnergyRegenDurationSeconds": 0,
+
+	// How long should hydration regeneration last? Default is 180. (0 to disable)
+	// WIP: Not sure if this is working yet.
+	"HydrationRegenDurationSeconds": 0,
+
+
+	//==RIGSCONFIG=============================================================
+	// Hecules' rig. (weight must be negative)
+	// Double the value of this setting. The game halves it for some reason.
+	// If you want the value in game to be -1000, set this to -2000.
+	"Herc1RigWeightDrop": -1000,
+
+	// Hercules' armored rig. (weight must be negative)
+	// Double the value of this setting. The game halves it for some reason.
+	// If you want the value in game to be -1000, set this to -2000.
+	"Herc2RigWeightDrop": -500,
+
+	// Hercules' armored rig armor amount.
+	"Herc2ArmorAmount": 2000,
+
+	// Atlas' satchel. Default is set to 1080p compatibility.
+	// Maximum recommended values based on screen size for following options:
+	// 1080p -> [24h x 14v]
+	// 1440p -> [32h x 16v]
+	// 2160p -> [40h? x 20v?] (4K is currently untested)
+	"PackGridVertical": 14,
+	"PackGridHorizontal": 24,
+
+	// Athena's armor.
+	"AthenaArmorAmount": 2000,
+
+	// Hermes' helmet.
+	"HelmetArmorAmount": 2000,
+
+
+	//==MAGSCONFIG=============================================================
+	// Accuracy bonus for all mags. (Negative values reduce accuracy)
+	"AccuracyBonusAmount": 50,
+
+	// Reduce recoil by this amount for all mags. (Negative values reduce recoil)
+	"RecoilReductionAmount": -75,
+
+	// Increase ergo by this amount for all mags.
+	"ErgoIncreaseAmount": 50,
+
+	// Increase velocity by this amount for all mags.
+	"VelocityIncreaseAmount": 50,
+
+	// Chance for a mag to malfunction when used. (0 = 0% Chance; 1.0 = 100% Chance)
+	"MalfunctionChance": 0,
+
+	// Make it easier to get better mags? Sets all mags to loyalty level 1 if true. (WIP: May not work properly)
+	"SetAllMagsLoyaltyLevelOne": false,
+
+
+	//==BLACKLISTCONFIG========================================================
+	"BlacklistStims": false,
+	"BlacklistRigs": false,
+	"BlacklistMags": false,
+
+
+	//==DEVELOPERCONFIG========================================================
+	"EnableDebugLogging": false
+}
