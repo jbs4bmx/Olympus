@@ -1,46 +1,45 @@
-﻿using SPTarkov.DI.Annotations;
+﻿using SPTarkov.Common.Logger;
+using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
-using SPTarkov.Server.Core.Models.Eft.Common;
+using SPTarkov.Server.Core.Helpers.Server;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Enums;
 using SPTarkov.Server.Core.Models.Spt.Mod;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services.Mod;
+using SPTarkov.Server.Core.Services.Modding.Custom;
 using System.Reflection;
+using static MountOlympus.Olympus;
 
 namespace MountOlympus.Helpers;
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 4)]
-internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
+[Injectable(TypePriority = OnLoadOrder.Preload + 1002)]
+internal class AddItemsRigsHelper(SptLogger<AddItemsRigsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
 {
     public void Apply()
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+        var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+        var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
         var debug = cfgPath?.EnableDebugLogging == true;
 
-        customItemService.CreateItemFromClone(Athena());
+        customItemService.CreateItemFromClone(Athena(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsRigsHelper] Created Item: Athena");
         customItemService.CreateItemFromClone(AtSatch());
         if (debug) logger.Info($"[Olympus][AddItemsRigsHelper] Created Item: AtSatch");
-        customItemService.CreateItemFromClone(Herc1());
+        customItemService.CreateItemFromClone(Herc1(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsRigsHelper] Created Item: Herc1");
-        customItemService.CreateItemFromClone(Herc2());
+        customItemService.CreateItemFromClone(Herc2(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsRigsHelper] Created Item: Herc2");
-        customItemService.CreateItemFromClone(Hermes());
+        customItemService.CreateItemFromClone(Hermes(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsRigsHelper] Created Item: Hermes");
     }
 
-    public NewItemFromCloneDetails Athena()
+    public static NewItemFromCloneDetails Athena(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5ca21c6986f77479963115a7",
             NewId = "661c91744502ba91ef63c8d7",
+            NewItemName = "athena_armor",
             ParentId = "5448e54d4bdc2dcc718b4568",
             HandbookPriceRoubles = 23315,
             HandbookParentId = "5b5f701386f774093f2ecf0f",
@@ -71,7 +70,7 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
                 Name = "Armor of Athena",
                 RepairCost = 50,
                 RepairSpeed = 5,
-                RicochetParams = new XYZ { X = 0, Y = 0, Z = 80 },
+                RicochetChance = 0,
                 ShortName = "Athena",
                 Slots = [],
                 Weight = 5,
@@ -100,15 +99,13 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails AtSatch()
+    public static NewItemFromCloneDetails AtSatch()
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "56e33680d2720be2748b4576",
             NewId = "661c917426ba940d7138e5cf",
+            NewItemName = "atlas_satchel",
             ParentId = "5448e53e4bdc2d60728b4567",
             HandbookPriceRoubles = 7775,
             HandbookParentId = "5b5f6f6c86f774093f2ecf0b",
@@ -139,15 +136,13 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Herc1()
+    public static NewItemFromCloneDetails Herc1(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5df8a42886f77412640e2e75",
             NewId = "661c9174018549befc3a7d62",
+            NewItemName = "hercules_rig_1",
             ParentId = "5448e5284bdc2dcb718b4567",
             HandbookPriceRoubles = 23315,
             HandbookParentId = "5b5f6f8786f77447ed563642",
@@ -178,15 +173,13 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Herc2()
+    public static NewItemFromCloneDetails Herc2(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5d5d87f786f77427997cfaef",
             NewId = "661c9174d9718c60a32fe5b4",
+            NewItemName = "hercules_rig_2",
             ParentId = "5448e5284bdc2dcb718b4567",
             HandbookPriceRoubles = 23315,
             HandbookParentId = "5b5f6f8786f77447ed563642",
@@ -670,7 +663,7 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
                 Name = "Hercules' Rig 2",
                 RepairCost = 60,
                 RepairSpeed = 5,
-                RicochetParams = new XYZ { X = 0, Y = 0, Z = 80 },
+                RicochetChance = 0,
                 ShortName = "Herc2",
                 Slots = [],
                 Weight = cfgPath.Herc2RigWeightDrop,
@@ -691,15 +684,13 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Hermes()
+    public static NewItemFromCloneDetails Hermes(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5e00c1ad86f774747333222c",
             NewId = "661c9174a371d90e62b8f5c4",
+            NewItemName = "helmet_hermes",
             ParentId = "5a341c4086f77401f2541505",
             HandbookPriceRoubles = 19429,
             HandbookParentId = "5b47574386f77428ca22b330",
@@ -710,12 +701,12 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
                 {
                     Name = "Helmet Of Hermes",
                     ShortName = "Hermes",
-                    Description = "The helmet worn by Hermes, the messenger of the gods, known for its speed and agility."
+                    Description = "The Helmet of Hermes protects your entire head while also making you feel light on your feet."
                 }
             },
             OverrideProperties = new TemplateItemProperties
             {
-                ArmorMaterial = ArmorMaterial.Combined,
+                ArmorMaterial = ArmorMaterial.ArmoredSteel,
                 ArmorType = "Heavy",
                 BackgroundColor = "yellow",
                 BlindnessProtection = 100,
@@ -735,7 +726,7 @@ internal class AddItemsRigsHelper(ISptLogger<AddItemsRigsHelper> logger, CustomI
                 Name = "Helmet Of Hermes",
                 RepairCost = 40,
                 RepairSpeed = 5,
-                RicochetParams = new XYZ { X = 0, Y = 0, Z = 80 },
+                RicochetChance = 0,
                 ShortName = "Hermes",
                 Slots =
                 [

@@ -1,26 +1,29 @@
+using SPTarkov.Common.Logger;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services;
+using SPTarkov.Server.Core.Helpers.Server;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 using System.Collections;
 using System.Reflection;
 using System.Text.Json;
+using static MountOlympus.Olympus;
+
 
 namespace MountOlympus.Helpers
 {
-    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 2)]
-    public class AddStimBuffs(ISptLogger<AddStimBuffs> logger, DatabaseService databaseService, ModHelper modHelper)
+    [Injectable(TypePriority = OnLoadOrder.Preload + 1006)]
+    public class AddStimBuffs(SptLogger<AddStimBuffs> logger, TemplateTable templateTable, ModHelper modHelper)
     {
         public void Apply()
         {
             try
             {
                 // get config debug value
-                var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-                var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+                var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+                var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
                 var debug = cfgPath?.EnableDebugLogging == true;
-                var globalsJsonPath = Path.Combine(ModPath, "Modifiers", "globals.json");
+                var globalsJsonPath = System.IO.Path.Combine(pathToMod, "Modifiers", "globals.json");
 
                 if (debug) logger.Info($"[Olympus][AddStimBuff] Looking for globals.json at: {globalsJsonPath}");
                 
@@ -71,17 +74,17 @@ namespace MountOlympus.Helpers
 
 
                 // Get db from DI.
-                var getTablesMethod = databaseService.GetType().GetMethod("GetTables");
+                var getTablesMethod = templateTable.GetType().GetMethod("GetTables");
                 if (getTablesMethod == null)
                 {
-                    logger.Warning("[Olympus][AddStimBuffs] Unable to locate GetTables() on DatabaseService.");
+                    logger.Warning("[Olympus][AddStimBuffs] Unable to locate GetTables() on templateTable.");
                     return;
                 }
 
                 var dbObject =
-                    databaseService.GetType().GetMethod("GetTables")?.Invoke(databaseService, null)
-                    ?? databaseService.GetType().GetProperty("Tables")?.GetValue(databaseService)
-                    ?? databaseService.GetType().GetField("Tables")?.GetValue(databaseService);
+                    templateTable.GetType().GetMethod("GetTables")?.Invoke(templateTable, null)
+                    ?? templateTable.GetType().GetProperty("Tables")?.GetValue(templateTable)
+                    ?? templateTable.GetType().GetField("Tables")?.GetValue(templateTable);
                 if (dbObject == null)
                 {
                     logger.Warning("[Olympus][AddStimBuffs] GetTables() returned null; cannot continue.");

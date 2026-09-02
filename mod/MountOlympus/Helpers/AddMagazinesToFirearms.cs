@@ -1,14 +1,14 @@
-﻿using SPTarkov.DI.Annotations;
+﻿using SPTarkov.Common.Logger;
+using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services;
+using SPTarkov.Server.Core.Helpers.Server;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 using System.Text.Json;
 
 namespace MountOlympus.Helpers
 {
-    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 13)]
-    public class AddMagazinesToFirearms(ISptLogger<AddMagazinesToFirearms> logger, DatabaseService databaseService, ModHelper modHelper)
+    [Injectable(TypePriority = OnLoadOrder.Preload + 1005)]
+    public class AddMagazinesToFirearms(SptLogger<AddMagazinesToFirearms> logger, TemplateTable templateTable, ModHelper modHelper)
     {
         public void Apply()
         {
@@ -27,7 +27,7 @@ namespace MountOlympus.Helpers
                 if (doc.RootElement.ValueKind != JsonValueKind.Object)
                     return;
 
-                var items = databaseService.GetItems();
+                var items = templateTable.Items;
                 if (items == null)
                 {
                     logger.Warning("[Olympus][AddMagazinesToFirearms] Unable to locate templates.items.");

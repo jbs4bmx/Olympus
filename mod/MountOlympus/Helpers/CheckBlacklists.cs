@@ -1,35 +1,37 @@
-﻿using SPTarkov.DI.Annotations;
+﻿using SPTarkov.Common.Logger;
+using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
+using SPTarkov.Server.Core.Helpers.Server;
+using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Spt.Config;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Servers;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 using System.Reflection;
+using static MountOlympus.Olympus;
 
 namespace MountOlympus.Helpers
 {
-    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 16)]
-    public class CheckBlacklists(ISptLogger<CheckBlacklists> logger, ConfigServer configServer, ModHelper modHelper)
+    [Injectable(TypePriority = OnLoadOrder.Preload + 1008)]
+    public class CheckBlacklists(SptLogger<CheckBlacklists> logger, PmcConfig pmcConfig, BotConfig botConfig, LootConfig lootConfig, ItemConfig itemConfig, AirdropConfig airdropConfig, TemplateItem containerTemplate, ModHelper modHelper)
     {
-        private static readonly List<string> StimItems = new()
-        {
+        private static readonly List<string> StimItems =
+        [
             "661c91746c391e0f5ba82d47",
             "661c91741ba0f93d4287c5e6",
             "661c91742b5c1493806daf7e",
             "661c9174e9365c70fa18b4d2"
-        };
+        ];
 
-        private static readonly List<string> RigItems = new()
-        {
+        private static readonly List<string> RigItems =
+        [
             "661c91744502ba91ef63c8d7",
             "661c917426ba940d7138e5cf",
             "661c9174018549befc3a7d62",
             "661c9174d9718c60a32fe5b4",
             "661c9174a371d90e62b8f5c4"
-        };
+        ];
 
-        private static readonly List<string> MagItems = new()
-        {
+        private static readonly List<string> MagItems =
+        [
             "6816beb871b09465ad3efc82", "6816beb851e6280ad379c4fb", "6816beb841be398af5270d6c",
             "6816beb88e62a50f19bd74c3", "6816beb8102946dabf3ec578", "6816beb82130bcd49ae6f785",
             "6816beb8d38f0ae629c7514b", "6816beb8b26ca97e413085df", "6816beb806be7c5f8912a4d3",
@@ -57,43 +59,92 @@ namespace MountOlympus.Helpers
             "68f2f70e0b2fe59176a3cd48", "68f2f70e9d4f2ea17b3c6085", "68f2f70e82f357c01ebd946a",
             "68f2f70eea56024b1387f9cd", "68f2f70ed7521ba38694fce0", "68f2f70e37e0458bf16acd29",
             "68f2f70e6d198f7eabc05324", "661c917436409c2d18e5afb7"
-        };
+        ];
+
+        private static readonly List<string> Containers =
+        [
+            "1","2","3",
+            "4","5","6"
+        ];
 
         public void Apply()
         {
             try
             {
-                var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-                var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+                var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+                var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+                if (cfgPath is null)
+                {
+                    logger.Warning("Medkits config not found - skipping medkit patches");
+                    return;
+                }
+
                 var debug = cfgPath?.EnableDebugLogging == true;
 
-                BotConfig? botConfig = null;
-                PmcConfig? pmcConfig = null;
-                ItemConfig? itemConfig = null;
-
-                try { botConfig = configServer.GetConfig<BotConfig>(); } catch { botConfig = null; }
-                try { pmcConfig = configServer.GetConfig<PmcConfig>(); } catch { pmcConfig = null; }
-                try { itemConfig = configServer.GetConfig<ItemConfig>(); } catch { itemConfig = null; }
-
-                if (debug) logger.Info("[Olympus][CheckBlacklists] Apply called with config: " +
-                    $"BlacklistStims={cfgPath.BlacklistStims}, BlacklistRigs={cfgPath.BlacklistRigs}, BlacklistMags={cfgPath.BlacklistMags}");
-
-                if (cfgPath.BlacklistStims)
+                // Stim Blacklists
+                if (cfgPath.BlacklistStimsFromBots)
                 {
-                    PmcBlacklist(pmcConfig, StimItems, debug, "stim");
                     BotBlacklist(botConfig, StimItems, debug, "stim");
                 }
-
-                if (cfgPath.BlacklistRigs)
+                if (cfgPath.BlacklistStimsFromPMCs)
                 {
-                    PmcBlacklist(pmcConfig, RigItems, debug, "rig");
-                    BotBlacklist(botConfig, RigItems, debug, "rig");
+                    PmcBlacklist(pmcConfig, StimItems, debug, "stim");
+                }
+                if (cfgPath.BlacklistStimsFromRaidContainers)
+                {
+                    ConBlacklist(containerTemplate, StimItems, debug, "stim");
+                }
+                if (cfgPath.BlacklistStimsFromLooseLoot)
+                {
+                    LooBlacklist(itemConfig, StimItems, debug, "stim");
+                }
+                if (cfgPath.BlacklistStimsFromAirdrop)
+                {
+                    AirBlacklist(StimItems, debug, "stim");
                 }
 
-                if (cfgPath.BlacklistMags)
+                // Rig Blacklists
+                if (cfgPath.BlacklistRigsFromBots)
+                {
+                    BotBlacklist(botConfig, RigItems, debug, "rig");
+                }
+                if (cfgPath.BlacklistRigsFromPMCs)
+                {
+                    PmcBlacklist(pmcConfig, RigItems, debug, "rig");
+                }
+                if (cfgPath.BlacklistRigsFromRaidContainers)
+                {
+                    ConBlacklist(containerTemplate, RigItems, debug, "rig");
+                }
+                if (cfgPath.BlacklistRigsFromLooseLoot)
+                {
+                    LooBlacklist(itemConfig, RigItems, debug, "rig");
+                }
+                if (cfgPath.BlacklistRigsFromAirdrop)
+                {
+                    AirBlacklist(StimItems, debug, "rig");
+                }
+
+                // Mag Blacklists
+                if (cfgPath.BlacklistMagsFromBots)
+                {
+                    BotBlacklist(botConfig, MagItems, debug, "mag");
+                }
+                if (cfgPath.BlacklistMagsFromPMCs)
                 {
                     PmcBlacklist(pmcConfig, MagItems, debug, "mag");
-                    BotBlacklist(botConfig, MagItems, debug, "mag");
+                }
+                if (cfgPath.BlacklistMagsFromRaidContainers)
+                {
+                    ConBlacklist(containerTemplate, MagItems, debug, "mag");
+                }
+                if (cfgPath.BlacklistMagsFromLooseLoot)
+                {
+                    LooBlacklist(itemConfig, MagItems, debug, "mag");
+                }
+                if (cfgPath.BlacklistMagsFromAirdrop)
+                {
+                    AirBlacklist(StimItems, debug, "mag");
                 }
             }
             catch (Exception ex)
@@ -109,10 +160,10 @@ namespace MountOlympus.Helpers
 
             foreach (var itemId in itemIds)
             {
-                pmcConfig.VestLoot.Blacklist.Add(itemId);
-                pmcConfig.PocketLoot.Blacklist.Add(itemId);
-                pmcConfig.BackpackLoot.Blacklist.Add(itemId);
-                pmcConfig.GlobalLootBlacklist.Add(itemId);
+                if (!pmcConfig.VestLoot.Blacklist.Contains(itemId)) pmcConfig.VestLoot.Blacklist.Add(itemId);
+                if (!pmcConfig.PocketLoot.Blacklist.Contains(itemId)) pmcConfig.PocketLoot.Blacklist.Add(itemId);
+                if (!pmcConfig.BackpackLoot.Blacklist.Contains(itemId)) pmcConfig.BackpackLoot.Blacklist.Add(itemId);
+                if (!pmcConfig.GlobalLootBlacklist.Contains(itemId)) pmcConfig.GlobalLootBlacklist.Add(itemId);
             }
             if (debug) logger.Info($"[Olympus][CheckBlacklists] Applied {itemType} blacklist to PMC config.");
         }
@@ -134,6 +185,54 @@ namespace MountOlympus.Helpers
                 }
             }
             if (debug) logger.Info($"[Olympus][CheckBlacklists] Applied {itemType} blacklist to Bot config.");
+        }
+
+        private void ConBlacklist(TemplateItem containerTemplate, List<string> itemIds, bool debug, string itemType)
+        {
+            if (containerTemplate?.Properties?.Grids != null)
+            {
+                foreach (var grid in containerTemplate.Properties.Grids)
+                {
+                    var filters = grid.Properties?.Filters?.ToList();
+                    if (filters?.Count > 0)
+                    {
+                        var excluded = filters[0].ExcludedFilter;
+                        foreach (var itemId in itemIds)
+                        {
+                            if (excluded != null && !excluded.Contains(itemId))
+                                excluded.Add(itemId);
+                        }
+                        grid.Properties!.Filters = filters;
+                    }
+                }
+            }
+            if (debug) logger.Info($"[Olympus][CheckBlacklists] Applied {itemType} blacklist to Containers.");
+        }
+
+        private void LooBlacklist(ItemConfig? itemConfig, List<string> itemIds, bool debug, string itemType)
+        {
+            foreach (var itemId in itemIds)
+            {
+                if (!itemConfig.LootableItemBlacklist.Contains(itemId)) itemConfig.LootableItemBlacklist.Add(itemId);
+                foreach (var limitLoose in lootConfig.StaticItemWeightAdjustment.Values)
+                {
+                    if (!limitLoose.ContainsKey(itemId))
+                        limitLoose[itemId] = 0;
+                }
+            }
+            if (debug) logger.Info($"[Olympus][CheckBlacklists] Applied {itemType} blacklist to Loose Loot.");
+        }
+
+        private void AirBlacklist(List<string> itemIds, bool debug, string itemType)
+        {
+            foreach (var itemId in itemIds)
+            {
+                foreach (var limitAir in airdropConfig.Loot.Values)
+                {
+                    if (!limitAir.ItemBlacklist.Contains(itemId)) limitAir.ItemBlacklist.Add(itemId);
+                }
+            }
+            if (debug) logger.Info($"[Olympus][CheckBlacklists] Applied {itemType} blacklist to Airdrop.");
         }
     }
 }

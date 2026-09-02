@@ -1,28 +1,27 @@
+using SPTarkov.Common.Logger;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services;
+using SPTarkov.Server.Core.Helpers.Server;
+using SPTarkov.Server.Core.Models.Spt.Tables;
+using SPTarkov.Server.Core.Services.Items;
 using System.Reflection;
+using static MountOlympus.Olympus;
 
 namespace MountOlympus.Helpers
 {
-    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 15)]
-    public class UpdateItemStatsHelper(
-        ISptLogger<UpdateItemStatsHelper> logger,
-        DatabaseService databaseService,
-        ModHelper modHelper,
-        ItemBaseClassService itemBaseClassService)
+    [Injectable(TypePriority = OnLoadOrder.Preload + 1007)]
+    public class UpdateItemStatsHelper(SptLogger<UpdateItemStatsHelper> logger, TemplateTable templateTable, TradersTable tradersTable, ItemBaseClassService itemBaseClassService, ModHelper modHelper)
     {
         public void Update()
         {
             try
             {
-                var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-                var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+                var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+                var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
                 var debug = cfgPath?.EnableDebugLogging == true;
 
-                var items = databaseService.GetItems();
+                var items = templateTable.Items;
                 if (items is null)
                 {
                     logger.Warning("[Olympus][UpdateItemStats] Items DB is null - aborting UpdateItemStats.");
@@ -30,8 +29,8 @@ namespace MountOlympus.Helpers
                 }
 
                 // Textual trader tables used only for loyalty mapping
-                var tables = databaseService.GetTables();
-                var loyal = tables?.Traders?["5c0647fdd443bc2504c2d371"].Assort.LoyalLevelItems;
+                var tables = templateTable.GetType().GetMethod("GetTables");
+                var loyal = tradersTable.GetTrader("5c0647fdd443bc2504c2d371").Assort.LoyalLevelItems;
 
                 var magItems = new List<string> {
                     "6816beb871b09465ad3efc82",
@@ -170,7 +169,7 @@ namespace MountOlympus.Helpers
 
                 if (cfgPath.PackGridVertical > 0)
                 {
-                    if (items.TryGetValue("661c917426ba940d7138e5cf", out var packV) && packV.Properties.Grids.FirstOrDefault() is var firstGrid && firstGrid != null)
+                    if (items.TryGetValue("661c917426ba940d7138e5cf", out var packV) && packV.Properties.Grids?.FirstOrDefault() is var firstGrid && firstGrid != null)
                     {
                         firstGrid.Properties.CellsV = cfgPath.PackGridVertical;
                         if (debug) logger.Info($"[Olympus][UpdateItemStats] AtSatch vertical grid to {cfgPath.PackGridVertical}.");
@@ -179,7 +178,7 @@ namespace MountOlympus.Helpers
                 
                 if (cfgPath.PackGridHorizontal > 0)
                 {
-                    if (items.TryGetValue("661c917426ba940d7138e5cf", out var packH) && packH.Properties.Grids.FirstOrDefault() is var firstGridH && firstGridH != null)
+                    if (items.TryGetValue("661c917426ba940d7138e5cf", out var packH) && packH.Properties.Grids?.FirstOrDefault() is var firstGridH && firstGridH != null)
                     {
                         firstGridH.Properties.CellsH = cfgPath.PackGridHorizontal;
                         if (debug) logger.Info($"[Olympus][UpdateItemStats] Set AtSatch horizontal grid to {cfgPath.PackGridHorizontal}.");
@@ -207,6 +206,7 @@ namespace MountOlympus.Helpers
                                 loyal[id] = 1;
                                 if (debug) logger.Info($"[Olympus][UpdateItemStats] Added mag '{id}' to loyalty mapping with level 1.");
                             }
+
                             itemBaseClassService.AddItemToCache(id);
                         }
                     }

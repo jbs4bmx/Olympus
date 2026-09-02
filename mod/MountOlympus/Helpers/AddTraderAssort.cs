@@ -1,27 +1,26 @@
-﻿using SPTarkov.DI.Annotations;
+﻿using SPTarkov.Common.Logger;
+using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
+using SPTarkov.Server.Core.Helpers.Server;
 using SPTarkov.Server.Core.Models.Common;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services;
+using SPTarkov.Server.Core.Models.Enums;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 using System.Reflection;
 using static MountOlympus.Olympus;
 
 namespace MountOlympus.Helpers
 {
-    [Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 12)]
-    public class AddTraderAssort(
-        ISptLogger<AddTraderAssort> logger,
-        DatabaseService databaseService,
-        ModHelper modHelper)
+    [Injectable(TypePriority = OnLoadOrder.Preload + 1004)]
+    public class AddTraderAssort(SptLogger<AddTraderAssort> logger, TradersTable tradersTable, ModHelper modHelper)
     {
         public void AssortProcessor(MongoId traderId, MongoId item, MongoId assortId, int buymax, int price, int loyalty)
         {
-            var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-            var OlympusConfig = modHelper.GetJsonDataFromFile<ModConfig>(ModPath, "MOConfig.jsonc");
-            var debug = OlympusConfig?.EnableDebugLogging == true;
-            var trader = databaseService.GetTrader(traderId);
+            var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+            var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
+            var debug = cfgPath?.EnableDebugLogging == true;
+            var trader = tradersTable.GetTrader(traderId);
             var assort = trader.Assort;
 
             if (assort != null)

@@ -1,30 +1,29 @@
 ﻿using MountOlympus.Helpers;
+using SPTarkov.Common.Logger;
 using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
+using SPTarkov.Server.Core.Helpers.Server;
 using SPTarkov.Server.Core.Models.Spt.Mod;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services;
+using SPTarkov.Server.Core.Models.Spt.Tables;
 using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
-using Range = SemanticVersioning.Range;
 
 namespace MountOlympus;
 
-public record ModMetadata : AbstractModMetadata
+public record ModMetadata : IModMetadata
 {
-    public override string ModGuid { get; init; } = "com.jbs4bmx.mountolympus";
-    public override string Name { get; init; } = "MountOlympus";
-    public override string Author { get; init; } = "SPTarkov";
-    public override List<string>? Contributors { get; init; }
-    public override SemanticVersioning.Version Version { get; init; } = new("4.0.0");
-    public override SemanticVersioning.Range SptVersion { get; init; } = new("~4.0.0");
-    public override List<string>? Incompatibilities { get; init; }
-    public override Dictionary<string, Range>? ModDependencies { get; init; }
-    public override string? Url { get; init; }
-    public override bool? IsBundleMod { get; init; }
-    public override string License { get; init; } = "MIT";
+    public string ModGuid { get; init; } = "com.jbs4bmx.mountolympus";
+    public string Name { get; init; } = "MountOlympus";
+    public string Author { get; init; } = "jbs4bmx";
+    public List<string>? Contributors { get; init; } = ["FLIGHTxS4L"];
+    public SemanticVersioning.Version Version { get; init; } = new("4.1.3");
+    public SemanticVersioning.Range SptVersion { get; init; } = new("~4.1.3");
+    public List<string>? Incompatibilities { get; init; } = null;
+    public Dictionary<string, SemanticVersioning.Range>? ModDependencies { get; init; } = null;
+    public string? Url { get; init; } = "https://github.com/jbs4bmx/Olympus";
+    public string License { get; init; } = "MIT";
+    public bool HasPrepatcher { get; init; } = false;
 }
 
 public sealed class ItemConfigRoot { [JsonPropertyName("items")] public List<ItemConfigItem> Items { get; set; } = []; }
@@ -42,27 +41,29 @@ public sealed class ItemConfigItem
     [JsonIgnore] public string? SourceFile { get; set; }
 }
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 1)]
+[Injectable(TypePriority = OnLoadOrder.Preload + 1000)]
 public class Olympus(
-    ISptLogger<Olympus> logger,
-    DatabaseService databaseService,
+    SptLogger<Olympus> logger,
+    TemplateTable templateTable,
     ModHelper modHelper,
     UpdateItemStatsHelper updateItemStatsHelper,
     IServiceProvider serviceProvider) : IOnLoad
 {
-    public Task OnLoad()
+    public Task OnLoadAsync(CancellationToken cancellationToken)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var OlympusConfig = modHelper.GetJsonDataFromFile<ModConfig>(ModPath, "MOConfig.jsonc");
-        var items = databaseService.GetItems();
+        var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+        var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
+        //var items = templateTable.GetItems();
+        var items = templateTable.Items;
 
         var ApoStimItem = items.GetValueOrDefault("661c91746c391e0f5ba82d47");
         var ApoPropItem = items.GetValueOrDefault("661c91741ba0f93d4287c5e6");
         var ApoPainItem = items.GetValueOrDefault("661c91742b5c1493806daf7e");
         var ApoCMSItem = items.GetValueOrDefault("661c9174e9365c70fa18b4d2");
 
-        var debug = OlympusConfig?.EnableDebugLogging == true;
-        if (debug) logger.Info($"[Olympus][Init] MOConfig loaded. EnableDebugLogging={OlympusConfig?.EnableDebugLogging}");
+        var debug = cfgPath?.EnableDebugLogging == true;
+        if (debug) logger.Info($"[Olympus][Init] MOConfig loaded. EnableDebugLogging={cfgPath?.EnableDebugLogging}");
 
 
         // Resolve helpers from DI
@@ -284,11 +285,23 @@ public class Olympus(
         public bool SetAllMagsLoyaltyLevelOne { get; set; }
 
         // Blacklist Config
-        public bool BlacklistStims { get; set; }
-        public bool BlacklistRigs { get; set; }
-        public bool BlacklistMags { get; set; }
+        public bool BlacklistStimsFromBots { get; set; }
+        public bool BlacklistStimsFromPMCs { get; set; }
+        public bool BlacklistStimsFromRaidContainers { get; set; }
+        public bool BlacklistStimsFromLooseLoot { get; set; }
+        public bool BlacklistStimsFromAirdrop { get; set; }
+        public bool BlacklistRigsFromBots { get; set; }
+        public bool BlacklistRigsFromPMCs { get; set; }
+        public bool BlacklistRigsFromRaidContainers { get; set; }
+        public bool BlacklistRigsFromLooseLoot { get; set; }
+        public bool BlacklistRigsFromAirdrop { get; set; }
+        public bool BlacklistMagsFromBots { get; set; }
+        public bool BlacklistMagsFromPMCs { get; set; }
+        public bool BlacklistMagsFromRaidContainers { get; set; }
+        public bool BlacklistMagsFromLooseLoot { get; set; }
+        public bool BlacklistMagsFromAirdrop { get; set; }
 
-        // Developer / Debug
+        // Developer Debug
         public bool EnableDebugLogging { get; set; }
     }
 }

@@ -66,9 +66,23 @@
 
 
 	//==BLACKLISTCONFIG========================================================
-	"BlacklistStims": false,
-	"BlacklistRigs": false,
-	"BlacklistMags": false,
+	"BlacklistStimsFromBots": false,
+	"BlacklistStimsFromPMCs": false,
+	"BlacklistStimsFromRaidContainers": false,
+	"BlacklistStimsFromLooseLoot": false,
+	"BlacklistStimsFromAirdrop": false,
+
+	"BlacklistRigsFromBots": false,
+	"BlacklistRigsFromPMCs": false,
+	"BlacklistRigsFromRaidContainers": false,
+	"BlacklistRigsFromLooseLoot": false,
+	"BlacklistRigsFromAirdrop": false,
+
+	"BlacklistMagsFromBots": false,
+	"BlacklistMagsFromPMCs": false,
+	"BlacklistMagsFromRaidContainers": false,
+	"BlacklistMagsFromLooseLoot": false,
+	"BlacklistMagsFromAirdrop": false,
 
 
 	//==DEVELOPERCONFIG========================================================

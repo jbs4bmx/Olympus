@@ -1,42 +1,44 @@
-﻿using SPTarkov.DI.Annotations;
+﻿using SPTarkov.Common.Logger;
+using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
+using SPTarkov.Server.Core.Helpers.Server;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
+using SPTarkov.Server.Core.Models.Enums;
 using SPTarkov.Server.Core.Models.Spt.Mod;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services.Mod;
+using SPTarkov.Server.Core.Services.Modding.Custom;
 using System.Reflection;
+using static MountOlympus.Olympus;
+
 
 namespace MountOlympus.Helpers;
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 3)]
-internal class AddItemsStimsHelper(ISptLogger<AddItemsStimsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
+[Injectable(TypePriority = OnLoadOrder.Preload + 1001)]
+internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
 {
     public void Apply()
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+        var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+        var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
         var debug = cfgPath?.EnableDebugLogging == true;
 
-        customItemService.CreateItemFromClone(ApoStim());
+        customItemService.CreateItemFromClone(ApoStim(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoStim");
-        customItemService.CreateItemFromClone(ApoProp());
+        customItemService.CreateItemFromClone(ApoProp(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoProp");
-        customItemService.CreateItemFromClone(ApoPain());
+        customItemService.CreateItemFromClone(ApoPain(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoPain");
-        customItemService.CreateItemFromClone(ApoCMS());
+        customItemService.CreateItemFromClone(ApoCMS(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsStimsHelper] Created Item: ApoCMS");
     }
 
-    public NewItemFromCloneDetails ApoStim()
+    public static NewItemFromCloneDetails ApoStim(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5ed5166ad380ab312177c100",
             NewId = "661c91746c391e0f5ba82d47",
+            NewItemName = "apollo_stim",
             ParentId = BaseClasses.STIMULATOR,
             HandbookPriceRoubles = 15545,
             HandbookParentId = "5b47574386f77428ca22b33a",
@@ -68,15 +70,13 @@ internal class AddItemsStimsHelper(ISptLogger<AddItemsStimsHelper> logger, Custo
         };
     }
 
-    public NewItemFromCloneDetails ApoProp()
+    public static NewItemFromCloneDetails ApoProp(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5c0e530286f7747fa1419862",
             NewId = "661c91741ba0f93d4287c5e6",
+            NewItemName = "apollo_propital",
             ParentId = BaseClasses.STIMULATOR,
             HandbookPriceRoubles = 15545,
             HandbookParentId = "5b47574386f77428ca22b33a",
@@ -108,15 +108,13 @@ internal class AddItemsStimsHelper(ISptLogger<AddItemsStimsHelper> logger, Custo
         };
     }
 
-    public NewItemFromCloneDetails ApoPain()
+    public static NewItemFromCloneDetails ApoPain(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5c0e533786f7747fa23f4d47",
             NewId = "661c91742b5c1493806daf7e",
+            NewItemName = "apollo_pain",
             ParentId = "5448f3a64bdc2d60728b456a",
             HandbookPriceRoubles = 15545,
             HandbookParentId = "5b47574386f77428ca22b33a",
@@ -148,15 +146,13 @@ internal class AddItemsStimsHelper(ISptLogger<AddItemsStimsHelper> logger, Custo
         };
     }
 
-    public NewItemFromCloneDetails ApoCMS()
+    public static NewItemFromCloneDetails ApoCMS(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             ItemTplToClone = "5c10c8fd86f7743d7d706df3",
             NewId = "661c9174e9365c70fa18b4d2",
+            NewItemName = "apollo_cms",
             ParentId = "5448f3a64bdc2d60728b456a",
             HandbookPriceRoubles = 15545,
             HandbookParentId = "5b47574386f77428ca22b33a",

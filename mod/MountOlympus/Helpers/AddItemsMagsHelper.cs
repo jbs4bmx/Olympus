@@ -1,193 +1,193 @@
-﻿using SPTarkov.DI.Annotations;
+﻿using SPTarkov.Common.Logger;
+using SPTarkov.DI.Annotations;
 using SPTarkov.Server.Core.DI;
-using SPTarkov.Server.Core.Helpers;
+using SPTarkov.Server.Core.Helpers.Server;
 using SPTarkov.Server.Core.Models.Eft.Common.Tables;
 using SPTarkov.Server.Core.Models.Spt.Mod;
-using SPTarkov.Server.Core.Models.Utils;
-using SPTarkov.Server.Core.Services.Mod;
+using SPTarkov.Server.Core.Services.Modding.Custom;
 using System.Reflection;
+using static MountOlympus.Olympus;
 
 namespace MountOlympus.Helpers;
 
-[Injectable(TypePriority = OnLoadOrder.PostDBModLoader + 5)]
-internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
+[Injectable(TypePriority = OnLoadOrder.Preload + 1003)]
+internal class AddItemsMagsHelper(SptLogger<AddItemsMagsHelper> logger, CustomItemService customItemService, ModHelper modHelper)
 {
     public void Apply()
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
+        var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
+        var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
+
         var debug = cfgPath?.EnableDebugLogging == true;
 
-        customItemService.CreateItemFromClone(ArHKM4());
+        customItemService.CreateItemFromClone(ArHKM4(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArHKM4");
-        customItemService.CreateItemFromClone(ArM4w());
+        customItemService.CreateItemFromClone(ArM4w(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM4w");
-        customItemService.CreateItemFromClone(ArM4wFDE());
+        customItemService.CreateItemFromClone(ArM4wFDE(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM4wFDE");
-        customItemService.CreateItemFromClone(ArUzi());
+        customItemService.CreateItemFromClone(ArUzi(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArUzi");
-        customItemService.CreateItemFromClone(ArVPO());
+        customItemService.CreateItemFromClone(ArVPO(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArVPO");
-        customItemService.CreateItemFromClone(Ar9A91());
+        customItemService.CreateItemFromClone(Ar9A91(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar9A91");
-        customItemService.CreateItemFromClone(ArAA12());
+        customItemService.CreateItemFromClone(ArAA12(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAA12");
-        customItemService.CreateItemFromClone(ArAXMC());
+        customItemService.CreateItemFromClone(ArAXMC(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAXMC");
-        customItemService.CreateItemFromClone(Ar762AK());
+        customItemService.CreateItemFromClone(Ar762AK(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar762AK");
-        customItemService.CreateItemFromClone(Ar556AK());
+        customItemService.CreateItemFromClone(Ar556AK(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar556AK");
-        customItemService.CreateItemFromClone(Ar545M3());
+        customItemService.CreateItemFromClone(Ar545M3(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar545M3");
-        customItemService.CreateItemFromClone(ArAPS());
+        customItemService.CreateItemFromClone(ArAPS(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAPS");
-        customItemService.CreateItemFromClone(ArAR10());
+        customItemService.CreateItemFromClone(ArAR10(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAR10");
-        customItemService.CreateItemFromClone(ArAsh());
+        customItemService.CreateItemFromClone(ArAsh(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAsh");
-        customItemService.CreateItemFromClone(ArAVT());
+        customItemService.CreateItemFromClone(ArAVT(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAVT");
-        customItemService.CreateItemFromClone(ArDVL());
+        customItemService.CreateItemFromClone(ArDVL(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArDVL");
-        customItemService.CreateItemFromClone(ArFS());
+        customItemService.CreateItemFromClone(ArFS(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArFS");
-        customItemService.CreateItemFromClone(ArP90());
+        customItemService.CreateItemFromClone(ArP90(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArP90");
-        customItemService.CreateItemFromClone(ArG36());
+        customItemService.CreateItemFromClone(ArG36(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArG36");
-        customItemService.CreateItemFromClone(ArUmp());
+        customItemService.CreateItemFromClone(ArUmp(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArUmp");
-        customItemService.CreateItemFromClone(ArKs23());
+        customItemService.CreateItemFromClone(ArKs23(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArKs23");
-        customItemService.CreateItemFromClone(ArMk18());
+        customItemService.CreateItemFromClone(ArMk18(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMk18");
-        customItemService.CreateItemFromClone(Ar590());
+        customItemService.CreateItemFromClone(Ar590(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar590");
-        customItemService.CreateItemFromClone(Ar155());
+        customItemService.CreateItemFromClone(Ar155(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar155");
-        customItemService.CreateItemFromClone(Ar133());
+        customItemService.CreateItemFromClone(Ar133(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar133");
-        customItemService.CreateItemFromClone(Ar153());
+        customItemService.CreateItemFromClone(Ar153(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar153");
-        customItemService.CreateItemFromClone(ArM3());
+        customItemService.CreateItemFromClone(ArM3(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM3");
-        customItemService.CreateItemFromClone(ArDE357());
+        customItemService.CreateItemFromClone(ArDE357(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArDE357");
-        customItemService.CreateItemFromClone(ArDE50());
+        customItemService.CreateItemFromClone(ArDE50(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArDE50");
-        customItemService.CreateItemFromClone(ArSH());
+        customItemService.CreateItemFromClone(ArSH(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSH");
-        customItemService.CreateItemFromClone(ArSHFDE());
+        customItemService.CreateItemFromClone(ArSHFDE(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSHFDE");
-        customItemService.CreateItemFromClone(ArSL());
+        customItemService.CreateItemFromClone(ArSL(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSL");
-        customItemService.CreateItemFromClone(ArSLFDE());
+        customItemService.CreateItemFromClone(ArSLFDE(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSLFDE");
-        customItemService.CreateItemFromClone(ArMp5());
+        customItemService.CreateItemFromClone(ArMp5(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMp5");
-        customItemService.CreateItemFromClone(ArMp7());
+        customItemService.CreateItemFromClone(ArMp7(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMp7");
-        customItemService.CreateItemFromClone(ArG45());
+        customItemService.CreateItemFromClone(ArG45(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArG45");
-        customItemService.CreateItemFromClone(ArGbsFDE());
+        customItemService.CreateItemFromClone(ArGbsFDE(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArGbsFDE");
-        customItemService.CreateItemFromClone(ArGbs());
+        customItemService.CreateItemFromClone(ArGbs(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArGbs");
-        customItemService.CreateItemFromClone(ArUSP());
+        customItemService.CreateItemFromClone(ArUSP(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArUSP");
-        customItemService.CreateItemFromClone(ArG28());
+        customItemService.CreateItemFromClone(ArG28(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArG28");
-        customItemService.CreateItemFromClone(ArM14());
+        customItemService.CreateItemFromClone(ArM14(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM14");
-        customItemService.CreateItemFromClone(Ar1911());
+        customItemService.CreateItemFromClone(Ar1911(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar1911");
-        customItemService.CreateItemFromClone(ArM1a());
+        customItemService.CreateItemFromClone(ArM1a(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM1a");
-        customItemService.CreateItemFromClone(ArM700ai());
+        customItemService.CreateItemFromClone(ArM700ai(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM700ai");
-        customItemService.CreateItemFromClone(ArM700pm());
+        customItemService.CreateItemFromClone(ArM700pm(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM700pm");
-        customItemService.CreateItemFromClone(ArM700aa());
+        customItemService.CreateItemFromClone(ArM700aa(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM700aa");
-        customItemService.CreateItemFromClone(ArM870());
+        customItemService.CreateItemFromClone(ArM870(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM870");
-        customItemService.CreateItemFromClone(ArM9());
+        customItemService.CreateItemFromClone(ArM9(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM9");
-        customItemService.CreateItemFromClone(ArMo());
+        customItemService.CreateItemFromClone(ArMo(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMo");
-        customItemService.CreateItemFromClone(ArMoPm());
+        customItemService.CreateItemFromClone(ArMoPm(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMoPm");
-        customItemService.CreateItemFromClone(ArMp443());
+        customItemService.CreateItemFromClone(ArMp443(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMp443");
-        customItemService.CreateItemFromClone(ArMp9());
+        customItemService.CreateItemFromClone(ArMp9(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMp9");
-        customItemService.CreateItemFromClone(ArMpx());
+        customItemService.CreateItemFromClone(ArMpx(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArMpx");
-        customItemService.CreateItemFromClone(ArT5000());
+        customItemService.CreateItemFromClone(ArT5000(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArT5000");
-        customItemService.CreateItemFromClone(ArP226());
+        customItemService.CreateItemFromClone(ArP226(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArP226");
-        customItemService.CreateItemFromClone(ArPL15());
+        customItemService.CreateItemFromClone(ArPL15(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArPL15");
-        customItemService.CreateItemFromClone(ArPM());
+        customItemService.CreateItemFromClone(ArPM(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArPM");
-        customItemService.CreateItemFromClone(ArPP19());
+        customItemService.CreateItemFromClone(ArPP19(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArPP19");
-        customItemService.CreateItemFromClone(ArKedr());
+        customItemService.CreateItemFromClone(ArKedr(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArKedr");
-        customItemService.CreateItemFromClone(ArPPSH());
+        customItemService.CreateItemFromClone(ArPPSH(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArPPSH");
-        customItemService.CreateItemFromClone(ArRPD());
+        customItemService.CreateItemFromClone(ArRPD(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArRPD");
-        customItemService.CreateItemFromClone(ArRPK());
+        customItemService.CreateItemFromClone(ArRPK(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArRPK");
-        customItemService.CreateItemFromClone(ArS58po());
+        customItemService.CreateItemFromClone(ArS58po(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArS58po");
-        customItemService.CreateItemFromClone(ArS58slr());
+        customItemService.CreateItemFromClone(ArS58slr(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArS58slr");
-        customItemService.CreateItemFromClone(ArSb7());
+        customItemService.CreateItemFromClone(ArSb7(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSb7");
-        customItemService.CreateItemFromClone(ArM10());
+        customItemService.CreateItemFromClone(ArM10(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArM10");
-        customItemService.CreateItemFromClone(ArSKSint());
+        customItemService.CreateItemFromClone(ArSKSint(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSKSint");
-        customItemService.CreateItemFromClone(ArSKStap());
+        customItemService.CreateItemFromClone(ArSKStap(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSKStap");
-        customItemService.CreateItemFromClone(ArSok10());
+        customItemService.CreateItemFromClone(ArSok10(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSok10");
-        customItemService.CreateItemFromClone(ArSr2m());
+        customItemService.CreateItemFromClone(ArSr2m(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSr2m");
-        customItemService.CreateItemFromClone(ArAug());
+        customItemService.CreateItemFromClone(ArAug(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArAug");
-        customItemService.CreateItemFromClone(ArSV98());
+        customItemService.CreateItemFromClone(ArSV98(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSV98");
-        customItemService.CreateItemFromClone(ArSVD());
+        customItemService.CreateItemFromClone(ArSVD(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSVD");
-        customItemService.CreateItemFromClone(ArSVT());
+        customItemService.CreateItemFromClone(ArSVT(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSVT");
-        customItemService.CreateItemFromClone(ArToz());
+        customItemService.CreateItemFromClone(ArToz(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArToz");
-        customItemService.CreateItemFromClone(ArTT());
+        customItemService.CreateItemFromClone(ArTT(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArTT");
-        customItemService.CreateItemFromClone(Ar366());
+        customItemService.CreateItemFromClone(Ar366(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: Ar366");
-        customItemService.CreateItemFromClone(ArVSS());
+        customItemService.CreateItemFromClone(ArVSS(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArVSS");
-        customItemService.CreateItemFromClone(ArBlick());
+        customItemService.CreateItemFromClone(ArBlick(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArBlick");
-        customItemService.CreateItemFromClone(ArSrmp());
+        customItemService.CreateItemFromClone(ArSrmp(cfgPath!));
         if (debug) logger.Info($"[Olympus][AddItemsMagsHelper] Created Item: ArSrmp");
     }
 
-    public NewItemFromCloneDetails ArHKM4()
+    public static NewItemFromCloneDetails ArHKM4(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb871b09465ad3efc82",
+            NewItemName = "ArHKM4",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -267,14 +267,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM4w()
+    public static NewItemFromCloneDetails ArM4w(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb851e6280ad379c4fb",
+            NewItemName = "ArM4w",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -354,14 +352,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM4wFDE()
+    public static NewItemFromCloneDetails ArM4wFDE(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb841be398af5270d6c",
+            NewItemName = "ArM4wFDE",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -441,14 +437,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArUzi()
+    public static NewItemFromCloneDetails ArUzi(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb88e62a50f19bd74c3",
+            NewItemName = "ArUzi",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -520,14 +514,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArVPO()
+    public static NewItemFromCloneDetails ArVPO(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8102946dabf3ec578",
+            NewItemName = "ArVPO",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -598,14 +590,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar9A91()
+    public static NewItemFromCloneDetails Ar9A91(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82130bcd49ae6f785",
+            NewItemName = "Ar9A91",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -674,14 +664,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAA12()
+    public static NewItemFromCloneDetails ArAA12(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8d38f0ae629c7514b",
+            NewItemName = "ArAA12",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -761,14 +749,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAXMC()
+    public static NewItemFromCloneDetails ArAXMC(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8b26ca97e413085df",
+            NewItemName = "ArAXMC",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -835,14 +821,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar762AK()
+    public static NewItemFromCloneDetails Ar762AK(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb806be7c5f8912a4d3",
+            NewItemName = "Ar762AK",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -918,14 +902,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar556AK()
+    public static NewItemFromCloneDetails Ar556AK(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8280ec5a63bdf4971",
+            NewItemName = "Ar556AK",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1005,14 +987,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar545M3()
+    public static NewItemFromCloneDetails Ar545M3(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8da95831eb6402fc7",
+            NewItemName = "Ar545M3",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1088,14 +1068,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAPS()
+    public static NewItemFromCloneDetails ArAPS(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb801d8937ace4b265f",
+            NewItemName = "ArAPS",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1172,14 +1150,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAR10()
+    public static NewItemFromCloneDetails ArAR10(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8029dbaef8574136c",
+            NewItemName = "ArAR10",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1252,14 +1228,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAsh()
+    public static NewItemFromCloneDetails ArAsh(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80312f467c9bea8d5",
+            NewItemName = "ArAsh",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1325,14 +1299,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAVT()
+    public static NewItemFromCloneDetails ArAVT(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8031bcf82a967e4d5",
+            NewItemName = "ArAVT",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1404,14 +1376,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArDVL()
+    public static NewItemFromCloneDetails ArDVL(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb806c372a491ebd85f",
+            NewItemName = "ArDVL",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1482,14 +1452,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArFS()
+    public static NewItemFromCloneDetails ArFS(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8076854e1afb3d92c",
+            NewItemName = "ArFS",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1559,14 +1527,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArP90()
+    public static NewItemFromCloneDetails ArP90(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80983fdca5461b27e",
+            NewItemName = "ArP90",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1636,14 +1602,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArG36()
+    public static NewItemFromCloneDetails ArG36(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80ab85c36ef42719d",
+            NewItemName = "ArG36",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1717,14 +1681,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArUmp()
+    public static NewItemFromCloneDetails ArUmp(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80d7ab48f6c23195e",
+            NewItemName = "ArUmp",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1792,14 +1754,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArKs23()
+    public static NewItemFromCloneDetails ArKs23(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80d9f482b6e571a3c",
+            NewItemName = "ArKs23",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1868,14 +1828,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMk18()
+    public static NewItemFromCloneDetails ArMk18(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80df5976e243ab8c1",
+            NewItemName = "ArMk18",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -1942,14 +1900,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar590()
+    public static NewItemFromCloneDetails Ar590(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb80e865dabf4219c37",
+            NewItemName = "Ar590",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2029,14 +1985,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar155()
+    public static NewItemFromCloneDetails Ar155(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8120af4deb8c35679",
+            NewItemName = "Ar155",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2116,14 +2070,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar133()
+    public static NewItemFromCloneDetails Ar133(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb812a48ef976dc053b",
+            NewItemName = "Ar133",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2203,14 +2155,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar153()
+    public static NewItemFromCloneDetails Ar153(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb813b4de9cf28a5706",
+            NewItemName = "Ar153",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2290,14 +2240,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM3()
+    public static NewItemFromCloneDetails ArM3(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb815034f78ed6c92ba",
+            NewItemName = "ArM3",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2377,14 +2325,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArDE357()
+    public static NewItemFromCloneDetails ArDE357(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb815af2ed894670b3c",
+            NewItemName = "ArDE357",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2451,14 +2397,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArDE50()
+    public static NewItemFromCloneDetails ArDE50(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb816e84095ca273dfb",
+            NewItemName = "ArDE50",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2525,14 +2469,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSH()
+    public static NewItemFromCloneDetails ArSH(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8194826f7e5d0c3ba",
+            NewItemName = "ArSH",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2603,14 +2545,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSHFDE()
+    public static NewItemFromCloneDetails ArSHFDE(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb81a73d5c2b890e4f6",
+            NewItemName = "ArSHFDE",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2681,14 +2621,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSL()
+    public static NewItemFromCloneDetails ArSL(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb81bf95adc2436780e",
+            NewItemName = "ArSL",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2768,14 +2706,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSLFDE()
+    public static NewItemFromCloneDetails ArSLFDE(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb81d379c8624af5e0b",
+            NewItemName = "ArSLFDE",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2855,14 +2791,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMp5()
+    public static NewItemFromCloneDetails ArMp5(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb81f03c7259ea86b4d",
+            NewItemName = "ArMp5",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -2934,14 +2868,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMp7()
+    public static NewItemFromCloneDetails ArMp7(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82306ab59f7e4dc18",
+            NewItemName = "ArMp7",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3009,14 +2941,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArG45()
+    public static NewItemFromCloneDetails ArG45(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8241f0c6897bd35ea",
+            NewItemName = "ArG45",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3084,14 +3014,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArGbsFDE()
+    public static NewItemFromCloneDetails ArGbsFDE(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82708b5a41d96ec3f",
+            NewItemName = "ArGbsFDE",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3163,14 +3091,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArGbs()
+    public static NewItemFromCloneDetails ArGbs(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8270981ce3f64da5b",
+            NewItemName = "ArGbs",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3242,14 +3168,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArUSP()
+    public static NewItemFromCloneDetails ArUSP(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8278a1cd59be0f634",
+            NewItemName = "ArUSP",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3317,14 +3241,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArG28()
+    public static NewItemFromCloneDetails ArG28(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb828dce751ab36f049",
+            NewItemName = "ArG28",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3395,14 +3317,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM14()
+    public static NewItemFromCloneDetails ArM14(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82b5e4a89371fdc06",
+            NewItemName = "ArM14",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3473,14 +3393,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar1911()
+    public static NewItemFromCloneDetails Ar1911(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82dac93e574f1b068",
+            NewItemName = "Ar1911",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3548,14 +3466,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM1a()
+    public static NewItemFromCloneDetails ArM1a(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82e640fc78931bda5",
+            NewItemName = "ArM1a",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3626,14 +3542,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM700ai()
+    public static NewItemFromCloneDetails ArM700ai(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82f46ab87e59dc103",
+            NewItemName = "ArM700ai",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3704,14 +3618,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM700pm()
+    public static NewItemFromCloneDetails ArM700pm(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb82fc1b6d3e5a49078",
+            NewItemName = "ArM700pm",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3782,14 +3694,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM700aa()
+    public static NewItemFromCloneDetails ArM700aa(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb831e25c084fb79da6",
+            NewItemName = "ArM700aa",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3860,14 +3770,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM870()
+    public static NewItemFromCloneDetails ArM870(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb83426dcf15a780b9e",
+            NewItemName = "ArM870",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -3947,14 +3855,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM9()
+    public static NewItemFromCloneDetails ArM9(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8356f0e2c419ab87d",
+            NewItemName = "ArM9",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4026,14 +3932,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMo()
+    public static NewItemFromCloneDetails ArMo(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8359e47081cbf6ad2",
+            NewItemName = "ArMo",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4105,14 +4009,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMoPm()
+    public static NewItemFromCloneDetails ArMoPm(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb836c2f87de5b9104a",
+            NewItemName = "ArMoPm",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4184,14 +4086,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMp443()
+    public static NewItemFromCloneDetails ArMp443(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb839bf42ce510a7d68",
+            NewItemName = "ArMp443",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4263,14 +4163,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMp9()
+    public static NewItemFromCloneDetails ArMp9(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb83b82d7e6c9af5041",
+            NewItemName = "ArMp9",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4342,14 +4240,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArMpx()
+    public static NewItemFromCloneDetails ArMpx(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8fc419e7a2d8305b6",
+            NewItemName = "ArMpx",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4421,14 +4317,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArT5000()
+    public static NewItemFromCloneDetails ArT5000(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "6816beb8fe92d4a031c56b78",
+            NewItemName = "ArT5000",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4499,14 +4393,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArP226()
+    public static NewItemFromCloneDetails ArP226(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e436d9a8072fb5e1c",
+            NewItemName = "ArP226",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4578,14 +4470,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArPL15()
+    public static NewItemFromCloneDetails ArPL15(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e290d8b3c5a746f1e",
+            NewItemName = "ArPL15",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4657,14 +4547,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArPM()
+    public static NewItemFromCloneDetails ArPM(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70efe6c3d729a0b8541",
+            NewItemName = "ArPM",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4741,14 +4629,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArPP19()
+    public static NewItemFromCloneDetails ArPP19(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e97018efab2c3654d",
+            NewItemName = "ArPP19",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4820,14 +4706,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArKedr()
+    public static NewItemFromCloneDetails ArKedr(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e56f82ab140c9e73d",
+            NewItemName = "ArKedr",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4904,14 +4788,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArPPSH()
+    public static NewItemFromCloneDetails ArPPSH(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e5e1f837429a6bc0d",
+            NewItemName = "ArPPSH",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -4981,14 +4863,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArRPD()
+    public static NewItemFromCloneDetails ArRPD(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e30264efab7c891d5",
+            NewItemName = "ArRPD",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5060,14 +4940,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArRPK()
+    public static NewItemFromCloneDetails ArRPK(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70ee3f58b740d126c9a",
+            NewItemName = "ArRPK",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5143,14 +5021,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArS58po()
+    public static NewItemFromCloneDetails ArS58po(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70eb38c257af46d9e10",
+            NewItemName = "ArS58po",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5221,14 +5097,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArS58slr()
+    public static NewItemFromCloneDetails ArS58slr(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e1bf03c76a4529e8d",
+            NewItemName = "ArS58slr",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5299,14 +5173,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSb7()
+    public static NewItemFromCloneDetails ArSb7(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e7dace16582f0349b",
+            NewItemName = "ArSb7",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5378,14 +5250,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArM10()
+    public static NewItemFromCloneDetails ArM10(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e73486c0ad15be2f9",
+            NewItemName = "ArM10",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5452,14 +5322,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSKSint()
+    public static NewItemFromCloneDetails ArSKSint(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e3d8692aeb471f0c5",
+            NewItemName = "ArSKSint",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5534,14 +5402,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSKStap()
+    public static NewItemFromCloneDetails ArSKStap(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70eb2c38f9a7d06415e",
+            NewItemName = "ArSKStap",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5616,14 +5482,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSok10()
+    public static NewItemFromCloneDetails ArSok10(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e46783c512f9a0edb",
+            NewItemName = "ArSok10",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5702,14 +5566,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSr2m()
+    public static NewItemFromCloneDetails ArSr2m(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70efd97b56ca81204e3",
+            NewItemName = "ArSr2m",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5777,14 +5639,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArAug()
+    public static NewItemFromCloneDetails ArAug(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e069ed2c1ab5738f4",
+            NewItemName = "ArAug",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5864,14 +5724,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSV98()
+    public static NewItemFromCloneDetails ArSV98(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e79f3c8e0bda45126",
+            NewItemName = "ArSV98",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -5943,14 +5801,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSVD()
+    public static NewItemFromCloneDetails ArSVD(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e0b2fe59176a3cd48",
+            NewItemName = "ArSVD",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6022,14 +5878,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSVT()
+    public static NewItemFromCloneDetails ArSVT(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e9d4f2ea17b3c6085",
+            NewItemName = "ArSVT",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6101,14 +5955,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArToz()
+    public static NewItemFromCloneDetails ArToz(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e82f357c01ebd946a",
+            NewItemName = "ArToz",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6182,14 +6034,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArTT()
+    public static NewItemFromCloneDetails ArTT(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70eea56024b1387f9cd",
+            NewItemName = "ArTT",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6259,14 +6109,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails Ar366()
+    public static NewItemFromCloneDetails Ar366(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70ed7521ba38694fce0",
+            NewItemName = "Ar366",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6333,14 +6181,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArVSS()
+    public static NewItemFromCloneDetails ArVSS(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e37e0458bf16acd29",
+            NewItemName = "ArVSS",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6409,14 +6255,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArBlick()
+    public static NewItemFromCloneDetails ArBlick(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "68f2f70e6d198f7eabc05324",
+            NewItemName = "ArBlick",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
@@ -6480,14 +6324,12 @@ internal class AddItemsMagsHelper(ISptLogger<AddItemsMagsHelper> logger, CustomI
         };
     }
 
-    public NewItemFromCloneDetails ArSrmp()
+    public static NewItemFromCloneDetails ArSrmp(ModConfig cfgPath)
     {
-        var ModPath = modHelper.GetAbsolutePathToModFolder(Assembly.GetExecutingAssembly());
-        var cfgPath = modHelper.GetJsonDataFromFile<Olympus.ModConfig>(ModPath, "MOConfig.jsonc") ?? new Olympus.ModConfig();
-
         return new NewItemFromCloneDetails
         {
             NewId = "661c917436409c2d18e5afb7",
+            NewItemName = "ArSrmp",
             ParentId = "5448bc234bdc2d3c308b4569",
             OverrideProperties = new TemplateItemProperties
             {
