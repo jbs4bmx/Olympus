@@ -11,7 +11,7 @@ using static MountOlympus.Olympus;
 namespace MountOlympus.Helpers
 {
     [Injectable(TypePriority = OnLoadOrder.Preload + 1008)]
-    public class CheckBlacklists(SptLogger<CheckBlacklists> logger, PmcConfig pmcConfig, BotConfig botConfig, LootConfig lootConfig, ItemConfig itemConfig, AirdropConfig airdropConfig, TemplateItem containerTemplate, ModHelper modHelper)
+    public class CheckBlacklists(SptLogger<CheckBlacklists> logger, PmcConfig pmcConfig, BotConfig botConfig, LootConfig lootConfig, ItemConfig itemConfig, AirdropConfig airdropConfig, TemplateTable templateTable, ModHelper modHelper)
     {
         private static readonly List<string> StimItems =
         [
@@ -63,8 +63,27 @@ namespace MountOlympus.Helpers
 
         private static readonly List<string> Containers =
         [
-            "1","2","3",
-            "4","5","6"
+            "6223349b3136504a544d1608", "622334c873090231d904a9fc", "622334fa3136504a544d160c",
+            "6223351bb5d97a7b2c635ca7", "66da1b49099cf6adcc07a36b", "66da1b546916142b3b022777",
+            "67614e3a6a90e4f10b0b140d", "64d116f41a9c6143a956127d", "578f879c24597735401e6bc6",
+            "5ad74cf586f774391278f6f0", "5ad7247386f7747487619dc3", "5ad7242b86f7740a6a3abd43",
+            "5ad7217186f7746744498875", "64ccc2111779ad6ba200a139", "6581998038c79576a2569e11",
+            "64d11702dd0cd96ab82c3280", "66acff0a1d8e1083b303f5af", "5d6d2bb386f774785b07a77a",
+            "5d6d2b5486f774785c2ba8ea", "5d07b91b86f7745a077a9432", "658420d8085fea07e674cdb6",
+            "67adf5752fc5ee84020a9940", "5909e4b686f7747f5b744fa4", "6582e6c6edf14c4c6023adf2",
+            "6582e6d7b14c3f72eb071420", "6582e6bb0c3b9823fe6d1840", "5675838d4bdc2d95058b456e",
+            "578f87b7245977356274f2cd", "5909d36d86f774660f0bb900", "67adf4eb110ba15da90c6413",
+            "578f8778245977358849a9b5", "5914944186f774189e5e76c2", "5937ef2b86f77408a47244b3",
+            "59387ac686f77401442ddd61", "67adf4a95247ac91530fcec7", "5909d24f86f77466f56e6855",
+            "61aa1ead84ea0800645777fd", "5d6fe50986f77449d97f7463", "59139c2186f77411564f8e42",
+            "5c052cea86f7746b2101e8d8", "5d6fd13186f77424ad2a8c69", "5d6fd45b86f774317075ed43",
+            "67adf5f7adc1f43b0702b826", "578f87a3245977356274f2cb", "61aa1e9a32a4743c3453d2cf",
+            "5909d50c86f774659e6aaebe", "67adf54d1c58bd68b2002ff0", "688b2dba67bf6fa26c07e918",
+            "62f10b79e7ee985f386b2f47", "633ffb5d419dbf4bea7004c6", "578f8782245977354405a1e3",
+            "61a89e5445a2672acf66c877", "61a89e812cc17d60cc5f9879", "5909d5ef86f77467974efbd8",
+            "5909d76c86f77471e53d2adf", "5909d7cf86f77470ee57d75a", "5909d89086f77472591234a0",
+            "61aa1e6984ea0800645777f9", "5909d45286f77465a8136dc6", "578f87ad245977356274f2cc",
+            "67adf4db515e3dd542077a1d", "67adf4b81c58bd68b2002fec"
         ];
 
         public void Apply()
@@ -92,7 +111,7 @@ namespace MountOlympus.Helpers
                 }
                 if (cfgPath.BlacklistStimsFromRaidContainers)
                 {
-                    ConBlacklist(containerTemplate, StimItems, debug, "stim");
+                    ConBlacklist(templateTable, StimItems, debug, "stim");
                 }
                 if (cfgPath.BlacklistStimsFromLooseLoot)
                 {
@@ -114,7 +133,7 @@ namespace MountOlympus.Helpers
                 }
                 if (cfgPath.BlacklistRigsFromRaidContainers)
                 {
-                    ConBlacklist(containerTemplate, RigItems, debug, "rig");
+                    ConBlacklist(templateTable, RigItems, debug, "rig");
                 }
                 if (cfgPath.BlacklistRigsFromLooseLoot)
                 {
@@ -136,7 +155,7 @@ namespace MountOlympus.Helpers
                 }
                 if (cfgPath.BlacklistMagsFromRaidContainers)
                 {
-                    ConBlacklist(containerTemplate, MagItems, debug, "mag");
+                    ConBlacklist(templateTable, MagItems, debug, "mag");
                 }
                 if (cfgPath.BlacklistMagsFromLooseLoot)
                 {
@@ -187,22 +206,27 @@ namespace MountOlympus.Helpers
             if (debug) logger.Info($"[Olympus][CheckBlacklists] Applied {itemType} blacklist to Bot config.");
         }
 
-        private void ConBlacklist(TemplateItem containerTemplate, List<string> itemIds, bool debug, string itemType)
+        private void ConBlacklist(TemplateTable templateTable, List<string> itemIds, bool debug, string itemType)
         {
-            if (containerTemplate?.Properties?.Grids != null)
+            foreach (var container in Containers)
             {
-                foreach (var grid in containerTemplate.Properties.Grids)
+                var itemList = templateTable.Items;
+
+                if (itemList[container].Properties?.Grids != null)
                 {
-                    var filters = grid.Properties?.Filters?.ToList();
-                    if (filters?.Count > 0)
+                    foreach (var grid in itemList[container].Properties.Grids)
                     {
-                        var excluded = filters[0].ExcludedFilter;
-                        foreach (var itemId in itemIds)
+                        var filters = grid.Properties?.Filters?.ToList();
+                        if (filters?.Count > 0)
                         {
-                            if (excluded != null && !excluded.Contains(itemId))
-                                excluded.Add(itemId);
+                            var excluded = filters[0].ExcludedFilter;
+                            foreach (var itemId in itemIds)
+                            {
+                                if (excluded != null && !excluded.Contains(itemId))
+                                    excluded.Add(itemId);
+                            }
+                            grid.Properties!.Filters = filters;
                         }
-                        grid.Properties!.Filters = filters;
                     }
                 }
             }

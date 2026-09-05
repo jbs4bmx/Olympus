@@ -1,5 +1,16 @@
 # CHANGE LOG
 
+## [Version: 4.1.3]
+Changes:
+  * Update: Support SPT 4.1.3+ on EFT Version 0.16.9.5.40743
+  * Update: Minor code optimizations.
+  * Add: Experimental new blacklisting options.
+
+Thanks:
+  * Contributor: FLIGHTxS4L
+
+---
+
 ## [Version: 4.0.11]
 > Type: LTS (Long-Term Support)</br>
 > Release Date: January 27, 2026</br>

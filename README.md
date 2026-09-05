@@ -123,17 +123,9 @@ If a firearm doesn't have a "magazine", then it is not supported.</br>
 ### Installation
 1. Download the latest release from the [Releases](https://github.com/jbs4bmx/Olympus/releases) page..
 2. Extract the contents into your **SPT root folder** (same location as `EscapeFromTarkov.exe`).
-3. Edit `config.jsonc` to customize coverage, prefab, and item properties.
+3. Edit `config.jsonc` to customize your experience.
 4. Start `SPT.Server.exe` and wait for it to fully load.
 5. Launch the game through `SPT.Launcher.exe`.
-
-Follow these steps to install and configure the mod:
-  1. Extract the contents of the zip file into the root of your [SPT] folder.
-     - That's the same location as "SPT.Server.exe" and "SPT.Launcher.exe".
-  2. Edit the Config to adjust the values to your liking.
-  3. Start SPT.Server.exe and wait until it fully loads.
-  4. Start SPT.Launcher.exe.
-  5. Now you can launch the game and profit.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,6 +138,7 @@ All settings are controlled through `config.jsonc`. You can adjust:
   - Increase or decrease armor amounts for armored items.
   - Adjust the capacity of Atlas' Satchel.
   - Modify magazine stats.
+  - And more...
 
 The values that you see in the example below are the default values of the mod.<br>
 ``` jsonc
@@ -217,9 +210,23 @@ The values that you see in the example below are the default values of the mod.<
 
 
 	//==BLACKLISTCONFIG========================================================
-	"BlacklistStims": false,
-	"BlacklistRigs": false,
-	"BlacklistMags": false,
+	"BlacklistStimsFromBots": false,
+	"BlacklistStimsFromPMCs": false,
+	"BlacklistStimsFromRaidContainers": false,
+	"BlacklistStimsFromLooseLoot": false,
+	"BlacklistStimsFromAirdrop": false,
+
+	"BlacklistRigsFromBots": false,
+	"BlacklistRigsFromPMCs": false,
+	"BlacklistRigsFromRaidContainers": false,
+	"BlacklistRigsFromLooseLoot": false,
+	"BlacklistRigsFromAirdrop": false,
+
+	"BlacklistMagsFromBots": false,
+	"BlacklistMagsFromPMCs": false,
+	"BlacklistMagsFromRaidContainers": false,
+	"BlacklistMagsFromLooseLoot": false,
+	"BlacklistMagsFromAirdrop": false,
 
 
 	//==DEVELOPERCONFIG========================================================
@@ -238,18 +245,6 @@ The values that you see in the example below are the default values of the mod.<
 
 **Not all magazines are showing under Jaeger LL1**
 - The current option to set all magazines to LL1 is a WIP. It will likely not work at this time.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
----
-
-## Roadmap
-- [❓] Add new trader for selling of custom items. (Not yet implemented in current release.)
-- [✅] Add custom trader avatar for new trader. (Not yet implemented in current release.)
-- [✅] Add alternative trader avatar for use with trader image switching mods. (Not yet implemented in current release.)
-- [❓] Add new questline for advancement with new trader.
-- [❓] Add even more variations of magazines with different properties based on item levels.
-- [✅] Update code for SPT Server v4.0.0 (New server is written in C#)
 
 Suggest changes or report issues here: [ISSUES](https://github.com/jbs4bmx/Olympus/issues).
 
