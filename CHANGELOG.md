@@ -1,5 +1,19 @@
 # CHANGE LOG
 
+## [Version: 4.1.3.9]
+Changes:
+  * Fix: Missing helper files in mod directory.
+  * Fix: Damage and Health effects applied to stims.
+  * Fix: Squashed "Hands are busy" bug when using stims.
+  * Fix: Buffs applied to stims.
+  * Fix: Firearm association for magazines.
+  * Update: Stim properties
+
+Thanks:
+  * Contributor: FLIGHTxS4L
+
+---
+
 ## [Version: 4.1.3]
 Changes:
   * Update: Support SPT 4.1.3+ on EFT Version 0.16.9.5.40743

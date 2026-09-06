@@ -214,38 +214,6 @@ public class Olympus(
         addBuffs.Apply();
         if (debug) logger.Info("[Olympus] ===== AddStimBuffs.Apply() completed. ==========");
 
-        // Apply health and damage effects to stimulants
-        if (debug) logger.Info("[Olympus] ===== Applying Health and Damage effects to stims. ==========");
-        if (ApoStimItem != null)
-        {
-            AddStimEffects.AddOrUpdateDamageEffects(ApoStimItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.Pain, 0, 120, 5);
-            AddStimEffects.AddOrUpdateHealthEffects(ApoStimItem, SPTarkov.Server.Core.Models.Enums.HealthFactor.Energy, 180);
-            AddStimEffects.AddOrUpdateHealthEffects(ApoStimItem, SPTarkov.Server.Core.Models.Enums.HealthFactor.Hydration, 180);
-        }
-        if (ApoPropItem != null)
-        {
-            AddStimEffects.AddOrUpdateDamageEffects(ApoPropItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.Pain, 0, 120, 5);
-            AddStimEffects.AddOrUpdateDamageEffects(ApoPropItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.Contusion, 0, 120, 0);
-            AddStimEffects.AddOrUpdateDamageEffectsWithCost(ApoPropItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.LightBleeding, 0, 0, 120, 0, 100, 100);
-            AddStimEffects.AddOrUpdateDamageEffectsWithCost(ApoPropItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.HeavyBleeding, 0, 0, 120, 0, 100, 100);
-            AddStimEffects.AddOrUpdateDamageEffects(ApoPropItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.RadExposure, 0, 120, 0);
-            AddStimEffects.AddOrUpdateHealthEffects(ApoPropItem, SPTarkov.Server.Core.Models.Enums.HealthFactor.Energy, 180);
-            AddStimEffects.AddOrUpdateHealthEffects(ApoPropItem, SPTarkov.Server.Core.Models.Enums.HealthFactor.Hydration, 180);
-        }
-        if (ApoPainItem != null)
-        {
-            AddStimEffects.AddOrUpdateDamageEffects(ApoPainItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.Pain, 0, 120, 5);
-            AddStimEffects.AddOrUpdateDamageEffects(ApoPainItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.Contusion, 0, 120, 0);
-        }
-        if (ApoCMSItem != null)
-        {
-            AddStimEffects.AddOrUpdateDamageEffectsWithCost(ApoCMSItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.LightBleeding, 0, 0, 120, 0, 100, 100);
-            AddStimEffects.AddOrUpdateDamageEffectsWithCost(ApoCMSItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.HeavyBleeding, 0, 0, 120, 0, 100, 100);
-            AddStimEffects.AddOrUpdateDamageEffectsWithCost(ApoCMSItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.DestroyedPart, 0, 0, 0, 0, 100, 100);
-            AddStimEffects.AddOrUpdateDamageEffectsWithCost(ApoCMSItem, SPTarkov.Server.Core.Models.Enums.DamageEffectType.Fracture, 0, 0, 0, 0, 100, 100);
-        }
-        if (debug) logger.Info("[Olympus] ===== Applying Health and Damage effects completed. ==========");
-
         // Update some item properties
         if (debug) logger.Info("[Olympus] ===== Updating item stats.");
         updateItemStatsHelper.Update();

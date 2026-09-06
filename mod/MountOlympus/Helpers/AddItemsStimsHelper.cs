@@ -55,6 +55,7 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
             OverrideProperties = new TemplateItemProperties
             {
                 BackgroundColor = "red",
+                BodyPartPriority = [],
                 ExaminedByDefault = false,
                 Description = "Apollo's own concoction made from the root of the peony and many other godly essences. It temporarily enhances many of your skills.",
                 ExamineExperience = 100,
@@ -63,8 +64,27 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
                 ShortName = "ApoStim",
                 StimulatorBuffs = "BuffsApolloStim",
                 Weight = 0.01,
-                EffectsDamage = [],
-                EffectsHealth = [],
+                EffectsDamage = new Dictionary<DamageEffectType, EffectsDamageProperties>
+                {
+                    [DamageEffectType.Pain] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 5
+                    }
+                },
+                EffectsHealth = new Dictionary<HealthFactor, EffectsHealthProperties>
+                {
+                    [HealthFactor.Energy] = new EffectsHealthProperties
+                    {
+                        Value = 180
+                    },
+                    [HealthFactor.Hydration] = new EffectsHealthProperties
+                    {
+                        Value = 180
+                    }
+                },
+                MedEffectType = "duringUse",
                 MedUseTime = cfgPath.StimUseTimeSeconds
             }
         };
@@ -93,6 +113,7 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
             OverrideProperties = new TemplateItemProperties
             {
                 BackgroundColor = "red",
+                BodyPartPriority = [],
                 Description = "The ultimate first-aid stimulant, said to have been used by Apollo himself to heal the wounds of fallen warriors on the battlefield.",
                 ExaminedByDefault = false,
                 ExamineExperience = 100,
@@ -101,8 +122,58 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
                 ShortName = "ApoProp",
                 StimulatorBuffs = "BuffsApollosPropital",
                 Weight = 0.01,
-                EffectsDamage = [],
-                EffectsHealth = [],
+                EffectsDamage = new Dictionary<DamageEffectType, EffectsDamageProperties>
+                {
+                    [DamageEffectType.Pain] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 5
+                    },
+                    [DamageEffectType.Contusion] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0
+                    },
+                    [DamageEffectType.RadExposure] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0
+                    },
+                    [DamageEffectType.LightBleeding] = new EffectsDamageProperties
+                    {
+                        Cost = 0,
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0,
+                        HealthPenaltyMin = 100,
+                        HealthPenaltyMax = 100
+                    },
+                    [DamageEffectType.HeavyBleeding] = new EffectsDamageProperties
+                    {
+                        Cost = 0,
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0,
+                        HealthPenaltyMin = 100,
+                        HealthPenaltyMax = 100
+                    }
+
+                },
+                EffectsHealth = new Dictionary<HealthFactor, EffectsHealthProperties>
+                {
+                    [HealthFactor.Energy] = new EffectsHealthProperties
+                    {
+                        Value = 180
+                    },
+                    [HealthFactor.Hydration] = new EffectsHealthProperties
+                    {
+                        Value = 180
+                    }
+                },
+                MedEffectType = "duringUse",
                 MedUseTime = cfgPath.StimUseTimeSeconds
             }
         };
@@ -131,6 +202,7 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
             OverrideProperties = new TemplateItemProperties
             {
                 BackgroundColor = "red",
+                BodyPartPriority = [],
                 Description = "Created by Apollo's son Asclepius, this simple pain medication helped many warriors push through the pain to win victories over their enemies.",
                 ExaminedByDefault = false,
                 ExamineExperience = 100,
@@ -139,8 +211,23 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
                 ShortName = "ApoPain",
                 StimulatorBuffs = "BuffsApolloPain",
                 Weight = 0.01,
-                EffectsDamage = [],
+                EffectsDamage = new Dictionary<DamageEffectType, EffectsDamageProperties>
+                {
+                    [DamageEffectType.Pain] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 5
+                    },
+                    [DamageEffectType.Contusion] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0
+                    }
+                },
                 EffectsHealth = [],
+                MedEffectType = "duringUse",
                 MedUseTime = cfgPath.StimUseTimeSeconds
             }
         };
@@ -150,7 +237,7 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
     {
         return new NewItemFromCloneDetails
         {
-            ItemTplToClone = "5c10c8fd86f7743d7d706df3",
+            ItemTplToClone = "5d02778e86f774203e7dedbe",
             NewId = "661c9174e9365c70fa18b4d2",
             NewItemName = "apollo_cms",
             ParentId = "5448f3a64bdc2d60728b456a",
@@ -169,16 +256,73 @@ internal class AddItemsStimsHelper(SptLogger<AddItemsStimsHelper> logger, Custom
             OverrideProperties = new TemplateItemProperties
             {
                 BackgroundColor = "red",
+                BodyPartPriority = [
+                    "Stomach",
+                    "RightLeg",
+                    "LeftLeg",
+                    "RightArm",
+                    "LeftArm"
+                ],
                 Description = "Not even 100 blackened limbs can stop the god of healing!",
                 ExaminedByDefault = false,
                 ExamineExperience = 100,
                 LootExperience = 20,
                 Name = "Apollo's CMS",
                 ShortName = "ApoCMS",
+                Prefab = new Prefab
+                {
+                    Path = "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_loot.bundle",
+                    Rcid = ""
+                },
+                UsePrefab = new Prefab
+                {
+                    Path = "assets/content/weapons/usable_items/item_syringe/item_stimulator_adrenaline_container.bundle",
+                    Rcid = ""
+                },
+                ItemSound = "med_stimulator",
                 StimulatorBuffs = "BuffsApolloCMS",
+                Height = 1,
+                Width = 1,
                 Weight = 0.01,
-                EffectsDamage = [],
+                EffectsDamage = new Dictionary<DamageEffectType, EffectsDamageProperties>
+                {
+                    [DamageEffectType.DestroyedPart] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 0,
+                        FadeOut = 0,
+                        HealthPenaltyMax = 100,
+                        HealthPenaltyMin = 100
+                    },
+                    [DamageEffectType.Fracture] = new EffectsDamageProperties
+                    {
+                        Delay = 0,
+                        Duration = 0,
+                        FadeOut = 0,
+                        HealthPenaltyMax = 100,
+                        HealthPenaltyMin = 100
+                    },
+                    [DamageEffectType.LightBleeding] = new EffectsDamageProperties
+                    {
+                        Cost = 0,
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0,
+                        HealthPenaltyMin = 100,
+                        HealthPenaltyMax = 100
+                    },
+                    [DamageEffectType.HeavyBleeding] = new EffectsDamageProperties
+                    {
+                        Cost = 0,
+                        Delay = 0,
+                        Duration = 120,
+                        FadeOut = 0,
+                        HealthPenaltyMin = 100,
+                        HealthPenaltyMax = 100
+                    }
+                },
                 EffectsHealth = [],
+                MedEffectType = "duringUse",
                 MedUseTime = cfgPath.StimUseTimeSeconds
             }
         };

@@ -116,7 +116,7 @@ namespace MountOlympus.Helpers
                 };
 
                 // Apply changes ------------------------------------------------------------
-                /*
+                
                 if (cfgPath.PainSuppressionDurationSeconds > 0)
                 {
                     if (items.TryGetValue("661c91746c391e0f5ba82d47", out var s1) && s1.Properties.EffectsDamage != null && s1.Properties.EffectsDamage.TryGetValue(SPTarkov.Server.Core.Models.Enums.DamageEffectType.Pain, out var dmg1))
@@ -165,7 +165,7 @@ namespace MountOlympus.Helpers
                     itemBaseClassService.AddItemToCache("661c91746c391e0f5ba82d47");
                     itemBaseClassService.AddItemToCache("661c91741ba0f93d4287c5e6");
                     if (debug) logger.Info($"[Olympus][UpdateItemStats] Set Hydration Regen duration on compatible stims to {cfgPath.HydrationRegenDurationSeconds} seconds.");
-                }*/
+                }
 
                 if (cfgPath.PackGridVertical > 0)
                 {
@@ -211,6 +211,7 @@ namespace MountOlympus.Helpers
                         }
                     }
                 }
+                
                 // End Apply changes --------------------------------------------------------
             }
             catch (Exception ex)

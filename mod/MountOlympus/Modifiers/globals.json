@@ -134,7 +134,7 @@
         "Delay": 0,
         "Duration": 120,
         "SkillName": "",
-        "Value": -1
+        "Value": 0
       }
     ],
     "BuffsApolloPain": [
@@ -143,7 +143,7 @@
         "Chance": 1,
         "Delay": 1,
         "Duration": 120,
-        "Value": -1,
+        "Value": 0,
         "AbsoluteValue": false,
         "SkillName": ""
       },
@@ -224,16 +224,6 @@
         "SkillName": ""
       },
       {
-        "BuffType": "Fracture",
-        "AbsoluteValue": false,
-        "AppliesTo": [],
-        "Chance": 1,
-        "Delay": 0,
-        "Duration": 0,
-        "SkillName": "",
-        "Value": -1
-      },
-      {
         "BuffType": "SkillRate",
         "AbsoluteValue": true,
         "Chance": 1,
@@ -267,7 +257,7 @@
         "Delay": 1,
         "Duration": 120,
         "SkillName": "",
-        "Value": -1
+        "Value": 1
       },
       {
         "AbsoluteValue": false,
@@ -277,7 +267,7 @@
         "Delay": 0,
         "Duration": 120,
         "SkillName": "",
-        "Value": -1
+        "Value": 0
       }
     ]
   }

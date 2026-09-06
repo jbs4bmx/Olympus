@@ -12,7 +12,7 @@ using static MountOlympus.Olympus;
 namespace MountOlympus.Helpers
 {
     [Injectable(TypePriority = OnLoadOrder.Preload + 1006)]
-    public class AddStimBuffs(SptLogger<AddStimBuffs> logger, TemplateTable templateTable, ModHelper modHelper)
+    public class AddStimBuffs(SptLogger<AddStimBuffs> logger, GlobalTable globalTable, ModHelper modHelper)
     {
         public void Apply()
         {
@@ -72,29 +72,9 @@ namespace MountOlympus.Helpers
                     buffsEl = found.Value;
                 }
 
-
-                // Get db from DI.
-                var getTablesMethod = templateTable.GetType().GetMethod("GetTables");
-                if (getTablesMethod == null)
-                {
-                    logger.Warning("[Olympus][AddStimBuffs] Unable to locate GetTables() on templateTable.");
-                    return;
-                }
-
-                var dbObject =
-                    templateTable.GetType().GetMethod("GetTables")?.Invoke(templateTable, null)
-                    ?? templateTable.GetType().GetProperty("Tables")?.GetValue(templateTable)
-                    ?? templateTable.GetType().GetField("Tables")?.GetValue(templateTable);
-                if (dbObject == null)
-                {
-                    logger.Warning("[Olympus][AddStimBuffs] GetTables() returned null; cannot continue.");
-                    return;
-                }
-
                 // Walk: Globals.Configuration.Health.Effects.Stimulator.Buffs
                 var buffsObj = GetNestedProperty(
-                    dbObject,
-                    "Globals",
+                    globalTable,
                     "Configuration",
                     "Health",
                     "Effects",
