@@ -110,6 +110,9 @@ If a firearm doesn't have a "magazine", then it is not supported.</br>
 | CR 50DS | ❌ |   | FN40GL | ❌ |   | M32A1 | ❌ |   | MP-18 | ❌ |   | MP-43 sawed-off | ❌ |
 | MP-43-1C | ❌ |   | MTs-255-12 | ❌ |   | RSh-12 | ❌ |   |   |   |   |   |   |   |
 
+### Mod Support
+This mod currently supports WTT firearms as of version 4.1.3.10 (Credit: FLIGHTxS4L)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ---

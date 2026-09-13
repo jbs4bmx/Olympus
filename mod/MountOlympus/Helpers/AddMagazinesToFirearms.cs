@@ -7,9 +7,22 @@ using System.Text.Json;
 
 namespace MountOlympus.Helpers
 {
-    [Injectable(TypePriority = OnLoadOrder.Preload + 1005)]
-    public class AddMagazinesToFirearms(SptLogger<AddMagazinesToFirearms> logger, TemplateTable templateTable, ModHelper modHelper)
+    /*
+        Runs at PostLoad rather than being called from Olympus's Preload stage. This edits an existing firearm's magazine-slot filter - it doesn't
+        create new database entries, so it doesn't need Preload's guarantees. Running at PostLoad instead means it's safe to reference firearms added
+        by OTHER mods (e.g. custom weapons), since PostLoad is guaranteed to run after every mod's own database setup is finished, regardless of
+        what priority that other mod happens to use internally.
+        Credit: FLIGHTxS4L
+    */
+
+    [Injectable(TypePriority = OnLoadOrder.PostLoad + 1)]
+    public class AddMagazinesToFirearms(SptLogger<AddMagazinesToFirearms> logger, TemplateTable templateTable, ModHelper modHelper) : IOnLoad
     {
+        public Task OnLoadAsync(CancellationToken cancellationToken)
+        {
+            Apply();
+            return Task.CompletedTask;
+        }
         public void Apply()
         {
             try

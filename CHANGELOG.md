@@ -1,5 +1,15 @@
 # CHANGE LOG
 
+## [Version: 4.1.3.10]
+Changes:
+  * Add: Support for WTT firearms. (credit: FLIGHTxS4L)
+  * Fix: Move Mags-To-Firearms association method to PostLoad.
+
+Thanks:
+  * Contributor: FLIGHTxS4L
+
+---
+
 ## [Version: 4.1.3.9]
 Changes:
   * Fix: Missing helper files in mod directory.

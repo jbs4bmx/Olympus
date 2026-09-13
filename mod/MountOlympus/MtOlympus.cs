@@ -42,12 +42,7 @@ public sealed class ItemConfigItem
 }
 
 [Injectable(TypePriority = OnLoadOrder.Preload + 1000)]
-public class Olympus(
-    SptLogger<Olympus> logger,
-    TemplateTable templateTable,
-    ModHelper modHelper,
-    UpdateItemStatsHelper updateItemStatsHelper,
-    IServiceProvider serviceProvider) : IOnLoad
+public class Olympus(SptLogger<Olympus> logger, TemplateTable templateTable, ModHelper modHelper, UpdateItemStatsHelper updateItemStatsHelper, IServiceProvider serviceProvider) : IOnLoad
 {
     public Task OnLoadAsync(CancellationToken cancellationToken)
     {
@@ -87,9 +82,13 @@ public class Olympus(
                 ?? throw new InvalidOperationException("Failed to resolve AddStimBuffs from DI.");
         if (debug) logger.Info("[Olympus][Init] Resolved AddStimBuffs from DI.");
 
-        var addMags = (AddMagazinesToFirearms?)serviceProvider.GetService(typeof(AddMagazinesToFirearms))
-                ?? throw new InvalidOperationException("Failed to resolve AddMagazinesToFirearms from DI.");
-        if (debug) logger.Info("[Olympus][Init] Resolved AddMagazinesToFirearms from DI.");
+        /*
+            Removed AddMagazinesToFirearms from DI because it was no longer required.
+            The functionality is now handled in PostLoad.
+        */
+        //var addMags = (AddMagazinesToFirearms?)serviceProvider.GetService(typeof(AddMagazinesToFirearms))
+        //        ?? throw new InvalidOperationException("Failed to resolve AddMagazinesToFirearms from DI.");
+        //if (debug) logger.Info("[Olympus][Init] Resolved AddMagazinesToFirearms from DI.");
 
         var checkBlacklists = (CheckBlacklists?)serviceProvider.GetService(typeof(CheckBlacklists))
                 ?? throw new InvalidOperationException("Failed to resolve CheckOlympusItemBlacklists from DI.");
@@ -202,12 +201,72 @@ public class Olympus(
         applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "68f2f70e37e0458bf16acd29", "68f2f70fe42a905c1d6b38f7", 5, 3960, 3);
         applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "68f2f70e6d198f7eabc05324", "68f2f70f69e4d0521a73cb8f", 7, 3960, 1);
         applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "661c917436409c2d18e5afb7", "6816beb8d7b63ce01482af59", 7, 3960, 1);
+
+        // WTT-Armory compatibility: new-caliber magazines (Jaeger, matching the rest of the mag catalog)
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "436d497b0343516d521250c3", "d3707eeb2b6392943e7ae144", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "2263e611456a811f6543286b", "b07644638995fe4f5117f360", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "2dfd06092497541d0ebeb653", "45efa08ecdf342eb3f03a6b4", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "aa6fa1cf01e42a764c053809", "d5fbd102050080ea1098716d", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "c7b912cac5d666dd0271d2cd", "c81fa5c6e3f2775878e4c7ca", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "c7b912cac5d666dd0271d2ce", "f310dc7fdb3c7ed015077cda", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "964d1222985c11c2c84e7f3f", "c40ced5577263bf94debbc5d", 5, 3960, 3);
+
+        // WTT-Armory compatibility: per-weapon custom-art magazines (Jaeger)
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "b0c383075ea77729b051c3a7", "f43629e8a7d24f0ceb56c621", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "4c9fcdee95bffe9ff8a07a44", "7113f6718c1c5fa2295380b5", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "45c81346d9461ee8f9981008", "a3e6a1e743e929569bbdee55", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "9589359907fca6a0a07cfbfd", "5815cca0a1ffde0b661886e3", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "a01c04b3231dc39cdbab22ae", "d67a026d0a78eac2697b9b97", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "00da199defbc2fbcb10f9ec5", "c8f10a323358ebf8511c519f", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "a085d83bce3a727583a9f414", "29ee04c37f858c268f0902a1", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "45be94029e87ff2634e7de93", "b7a5f9d935081574617ef8b1", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "a8dec5909e063bfa71d40ba9", "6fec47771936b25351bda7a7", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "d85093c45145fce1aba14c45", "6ffaa98e95116a372e948bd8", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "9d78b09b51dac5d49af2a81c", "45b5280e4ce0034286303b23", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "7fe6b9b26d25a30899bcb7fe", "3774331221a8bfa19e20ece3", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "b2830544fa5df93204d612a5", "374c9fa107d752e22da153a9", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "73050ee0e3b3b7dcf0c3f01b", "464cc113911a6440fdd334c3", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "46bfca1fcdec5872ffeb284a", "d56289fff65c7a609cbaea5a", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "56543418653ccdec6334d1ed", "b4d22acb7bd3688e66f0dc1f", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "f3aeb467cb54f1773dc408da", "f2b67d9069807c1142aa5e97", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "88da98b9b2b64c2c2f790b72", "3d48fc83797657553281505b", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "20d5db641f028f1c3d2d718e", "e9a54f27d17102dd421555e8", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "6f88b582e3e9b44dfde186cf", "fac2a705f26a6442687aacc1", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "de55fbc58a6dd78332ae893f", "a313f011abc222df311ebb04", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "16ac01c1c47ee92b45434aa9", "97e80ccbc0e8bf226537655d", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "516ec1636d395b9a5269770f", "6c846f06dcb27b19d82f1ea4", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "aad8c4444a1e860e8f4a0ddd", "1b9bc07e713ebce2d974c4ba", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "00d9f8906ba2da8037d48b10", "5fd1e6751c2590393e15682d", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "3d615617813d2601ba945692", "0485d9ae4635bd0016812729", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "3c092b4c4d6c6f55690a8498", "f2342e5d3cfd3918f7fb5cb1", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "7535716f71efa3a1f680865c", "16fc3727b9826fdf87fde5a7", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "3d9ac26ca6383bb3341866ac", "7e682b45fa52c897c2043a73", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "b2333cdd7256a0ecaf179b4f", "a46679b5e577159e7ae997ce", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "b7766cf6a574c79b608986d0", "7efafddbaf4c1d7554820956", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "11e1eff49d397189414ab868", "453a5e9daebf50222934d3ef", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "7148eb9b6953df70b0bda525", "c68a760a49bce2b2f8b50d18", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "92817fb92a313fa21ec59057", "d5315bd0f92be2d6bef83608", 5, 3960, 3);
+
+        // WTT Content Backport compatibility (Jaeger)
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "0d084425cb03c37566b8c1f4", "6b58c219e333ade0a2c5876c", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "ce89fa83336f1c07c1e494a1", "5b7b22e1e54a9089ec8be42b", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "e4e53415475b032d7dde6ee9", "946516305442cba51ffb6c01", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "5e8798197d76ce668b83e84d", "51be02f0c152be78e2143ffb", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "4cc2529d8711f4aa22315ffa", "1e21edc4e2f067d2a2f051b7", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "8c4d94ec908ddd3fa01ca6f6", "082ae99aa02ea03d5f4f44fe", 5, 3960, 3);
+        applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "75c571c4b1155f3a4d1ffd9d", "9d4fac0cbe9e70cb015b08bc", 5, 3960, 3);
         if (debug) logger.Info("[Olympus] ===== ApplyItemsToTraders.Apply() completed. ==========");
 
         // Add magazines to their respective firearms
-        if (debug) logger.Info("[Olympus] ===== Applying AddMagazinesToFirearms. ==========");
-        addMags.Apply();
-        if (debug) logger.Info("[Olympus] ===== AddMagazinesToFirearms.Apply() completed. ==========");
+        // if (debug) logger.Info("[Olympus] ===== Applying AddMagazinesToFirearms. ==========");
+        // addMags.Apply();
+        // if (debug) logger.Info("[Olympus] ===== AddMagazinesToFirearms.Apply() completed. ==========");
+        /*
+            Magazine-to-firearm compatibility (AddMagazinesToFirearms) now runs on its own at PostLoad,
+            not here - see Helpers/AddMagazinesToFirearms.cs. This lets it safely reference firearms added
+            by other mods.
+            Credit: FLIGHTxS4L
+        */
 
         // Add buffs to global buff list so they can be used by stimulants
         if (debug) logger.Info("[Olympus] ===== Applying AddStimBuffs. ==========");
