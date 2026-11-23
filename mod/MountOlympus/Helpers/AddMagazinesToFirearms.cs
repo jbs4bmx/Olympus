@@ -48,6 +48,7 @@ namespace MountOlympus.Helpers
                 }
 
                 const string magSlotName = "mod_magazine";
+                int skippedMags = 0;
 
                 foreach (var firearmProp in doc.RootElement.EnumerateObject())
                 {
@@ -60,7 +61,12 @@ namespace MountOlympus.Helpers
                     if (mags.Count == 0)
                         continue;
 
-                    dynamic firearmObj = items[firearmId];
+                    // Firearms from mods that aren't installed (e.g. WTT-Armory) are skipped; indexing them
+                    // would throw and end the loop for every firearm after them.
+                    if (!items.TryGetValue(firearmId, out var firearmTemplate))
+                        continue;
+
+                    dynamic firearmObj = firearmTemplate;
 
                     foreach (dynamic slot in firearmObj.Properties.Slots)
                     {
@@ -71,6 +77,13 @@ namespace MountOlympus.Helpers
 
                             foreach (var mag in mags)
                             {
+                                // Don't put magazines that don't exist into the slot filter.
+                                if (mag is null || !items.ContainsKey(mag))
+                                {
+                                    skippedMags++;
+                                    continue;
+                                }
+
                                 if (!filterCollection.Contains(mag))
                                 {
                                     filterCollection.Add(mag);
@@ -83,6 +96,9 @@ namespace MountOlympus.Helpers
                         }
                     }
                 }
+
+                if (skippedMags > 0)
+                    logger.Warning($"[Olympus][AddMagazinesToFirearms] Skipped {skippedMags} magazine reference(s) that are not in the item database.");
             }
             catch (Exception ex)
             {
