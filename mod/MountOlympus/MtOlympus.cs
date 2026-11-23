@@ -255,6 +255,8 @@ public class Olympus(SptLogger<Olympus> logger, TemplateTable templateTable, Mod
         applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "4cc2529d8711f4aa22315ffa", "1e21edc4e2f067d2a2f051b7", 5, 3960, 3);
         applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "8c4d94ec908ddd3fa01ca6f6", "082ae99aa02ea03d5f4f44fe", 5, 3960, 3);
         applyItems.AssortProcessor("5c0647fdd443bc2504c2d371", "75c571c4b1155f3a4d1ffd9d", "9d4fac0cbe9e70cb015b08bc", 5, 3960, 3);
+        if (applyItems.SkippedMissingItems > 0)
+            logger.Warning($"[Olympus] Skipped {applyItems.SkippedMissingItems} trader offer(s) for items that are not in the item database. Set EnableDebugLogging in MOConfig.jsonc to list them.");
         if (debug) logger.Info("[Olympus] ===== ApplyItemsToTraders.Apply() completed. ==========");
 
         // Add magazines to their respective firearms

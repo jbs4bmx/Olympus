@@ -12,14 +12,27 @@ using static MountOlympus.Olympus;
 namespace MountOlympus.Helpers
 {
     [Injectable(TypePriority = OnLoadOrder.Preload + 1004)]
-    public class AddTraderAssort(SptLogger<AddTraderAssort> logger, TradersTable tradersTable, ModHelper modHelper)
+    public class AddTraderAssort(SptLogger<AddTraderAssort> logger, TradersTable tradersTable, TemplateTable templateTable, ModHelper modHelper)
     {
+        // Number of offers skipped because their item is not in the item database.
+        public int SkippedMissingItems { get; private set; }
+
         public void AssortProcessor(MongoId traderId, MongoId item, MongoId assortId, int buymax, int price, int loyalty)
         {
             var pathToMod = System.IO.Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)!;
             var cfgPath = modHelper.GetJsonDataFromFile<ModConfig>(pathToMod, "MOConfig.jsonc");
 
             var debug = cfgPath?.EnableDebugLogging == true;
+
+            // An offer for an item that doesn't exist makes SPT log an error and a warning for it on every
+            // flea market and trader refresh (ItemBaseClassService cache misses), so leave it out.
+            if (!templateTable.Items.ContainsKey(item))
+            {
+                SkippedMissingItems++;
+                if (debug) logger.Info($"[Olympus][AddTraderAssort] Item {item} is not in the item database; not adding it to trader {traderId}.");
+                return;
+            }
+
             var trader = tradersTable.GetTrader(traderId);
             var assort = trader.Assort;
 
